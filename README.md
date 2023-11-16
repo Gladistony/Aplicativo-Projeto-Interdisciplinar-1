@@ -10,7 +10,7 @@
   
   -Erick Santos  		**[GitHub](https://github.com/Erickjonatthan)**
   
-  -Gustavo França 
+  -Gustavo França  		**[GitHub](https://github.com/gustavof0411)**
   
   -José Miguel			**[GitHub](https://github.com/JMiguelsilva2003)** 
   
