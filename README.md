@@ -16,4 +16,4 @@
   
   -Pedro Emmanuel		**[GitHub](https://github.com/Pedro-Emmanuel-G-C-Machado)** 
   
-  -Vinicius Henrykyy 
+  -Vinicius Henrykyy 	**[GitHub](https://github.com/ViniciusHenrykyy)**
