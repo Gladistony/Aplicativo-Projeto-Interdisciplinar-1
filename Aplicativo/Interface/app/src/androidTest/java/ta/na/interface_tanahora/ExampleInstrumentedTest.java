@@ -1,4 +1,4 @@
-package ta.na.hora;
+package ta.na.interface_tanahora;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("ta.na.hora", appContext.getPackageName());
+        assertEquals("ta.na.interface_tanahora", appContext.getPackageName());
     }
 }

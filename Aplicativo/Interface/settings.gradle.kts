@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Interface"
+rootProject.name = "Interface-TaNaHora"
 include(":app")

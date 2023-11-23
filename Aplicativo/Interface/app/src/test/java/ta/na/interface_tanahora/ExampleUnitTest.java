@@ -1,4 +1,4 @@
-package ta.na.hora;
+package ta.na.interface_tanahora;
 
 import org.junit.Test;
 
