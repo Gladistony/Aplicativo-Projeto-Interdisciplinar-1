@@ -1,0 +1,2 @@
+Nome de classes começando com letra maiuscula.
+Nomes de variaveis e de classes em ingles
