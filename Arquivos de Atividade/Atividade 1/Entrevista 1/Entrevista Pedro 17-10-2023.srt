@@ -1,0 +1,967 @@
+1
+00:00:00,430 --> 00:00:22,250
+A gente está fazendo o projeto da faculdade que o professor pediu pra gente resolver um
+problema de uma pessoa. A gente fez uma reunião com um grupo e a gente acabou escolhendo o tema relacionado
+
+2
+00:00:22,250 --> 00:00:26,870
+à saúde, que é sobre a questão da...
+
+3
+00:00:29,966 --> 00:00:43,166
+de doente, porque em específico a gente tratou de um caso da minha família que no avô ele tem Alzheimer
+e ele tem problema para tomar medicação e para organizar a gênero de remédio.
+
+4
+00:00:43,166 --> 00:00:57,166
+Muitas vezes assim, até por ele pegar remédio na rede pública, ele não tem o controle direito
+do horário que é para pegar o remédio, porque quando você pegar medicação pelo SUS, eles entregam
+
+5
+00:00:57,166 --> 00:01:07,134
+um cartãozinho dizendo a data que é para ir buscar.
+Só que o problema é que ele esquece que a data que ele tem que ir buscar.
+
+6
+00:01:07,134 --> 00:01:21,654
+Então, tem toda essa questão do programa. E o que a gente estava querendo fazer?
+Um aplicativo que ajudasse nesse gerenciamento, que fosse mais votado para a questão de idosos.
+
+7
+00:01:21,654 --> 00:01:34,998
+Que fosse algo simples para que gente que é idosa conseguisse mexer.
+E aí eu queria saber se já existe algo do tipo ou alguma proposta.
+
+8
+00:01:36,478 --> 00:01:47,158
+Então eu acho que Pedrinho mais ou menos comentou que eu sou farmacêutica
+e eu atualmente estou trabalhando na farmácia na farmácia na verdade
+
+9
+00:01:47,158 --> 00:02:03,586
+e na gerência da farmacêutica do Recife. Então a gente vai desde a seleção do medicamento ou seja escolher
+o que comprar baseado obviamente Digamos assim, na epidemiologia da população, que doenças a cometem, né?
+
+10
+00:02:03,586 --> 00:02:14,286
+Dentro da responsabilidade do município, porque quando é uma doença mais grave, digamos assim,
+ela perpassa a responsabilidade do município, entra no Estado
+
+11
+00:02:14,286 --> 00:02:22,846
+e vai até a dispensação ao paciente, ao usuário final.
+Então, toda essa cadeia logística, desde a seleção, aquisição...
+
+12
+00:02:23,310 --> 00:02:32,250
+armazenamento até a entrega no usuário final a gente consegue fazer a nossa área
+digamos assim despertiza o que acontece é o seguinte assim vou dizer mais ou
+
+13
+00:02:32,250 --> 00:02:40,790
+menos a vocês como funciona recife né porque eu acho que vocês estão tomando
+como é pressuposto a realidade do município de vocês né
+
+14
+00:02:40,790 --> 00:02:51,030
+é aqui em recife a gente tem um sistema chamado oros inclusive depois vocês
+quiserem eu posso até mostrar para vocês como funciona porque pode ser que
+
+15
+00:02:53,006 --> 00:03:02,846
+do aplicativo é um sistema de gestão que ele controla como eu falei desde a
+aquisição até a dispensação para o usuário final. Se eu estiver falando rápido ou
+
+16
+00:03:02,846 --> 00:03:15,366
+você tiver alguma dúvida pode interromper. E aí o que acontece?
+Vamos supor que eu sou uma idosa e que eu tenha hipertensão.
+
+17
+00:03:15,366 --> 00:03:22,366
+Vou no médico do posto do lado da minha casa, o médico diz que vai precisar de um
+medicamento para hipertensão, capto-april.
+
+18
+00:03:22,830 --> 00:03:37,510
+de posse dessa prescrição médica eu e idózinha vou lá na farmácia do meu postinho ou uma outra
+farmácia mais próxima da minha casa leva essa prescrição e vamos supor que a primeira vez que
+
+19
+00:03:37,510 --> 00:03:50,350
+eu vou pegar esse medicamento então eu já levo também o comprovante residência tá porque porque
+dentro do SUS da perspectiva do SUS tem a questão de territorialização né então por exemplo eu moro
+
+20
+00:03:50,350 --> 00:04:01,062
+aqui na Madalena possivelmente, mais coerentemente, eu vou buscar uma farmácia que seja perto da minha casa, dentro do mar
+da Madalena. Mas eu não vou entrar muito nessa seara, mas só pra vocês entenderem porque que
+
+21
+00:04:01,062 --> 00:04:11,342
+o comprão ante-residencia é importante, até pra identificar que aquele usuário é daquela área, né,
+pra cuidar melhor dele, entendendo que ele, tipo, mais perto da casa dele vai ter o acesso mais fácil,
+
+22
+00:04:11,342 --> 00:04:21,686
+mais facilitado ao medicamento. E aí, com o meu cartão SUS, que é fundamental também, né...
+Se vocês pensarem nessa ideia do âmbito do SUS o cartão SUS seria uma identificação
+
+23
+00:04:21,686 --> 00:04:30,366
+muito importante para o paciente e para o usuário.
+E vou até a farmácia e posto esses medicamentos.
+
+24
+00:04:30,366 --> 00:04:41,406
+Faço o meu cadastro como usuária do SUS e a partir dali o farmacêutico vai olhar
+minha prescrição e vai dizer a senhora vai levar o médico que prescreveu 30 comprimidos
+
+25
+00:04:41,406 --> 00:04:53,198
+de captoapril que é o antipertensivo. com o cadastro da usuária, de mim como usuária Carina,
+meu nome tudo direitinho, meu endereço, meu cartão SUS,
+
+26
+00:04:53,638 --> 00:05:05,558
+ele faz a entrega do medicamento, daquele medicamento para 30 dias, tá?
+E aí ele registra no sistema essa saída. Então eu recebo um boletim, tipo aqueles boletinhos amarelos de banco, sabe?
+
+27
+00:05:06,678 --> 00:05:13,318
+Naquele boletim, está falando lá, meu nome tudo direitinho,
+as informações e que eu recebi, meu capítulo a prior para 30 dias.
+
+28
+00:05:13,318 --> 00:05:25,246
+Vamos supor que eu peguei hoje dia 16. Como é um medicamento de uso crônico, como é o caso do seu avô, que é o medicamento
+Kraus-Heinem, que é uma doença que não tem cura, que o paciente possivelmente vai tomar
+
+29
+00:05:25,246 --> 00:05:41,806
+medicamento até o resto da vida. No meu caso, do exemplo da hipertensão, a minha prescrição tem validade para seis
+meses. Então, o que acontece? O sistema já agenda o meu retorno para 30 dias e aquela prescrição já continua válida.
+
+30
+00:05:41,806 --> 00:05:55,722
+Então, daqui a 30 dias eu vou lá. E aí já tá meu registro, meu cadastro tudo direitinho, dizendo que eu tenho previsão, né?
+Tá planejado eu pegar aqueles 30, mais 30 comprimintes pra mais um mês e assim sucessivamente.
+
+31
+00:05:55,722 --> 00:06:05,922
+Quando dá os seis meses, teoricamente o ideal é que eu volte no médico, até pra ele me reavaliar,
+pra saber se aquele medicamento tá fazendo o efeito esperado, né?
+
+32
+00:06:05,922 --> 00:06:14,190
+E aí se sim, ele prescreve novamente, ou se não ele vai mudar minha terapia farmacológica.
+Então mais ou menos é assim que funciona já.
+
+33
+00:06:14,390 --> 00:06:24,950
+Ou seja, a gente já tem mais ou menos um sistema que ajuda no caso a gente
+com o gestor público desse controle. No boletim do paciente já tem lá a data.
+
+34
+00:06:25,710 --> 00:06:35,150
+Mas você tocou num ponto interessante. E para os pacientes que não estão tão conscientes e orientados
+como é que ele vai saber que está na hora dele buscar o medicamento.
+
+35
+00:06:35,190 --> 00:06:41,630
+Então eu acho a ideia de você muito bacana.
+Eu não sei realmente se já existe alguma iniciativa nessa perspectiva.
+
+36
+00:06:42,094 --> 00:06:59,134
+Mas talvez você possa criar alertas, uma mensagem ou um SMS ou um WhatsApp
+dizendo vem aplicar seu medicamento. Seria mais ou menos essa ideia.
+
+37
+00:07:09,646 --> 00:07:18,926
+que já aconteceu algumas vezes que eu também tomo medicação controlada.
+Sim. Eu preciso viajar para Tamandara e eu esqueci
+
+38
+00:07:20,566 --> 00:07:26,646
+a carvamaza fina que eu tomo em casa e quando eu estiver lá
+deu um trabalho para a companhia e não posso interromper o tratamento.
+
+39
+00:07:26,646 --> 00:07:42,298
+Ô Leo, sai, Leo. Claro, claro. Eu acho que na verdade vocês podem atrelar
+várias coisas nesse aplicativo, tá? é pode atrelar o horário da tomada do medicamento.
+
+40
+00:07:43,158 --> 00:07:55,078
+O alertinha lá o medicamento é de 8 horas então ele já pode ajustar.
+Eu acho que seria importante vocês colocarem nessa perspectiva
+
+41
+00:07:55,538 --> 00:08:05,518
+que o profissional de saúde até assim o ideal seria o farmacêutico
+fazer esse primeiro input dessas informações ajudar o paciente
+
+42
+00:08:05,558 --> 00:08:21,534
+ajudar o usuário. nesses inputs iniciais, porque às vezes o que acontece, né?
+Os pacientes eles não têm esse conhecimento, às vezes tem algumas limitações, então,
+
+43
+00:08:21,534 --> 00:08:32,530
+digamos assim, esse primeiro approach do profissional de saúde seria interessante pra fazer, ou
+ele orita alguém, o responsável por aquele paciente, né?
+
+44
+00:08:32,814 --> 00:08:48,774
+para que fizesse de acordo com as limitações dele. Se ele for consciente e orientado, perfeito.
+Ele mesmo faz. Então vocês poderiam colocar os alertas de horário de tomada, como você falou,
+
+45
+00:08:48,774 --> 00:09:00,734
+se for viajar, avisar que vai viajar e aí botar o período, né?
+Aí vou viajar daqui a uma semana, então daqui a uma semana o aplicativo vai estar lá, digamos assim,
+
+46
+00:09:00,734 --> 00:09:08,778
+programado para dar o alerta. pra eu tomar meu medicamento, né?
+E caso o esquecimento ocorra porque a gente é humano,
+
+47
+00:09:08,778 --> 00:09:27,750
+eu esqueço às vezes toda hora. Claro. os mesmos próximos de farmácia ou até mesmo hospitais próximos serem alertados
+de qual melhor maneira pegar o remédio o medicamento onde tem porque a gente
+
+48
+00:09:27,750 --> 00:09:39,826
+esquece às vezes tem que comprar porque é controlado sabe e o cara não leva
+receita fica naquele desespero. É assim o que eu acho que pode fazer digamos assim
+
+49
+00:09:40,494 --> 00:09:54,294
+é aí são vários inputs que o paciente tem que vamos supor como pronto vou dar um exemplo meu
+eu comprei minha pila anticoncepcional hoje certo se eu comprei uma cartelinha só daqui a 30 dias eu
+
+50
+00:09:54,294 --> 00:10:08,094
+vou ter que estar com o meu medicamento então o aplicativo poderia dizer assim tá na hora de
+comprar novamente seu medicamento o que é importante pedindo é assim é vocês é digamos tentarem
+
+51
+00:10:10,254 --> 00:10:21,454
+é digamos assim mais limitado porque veja quando você pensa em
+a que as farmácias avisem e tal você começa a criar muitas redes
+
+52
+00:10:21,454 --> 00:10:30,054
+vai haver um confronto entre rede privada que é uma forma de acesso
+a medicamento e a rede pública que é outra forma de acesso a medicamento.
+
+53
+00:10:30,054 --> 00:10:38,854
+Tá entendendo. Então assim por exemplo vou dar um exemplo se eu precisar
+de um diperona não é o caso né porque não é o medicamento de uso
+
+54
+00:10:39,438 --> 00:10:51,278
+contínuo e controlado mas a de pirona para eu pegar no post eu tenho que levar
+para a inscrição do SUS para ir na farmácia ele é um medicamento que a gente chama
+
+55
+00:10:51,278 --> 00:11:00,998
+of over the counter que é o medicamento que está na prateleira você pode pegar
+a de pirona e comprar então você vê que são formas de acesso diferentes né
+
+56
+00:11:00,998 --> 00:11:14,042
+então das duas uma ou eu acho que para facilitar né
+vocês poderiam pensar na perspectiva do SUS porque se quiser entrar nessa seara
+
+57
+00:11:14,042 --> 00:11:27,342
+de acesso ou na seara do privado no sentido na perspectiva mais de algo assim
+de alto digamos de autocuidado disso do do solicitar.
+
+58
+00:11:27,942 --> 00:11:38,966
+Tá na hora de comprar o medicamento está na hora de tomar o medicamento.
+Tipo, não tomar esse... tem uma coisa bacana, mas aí entraria mais na área técnica, porque...
+
+59
+00:11:39,806 --> 00:11:49,246
+Tal medicamento não pode ser tomado com o alimento.
+Então tem que tomar em jejum, aí seria... Vou tomar o omeprazole, tem que estar o alertinha lá, tomar em jejum.
+
+60
+00:11:49,566 --> 00:12:01,234
+Você poderia introduzir essas... Tem um botão, mas que só pode tomar depois de almoço, depois de comer.
+Perfeito. Já tem... Oi? Eu tô usando medicamento que eu só tomo em jejum.
+
+61
+00:12:01,358 --> 00:12:09,918
+Já esqueci de tomar que eu comi e eu calenvão.
+E tem que ser em jejum. Aí vamos supor é interessante isso porque
+
+62
+00:12:10,918 --> 00:12:23,198
+eu sou uma pessoa que acordo às 6 da manhã certo.
+Eu vou estar de jejum às 6 da manhã. Beleza então eu posso colocar o horário do meu medicamento às 6 6 e meia e ajustar.
+
+63
+00:12:23,798 --> 00:12:30,878
+Mas se o paciente acordar às 9 que cada pessoa tem um horário
+não vai adiantar eu botar seis horas para ler.
+
+64
+00:12:31,022 --> 00:12:44,622
+porque eu vou estar dormindo ainda, então isso é bacana também, são esses parâmetros que a gente precisa avaliar.
+Isso é em jejum é porque existe uma questão técnica de fato, né, que há uma interação medicamentosa
+
+65
+00:12:44,622 --> 00:12:56,622
+entre o medicamento e o alimento, por isso tem que ser em jejum, né?
+Já o outro ele é potencializado a absorção se você tomar junto com o alimento, ou seja, depois que eu comer
+
+66
+00:12:56,622 --> 00:13:03,966
+eu como medicamento, às vezes para evitar a irritação gástrica.
+Isso é muito comum com o antibiótico, né? O antibiótico evita muito o estômago.
+
+67
+00:13:03,966 --> 00:13:10,886
+Então toma o antibiótico depois do alimento
+para proteger o teu estômago e tu não ter dor de estômago.
+
+68
+00:13:10,886 --> 00:13:26,406
+Então são coisas, são alertas que vocês poderiam também produzir
+de forma... bem simples, né? E que é uma forma educativa também de utilização do aplicativo.
+
+69
+00:13:26,638 --> 00:13:37,318
+Uma coisa que a gente estava cogitando fazer era que o aplicativo pudesse ser operado totalmente por voz.
+Por dois motivos. Primeiro, para a questão de acessibilidade,
+
+70
+00:13:37,318 --> 00:13:46,238
+porque tem deficiência, e segundo, porque, por exemplo, no caso do meu avô, ele é alfabeto,
+então não adiantaria de nada ele ter aquelas informações inscritas.
+
+71
+00:13:46,238 --> 00:13:59,438
+Então é necessário que tenha esse controle por voz para que ele consiga até cadastrar o medicamento
+ou alguma coisa assim de tipo. Excelente. E aí o que eu acho que faz sentido e até seja mais fácil para vocês.
+
+72
+00:14:02,766 --> 00:14:13,846
+o reconhecimento de perguntas que seja assim sim ou não.
+Porque é até mais fácil do que deixar. Para não pensar muito né, para não ficar com essa ideia.
+
+73
+00:14:14,646 --> 00:14:21,886
+Na verdade seria assim, não seria o paciente falando
+preciso tomar em jejum, seria o aplicativo perguntando
+
+74
+00:14:22,246 --> 00:14:33,318
+seu medicamento deve ser tomado em jejum, sim ou não.
+A gente merece uma peneira né. Isso, isso, exato, exatamente.
+
+75
+00:14:33,558 --> 00:14:41,858
+Porque esse eu acho que até para vocês, posso até falar uma besteira,
+mas talvez seja mais fácil de você fazer o reconhecimento
+
+76
+00:14:41,858 --> 00:14:48,598
+do sim e do não do que deixar a pessoa falar,
+falar, falar, falar, falar sem parar. Às vezes...
+
+77
+00:14:48,598 --> 00:14:59,658
+Menos em pude. Fala para Siri e Siri não entende o que a gente fala.
+Exato. Então poderia ser assim, por exemplo, seu medicamento.
+
+78
+00:14:59,886 --> 00:15:06,106
+ao invés de perguntar assim qual é a posologia do seu medicamento
+ao invés de perguntar e a pessoa falar e dizer assim
+
+79
+00:15:06,506 --> 00:15:21,666
+seu medicamento é dose única sim ou não seu medicamento é de 12 em 12 horas
+sim ou não está entendendo? Entendi. Tipo assim é você não sabe o com relaxante não ter muitos ífins para controlar.
+
+80
+00:15:22,546 --> 00:15:31,542
+Então assim você você começar a fazer uma pequena filtragem.
+Ali na primeira contato com paciente, como o avô Jorge e Tony falam,
+
+81
+00:15:31,542 --> 00:15:40,902
+ele não vai ter uma ideia muito grande, mas os seus parentes com certeza vai ter,
+e não vai ter muita paciência para ficar explicando direitinho.
+
+82
+00:15:40,902 --> 00:15:48,702
+Então, sim ou não, eu acho mais interessante.
+Mais interessante, com certeza. E aí eu posso ajudar vocês na construção dessas perguntas, né?
+
+83
+00:15:49,702 --> 00:15:53,102
+Que seriam perguntas pertinentes, entendeu?
+
+84
+00:15:57,038 --> 00:16:12,958
+É... Eu acho que tem alguma pergunta que você quer fazer, Pedro?
+Ah, seguinte, como você disse, teve um momento que você colocou o cartãozinho do SUS como um possível banco de dados.
+
+85
+00:16:12,958 --> 00:16:32,318
+Eu sei que o SUS está entrinhado com as carteirinhas de... com os planos, né?
+Os carteirinhos de plano de saúde, etc. plano também poderia ser acessado não pelo aplicativo nosso mas pela pessoa.
+
+86
+00:16:34,318 --> 00:16:42,798
+Aí veja na verdade assim o número do exemplo eu tenho um plano meu plano
+é um inmedio eu tenho um número do meu cartãozinho da unimédio certo.
+
+87
+00:16:43,278 --> 00:16:53,998
+Mas eu como brasileira também tenho meu cartãozinho SUS.
+Quanto nós. Todos nós. Na verdade a gente tem até que fazer e ter sempre isso porque vamos supor.
+
+88
+00:16:54,414 --> 00:17:03,614
+é sei lá Deus Deus nos livre né se a gente sofre um acidente e
+possivelmente quem vai atender a gente é o Samu que é o SUS né
+
+89
+00:17:03,614 --> 00:17:13,414
+a gente inicialmente vai ser internado no hospital que é da rede SUS e depois
+posteriormente é que você vai ser transferido né é pro hospital privado
+
+90
+00:17:13,414 --> 00:17:22,546
+então na verdade são duas coisas distintas mas eu acho Pedrinho que tem que pensar assim
+tem tem alguma necessidade de ter esse cadastro não sei
+
+91
+00:17:22,862 --> 00:17:34,742
+Por isso que eu falei, se vocês pensarem na perspectiva de acesso, porque vamos supor,
+vocês moram em Belo Jardim, certo? Eu moro em Belo Jardim, ele é de Caruaru.
+
+92
+00:17:34,742 --> 00:17:47,582
+Caruaru, pronto. Aí vamos supor que seja nessa perspectiva do SUS, certo?
+Certo. Aí você coloca o seu cadáver lá, se tiver o teu endereço, né?
+
+93
+00:17:47,582 --> 00:17:58,958
+Tipo, Pedro... Aí tá lá o teu endereço, o bairro que você mora e vinculado ao cartãozinho do SUS
+e você já tem um cadastro e você vai no médico, o médico que preescreve o antidiabético.
+
+94
+00:17:59,918 --> 00:18:14,238
+Aí lá no aplicativo ele já pode sugerir. Ó, a farmácia SUS mais próxima da sua casa, a rede pública mais perto.
+É essa, tá? Ou a rede privada se você quiser comprar o medicamento é essa.
+
+95
+00:18:14,318 --> 00:18:23,678
+Também ele pode dar essa opção, entendeu? por uma questão de geografia de georreferenciamento.
+Vocês também também poderiam adicionar isso no aplicativo
+
+96
+00:18:23,678 --> 00:18:36,198
+porque aí ele poderia te falar aonde ter acesso ao medicamento mais perto
+tanto via SUS ou aonde ter via privada. Aí vocês começariam pela parte da aquisição e do acesso.
+
+97
+00:18:36,198 --> 00:18:45,918
+É a primeira etapa. Depois disso seria o cadastramento da prescrição
+cadastramento que eu digo assim fazer os inputs relacionados
+
+98
+00:18:46,318 --> 00:18:56,478
+prescrição daquele medicamento. E a terceira etapa é o acompanhamento da
+que a gente chama de adesão ao tratamento, que é isso, é os alertas já tomou, não tomou, né?
+
+99
+00:18:56,478 --> 00:19:09,918
+Isso também é uma questão, vamos supor lá, que alerta e 18 horas, né? Por exemplo, o
+avô do Gladstone, 18 horas ele tem que tomar o medicamento X, aí ele vai alertar,
+
+100
+00:19:09,918 --> 00:19:19,294
+aí ele vai questionar, seu fulano, né? Se puder até fazer essa coisa intimista de...
+de tratar pelo nome seria bacana né. É dá pra fazer isso.
+
+101
+00:19:19,294 --> 00:19:28,774
+Dá pra fazer isso. O senhor tomou seu medicamento das 18.
+Aí ele responde sim ou não. Não eu esqueci vou tomar agora.
+
+102
+00:19:28,774 --> 00:19:38,374
+Tá entendendo. E aí criar essa essa coisa realmente.
+Esse elo né. Dualística. Isso. Esse esse porque não é um aplicativo frio
+
+103
+00:19:38,374 --> 00:19:50,766
+aquela coisa tipo de olá olá tudo bem. E aí o que vocês podem fazer ver que bacana vocês podem.
+no fim das contas durante um mês gerar um relatório que
+
+104
+00:19:50,766 --> 00:19:58,166
+possivelmente poderia ser apresentado para o médico
+automaticamente tá entendendo porque esse relatório já diz
+
+105
+00:19:58,166 --> 00:20:08,066
+ó no dia vamos que paciente fome duas vezes ao dia né aí dia
+1 ele tomou as duas vezes dia 12 ele só tomou um porque mesmo
+
+106
+00:20:08,066 --> 00:20:17,462
+tendo alerta ele estava cochilando sei lá dia 3 tomou as duas
+Na hora que o paciente pudesse voltar ao médico ele podia levar
+
+107
+00:20:17,782 --> 00:20:28,942
+Gerar esse relatório em PDF porque o médico ia ter a noção
+da adesão ao tratamento de que se porque vamos supor se o paciente tiver
+
+108
+00:20:29,142 --> 00:20:44,062
+vamos por que seja de pertenção porque o Alzheimer é algo que não tem como a gente
+mensurar tão tão mais facilmente. adesão ao tratamento e a eficiência e eficácia do tratamento.
+
+109
+00:20:44,582 --> 00:20:51,542
+Então, se põe uma hipertensão mesmo, né? Se o paciente voltar e o médico
+Ué, sua pressão ainda está muito alterada.
+
+110
+00:20:51,902 --> 00:20:55,902
+E aí quando ele vai ver o relatório vai dizer
+mas também o senhor não tomou o medicamento direito.
+
+111
+00:20:55,902 --> 00:21:02,102
+Então ele consegue fazer essa correlação, tá entendendo?
+E ajuda no tratamento da rotação do paciente.
+
+112
+00:21:02,102 --> 00:21:14,974
+E também pode ser outro caso. O médico pode ver poxa, você tomou todos os dias,
+mas sua pressão continua alterada. Vamos fazer um ajuste de dose, aumentar a dose ou vamos trocar a classe terapeutica do medicamento,
+
+113
+00:21:14,974 --> 00:21:26,974
+inserir um outro medicamento aqui para potencializar, tá entendendo?
+Isso também seria uma ferramenta de informação para a equipe de saúde que acompanha paciente, entendeu?
+
+114
+00:21:26,974 --> 00:21:35,974
+A caixão de horário é muito importante, principalmente a caixão de desplugue antibiótico,
+que não pode atrasar, não pode... Sem dúvida, sem dúvida.
+
+115
+00:21:37,550 --> 00:21:50,390
+Sem dúvida e aí vocês podem como eu tava dizendo a vocês assim também aí seria bem bem bacana.
+Mas porque às vezes quando você sai do médico o médico não leva em consideração
+
+116
+00:21:50,390 --> 00:22:02,494
+o estilo de vida da pessoa como eu estou dizendo se eu sou uma pessoa que acordo cedo.
+eu durmo cedo então eu não posso fazer uma não posso abrir um horário que eu
+
+117
+00:22:02,494 --> 00:22:11,574
+vou ter que tomar um medicamento de meia noite pra mim é péssimo porque eu vou
+ter que acordar de meia noite. Para a pessoa que bebe? Isso, para tomar aquela dose
+
+118
+00:22:11,574 --> 00:22:23,974
+então até o aplicativo se ele for muito intuitivo nisso assim de pegar um perfil
+da pessoa e dizer opa ele acorda como eu falei ele geralmente é almoça 3 da tarde
+
+119
+00:22:23,974 --> 00:22:32,158
+tem jeito que almoça 3 da tarde Então, se ele tem que tomar um medicamento depois do almoço,
+não adianta eu colocar esse horário de meio-dia,
+
+120
+00:22:33,158 --> 00:22:39,398
+porque ele só vai almoçar às três da tarde, tá entendendo?
+Isso é algo que é muito relevante para a adesão a tratamento
+
+121
+00:22:39,398 --> 00:22:48,718
+e para a eficiência também de tratamento, entendeu?
+Então, o nosso objetivo de intuição, a intuitividade desse aplicativo,
+
+122
+00:22:48,718 --> 00:22:55,278
+vai ser o meu objetivo pessoal do Vô Vô Pedro,
+não pedir ajuda para mexer em um aplicativo.
+
+123
+00:22:55,566 --> 00:23:06,166
+Porque eu sei as limitações natural que tem qualquer idoso.
+E você sabe que ele pede ajuda por qualquer coisa.
+
+124
+00:23:06,166 --> 00:23:16,966
+E é o objetivo realmente. E eu gostei da ideia realmente.
+Pode falar agora, Cháudigo. Essa questão do horário é realmente algo muito importante.
+
+125
+00:23:16,966 --> 00:23:23,766
+Porque como ela estava comentando, por exemplo, meus avós,
+eles 3, 4 horas da manhã já estão acordados.
+
+126
+00:23:23,766 --> 00:23:33,030
+Exato. Eu vou no café da manhã. E aí pronto.
+Eu acabei de dar uma passadinha lá embaixo agora porque ele já queria se deitar pra
+
+127
+00:23:33,030 --> 00:23:40,630
+dormir. Eu tinha que colocar ele pra dormir.
+É bom ver o horário do paciente pra poder ajustar a medicação.
+
+128
+00:23:41,198 --> 00:23:52,758
+Não que a pessoa pode ser no início, né? Tipo assim, qual é o seu perfil, né?
+Aí você diz geralmente que horário você dorme, que horário você acorda,
+
+129
+00:23:52,758 --> 00:24:03,638
+que horário você almoça, porque a partir dessa anamnese, digamos assim, inicial, né?
+O próprio aplicativo pode sugerir os horários de tomada dos medicamentos
+
+130
+00:24:03,638 --> 00:24:11,038
+baseado na vida do paciente e não invertido.
+Porque se você inverter, a probabilidade de não ter adesão
+
+131
+00:24:11,152 --> 00:24:25,712
+muito alta. É tipo o cara não vai se dobrar o aplicativo, o aplicativo tem que se dobrar
+ele. Isso. É uma coisa que eu acho interessante nessa, por exemplo, nos aplicativos do Google
+
+132
+00:24:25,712 --> 00:24:35,210
+é que você muda o que você quer fazer. Isso, o...
+O objetivo é se moldar o cara, não ao contrário.
+
+133
+00:24:35,550 --> 00:24:49,830
+Tem, sem dúvida, sem dúvida. E acho que assim, eu falo isso porque só, por exemplo, eu tenho enxaqueca
+e aí eu baixei um aplicativo, né, que é My Grand Buddy, é tipo o amigo da enxaqueca, o nome.
+
+134
+00:24:50,734 --> 00:25:02,214
+E ele é fantástico porque ele por exemplo até para mim que sou consciente e orientada
+mas ele mostra figurinhas tipo assim para eu identificar quais são os meus gatilhos
+
+135
+00:25:02,854 --> 00:25:14,774
+o que é que me gatilha enxaqueca desidratação aí bota lá na carinha um cara meio seco tipo com
+um copo. Isso é interessante porque você começa e aí eu acho que vocês precisam muito
+
+136
+00:25:15,374 --> 00:25:24,370
+investir nisso assim das coisas e figuras sabe.
+Isso é importante, né? Visual, é importantíssimo, sabe?
+
+137
+00:25:24,370 --> 00:25:32,530
+Como o Gualtino mencionou, o próprio avô dele é analfabeto
+e ele não vai entender, isso eu até com muito pensei, tipo
+
+138
+00:25:32,530 --> 00:25:41,010
+um monte de sopa-lidetrina, eu quero resolver logo, eu não quero...
+Não adianta, é aquela coisa, se o medicamento é pra tomar depois do almoço
+
+139
+00:25:41,010 --> 00:25:52,714
+tem que estar lá o desenho do almoço, sabe?
+de noitinha a luz a luzinha isso inclusive assim pra gente que existem técnicas né é de justamente
+
+140
+00:25:52,714 --> 00:26:07,694
+na abordagem farmacêutica de usuários que são analfabetos de usar muito essa cartelinha né olha
+né você marca marca o xzinho né no no sol marca o xzinho no almoço para facilitar o paciente fazer
+
+141
+00:26:07,694 --> 00:26:19,550
+aquela e assim a gente paciente idoso tem uma grande questão Gladstone vai saber.
+que é o que a gente chama de polifarmácia. O que é polifarmácia? São pacientes que tomam
+
+142
+00:26:19,550 --> 00:26:33,630
+inúmeros medicamentos. Então ele toma o de hipertensão, o de diabetes, aí ele tem
+problema do coração, o do coração ele toma, toma do colesterol e toma o da tireoide. Toma cinco.
+
+143
+00:26:33,630 --> 00:26:47,654
+O meu avô está tomando 11. 11. E bem possivelmente...
+Tomou uns milhares. Entende então assim, o paciente realmente fica, sabe por quê?
+
+144
+00:26:47,654 --> 00:27:00,814
+Porque para cada médico que ele vai, o médico só enxerga uma fatia dele.
+O cardiologista só enxerga o coração. O de Alzheimer possivelmente é um geriatra, ele é o mais sensível e é o que enxerga o idoso como um todo.
+
+145
+00:27:00,814 --> 00:27:08,174
+Mas aí ele vai no endócrino, o da tireoide.
+E cada um que passa o seu medicamento e o paciente que se lasca para juntar tudo.
+
+146
+00:27:08,654 --> 00:27:20,654
+numa sacola e não sabe como vai. Inclusive, um das medicações que ele está tomando foi o Geriatra que praçou, porque
+um dos remédios que um dos outros médicos tinha passado estava atacando o estômago
+
+147
+00:27:20,654 --> 00:27:30,854
+dele, ele estava tendo muita azia. Aí já passou um remédio justamente para aliviar.
+Desculpa. Vai, está gravando, pai. Foi o que eu falei, está gravando, sai.
+
+148
+00:27:30,854 --> 00:27:43,278
+Desculpa, Gladys Hanna. Aí teve um que irritou o estômago.
+Foi, aí ele passou uma medicação para poder ajudar justamente nessa questão do estômago dele.
+
+149
+00:27:43,278 --> 00:27:58,798
+Isso, aí insere mais um, né? Já é mais um. É, aí tá com dola, aí toma um medicamento pra dola, aí ele é constipante, aí tá constipante, passa e assim vai.
+E aí é como eu falo, então paciente, polifarmácia, né?
+
+150
+00:27:59,246 --> 00:28:10,406
+com que usa diversos medicamentos. Aí tipo se o aplicativo de vocês vingasse da uma startup me chame que eu sou
+arateca e a gente insere o que é que interage com cada coisa os horários
+
+151
+00:28:10,406 --> 00:28:18,426
+que tem que ser separados um do outro. Porque isso é a nossa área.
+Não é um paciente desse como seu avô que toma 11 medicamentos.
+
+152
+00:28:18,786 --> 00:28:32,094
+Liga só de golcada. Quer mesmo um paciente que toma 11 medicamentos.
+Assim eu duvido que alguém tenha sentado. para fazer uma análise de todos esses medicamentos e ver qual interage com qual
+
+153
+00:28:33,494 --> 00:28:49,378
+quais os melhores horários para distanciar um do outro.
+Isso é a realidade do mundo. Enfim então. num futuro próximo isso poderia também ser inserido na hora que você faz o input de todos os medicamentos
+
+154
+00:28:49,378 --> 00:29:03,978
+existem bases de dados na verdade inclusive utilizado muito em hospital que é quando a gente faz a análise da
+prescrição e a gente faz o input de todos esses medicamentos o próprio a própria base de dados ela cruza essas
+
+155
+00:29:03,978 --> 00:29:19,232
+informações e fala para a gente as interações potenciais porque quem interage interage que é químico junto com o
+que são potenciais, é potencialmente fatal, é muito arriscado, então é melhor não utilizar,
+
+156
+00:29:19,232 --> 00:29:33,712
+mas isso é uma outra coisa. Eu acho que dá pra fazer essa pesquisa, até relativamente fácil fazer essa pesquisa
+na internet, de dar bula do remédio, porque geralmente tem avisando, né, com as substâncias,
+
+157
+00:29:33,712 --> 00:29:43,726
+tem um perigo de interação com o remédio ou com outro.
+É, só que assim... Vocês não têm ideia da quantidade de especialidades farmacêuticas.
+
+158
+00:29:43,726 --> 00:29:52,686
+Isso é outra coisa que vocês precisam pensar.
+Porque o ideal é que não seja o paciente que vai inserir o medicamento.
+
+159
+00:29:52,686 --> 00:30:04,566
+O ideal é que você já tenha essa base. Eu posso inclusive mandar para vocês uma tabela
+de todas as especialidades farmacêuticas que são vendidas no Brasil.
+
+160
+00:30:04,782 --> 00:30:13,102
+porque aí você é uma tabela Excel é a tabela da SEMED que é a Câmara
+Reguladora de Medicamentos então para qualquer medicamento ser comercializado
+
+161
+00:30:13,102 --> 00:30:23,382
+no Brasil ele precisa estar nessa tabela e aí eu acho que vai ser fácil porque
+porque aí se você é vamos supor que não seja por voz essa parte vocês podem
+
+162
+00:30:23,382 --> 00:30:35,434
+até fazer híbrido que pode ser input né de...
+É porque aí tipo já vai estar lá na tabelinha se eu botar lá ambroxol cliquei
+
+163
+00:30:35,434 --> 00:30:46,614
+o ambroxol já aparece lá ambroxol 50mg premium e lá lá lá
+porque como são nomes difíceis de falar e concentrações diferentes um é
+
+164
+00:30:46,614 --> 00:30:56,858
+comprimido outra xaropeu outra solução oral outra enema
+Aí pode ser que se não usar uma base, fique um samba do crioulo doido e o sistema se perca.
+
+165
+00:30:56,858 --> 00:31:07,278
+Aí na minha cabeça a melhor base de dados seria a tabela de Excel que eu posso mandar para vocês
+e vocês inseririam aí, maravilha, no aplicativo.
+
+166
+00:31:07,278 --> 00:31:15,618
+Ajudaria muito. De tudo que é medicamento. Por exemplo, Deepirona, vai ter um trilhão de Deepironas,
+porque tem a Nova Algina, que é o de referência,
+
+167
+00:31:15,618 --> 00:31:25,398
+tem a Deepirona da Medley. Aí, tipo, vocês veem como é o melhor, mas vão ter vários.
+Aí tem solução oral, comprimido, injetável, todos os tipos, sabe?
+
+168
+00:31:25,398 --> 00:31:36,958
+Já tudo bem discriminadinho. Sim, maravilha.
+Tipo, você falou uma coisa interessante. É que a gente fez um mapa de atores...
+
+169
+00:31:37,934 --> 00:31:49,734
+Os principais seriam as pessoas que tomam remédio controlado, que tomam, que são idosos, etc.
+Mas os indiretos, os diretos, perdão, são os familiares, os amigos.
+
+170
+00:31:49,734 --> 00:32:03,054
+E essas pessoas podem fazer o papel de, no fim das contas, nesse, vamos assim, nesse papel,
+tirar um pouco do idoso e deixar, ó, deixa que eu faço, tudo tranquilo.
+
+171
+00:32:03,054 --> 00:32:15,398
+Pegar sua respeita e... vocês podem colocar dois atores aí nessa etapa. Como eu falei, o próprio
+profissional farmacêutico, que ele pode fazer esse input inicial e ajudar.
+
+172
+00:32:15,398 --> 00:32:27,038
+Eu digo isso porque assim, vamos supor, como é que funciona aqui? O paciente
+descobrir o que é diabético, certo? Ele vai ter acesso ao glicosímetro, que é
+
+173
+00:32:27,038 --> 00:32:34,446
+aquela maquininha que você pode mensurar glicose no sangue.
+Primeiro contato que ele tem com o glicosímetro é com o farmacêutico.
+
+174
+00:32:34,446 --> 00:32:46,006
+O farmacêutico vai ensinar ele a usar aquele glicosímetro, a medir.
+E vai dar para ele aquele glicosímetro. Todo mês ele vai pegar as tirinhas, porque a tirinha é descartável.
+
+175
+00:32:46,006 --> 00:32:55,166
+Mas essa primeira orientação, essa primeira abordagem é do profissional farmacêutico.
+Então vocês podem inserir o profissional da área de saúde nesse primeiro input.
+
+176
+00:32:55,166 --> 00:33:05,230
+Como direto. Isso. E o segundo seria o cuidador.
+que é esse responsável. Vocês podem usar essa palavra, o cuidador, que é a pessoa responsável
+
+177
+00:33:05,230 --> 00:33:16,550
+por aquele idoso. Eu acho, sabe, que seria, como vocês já estão com esse mote, vocês podem
+pensar realmente qual é o público alvo de vocês, pacientes idosos.
+
+178
+00:33:18,030 --> 00:33:27,390
+Porque vocês moldam o aplicativo na perspectiva do paciente idoso.
+Para facilitar para ele. Isso, e vocês também.
+
+179
+00:33:27,390 --> 00:33:35,470
+É assim, quanto mais recorte vocês fizerem no projeto, mais redondinho ele vai ficar.
+Porque às vezes a gente quer abarcar o mundo, né?
+
+180
+00:33:35,470 --> 00:33:49,702
+Mas quanto mais você fica envolvido, aí é mais difícil de você fazer algo mais robusto.
+Então o público ao lado de vocês é... fantástico. Por quê? Porque são usuários geralmente que já têm uma
+
+181
+00:33:49,702 --> 00:34:01,382
+deficiência de cognição naturalmente por causa da idade e porque são
+polifarmácia. Então o público Alva é perfeito porque são pacientes que têm
+
+182
+00:34:01,382 --> 00:34:16,326
+potenciais complicadores muito grandes em relação aos outros usuários de
+medicamentos. Entendeu? Além disso, também entra a questão da própria visão, que já começa a ficar debilitada.
+
+183
+00:34:16,326 --> 00:34:23,926
+Muitos também não têm um nível de escolaridade muito alto.
+a cuidar de visual exatamente a cuidar visual é menor então na hora que fazer
+
+184
+00:34:23,926 --> 00:34:36,606
+o aplicativo façam com poucas informações mais figuras
+se que é sequinho exato porque se botar muita coisa ali não vai adiantar.
+
+185
+00:34:37,046 --> 00:34:47,966
+Não vai ter êxito entendeu. Então quanto mais intuitivo nesse sentido de figura de poucas
+poucas palavras muito texto e tal que isso não vai.
+
+186
+00:34:49,680 --> 00:35:03,240
+Tem um celular que ele faz uma propaganda aqui, ele é o Babox, né, que é para idosos, não sei se já ouviu.
+Que a ureterona se desce de tamanho assim, ó, ele fala, né, é um celular simples, né, com pouca, mas com números grandes,
+
+187
+00:35:03,240 --> 00:35:14,280
+um númerozinho do alerta lá fácil, então tem que pensar nessa ideia de facilidade de comunicação, né, com esse público-alvo.
+
+188
+00:35:18,254 --> 00:35:25,254
+Então eu creio que seja somente isso mesmo, não é Pedro?
+Ah sim, caso não tenha mais uma pergunta, eu questiono.
+
+189
+00:35:25,254 --> 00:35:35,254
+A gente pode encerrar por aqui. É, muito obrigado pela ajuda, dona Karine.
+Por nada, que é isso. E é assim, gente, eu fico à disposição de vocês, tá?
+
+190
+00:35:35,254 --> 00:35:49,174
+É... Pedinho, depois que me manda o teu e-mail, que amanhã mesmo eu mando essa tabela em Excel, porque eu acho que já é... tipo...
+muito bacana vocês usarem uma base de dados dessa inclusive a base da Anvisa
+
+191
+00:35:49,174 --> 00:36:03,374
+né então já é algo de credibilidade com credibilidade altíssimo é exatamente
+exatamente ok então tá certo obrigado a você
+
+192
+00:36:03,374 --> 00:36:14,614
+obrigado de novo, boa noite, tá certo? Obrigado
+Agora eu vou gerar com o Gladstone aqui a gravação.
+
+193
+00:36:14,974 --> 00:36:25,262
+Perfeito, tá bom. Tchau, gente. Boa noite. Tchau.
+E aí, Gladinho? Eu não tenho a mínima ideia, Pedro.
+
+194
+00:36:25,262 --> 00:36:32,902
+Cara... Eu acho que deve ter algum botão de parar a gravação e aí deve ter algum botão de
+baixar. O que tá para ela?
+

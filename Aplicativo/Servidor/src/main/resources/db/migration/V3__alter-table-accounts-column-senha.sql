@@ -1,2 +1,0 @@
-ALTER TABLE accounts
-MODIFY COLUMN senha VARCHAR(255);
