@@ -57,7 +57,7 @@ public class UserAccountController {
     @Transactional
     public ResponseEntity remover(@PathVariable Long id) {
         var usuario = repository.getReferenceById(id);
-        usuario.excluir();
+        repository.delete(usuario);
         return ResponseEntity.noContent().build();
     }
 

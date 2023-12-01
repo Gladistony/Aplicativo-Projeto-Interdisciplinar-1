@@ -32,16 +32,16 @@ public class UserAccount implements UserDetails {
     private Long id;
     private String nome;
     private LocalDate dataNascimento;
+    private byte[] perfilFoto;
     private String login;
     private String senha;
-    private Boolean ativo;
 
     public UserAccount(UserRegistrationData user) {
         this.nome = user.nome();
         this.login = user.email();
         this.senha = user.senha();
         this.dataNascimento = user.dataNascimento();
-        this.ativo = true;
+        this.perfilFoto = user.perfilFoto();
     }
 
    
@@ -51,10 +51,8 @@ public class UserAccount implements UserDetails {
             this.nome = dados.nome();
         if (dados.dataNascimento() != null)
             this.dataNascimento = dados.dataNascimento();
-    }
-
-    public void excluir() {
-        this.ativo = false;
+        if (dados.fotoPerfil() != null)
+            this.perfilFoto = dados.fotoPerfil();
     }
 
     @Override
@@ -89,7 +87,7 @@ public class UserAccount implements UserDetails {
 
     @Override
     public boolean isEnabled() {
-        return this.ativo;
+        return true;
     }
 
 }
