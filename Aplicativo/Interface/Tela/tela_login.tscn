@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://20bund8hlauh"]
+
+[ext_resource type="FontFile" uid="uid://b3j2yi165hne7" path="res://Recursos/Fontes/Bestoom Bold.ttf" id="1_2g1fk"]
+[ext_resource type="Script" path="res://Script/tela_login.gd" id="1_4150r"]
+
+[node name="Tela Login" type="Node2D"]
+script = ExtResource("1_4150r")
+
+[node name="Entrar" type="Button" parent="."]
+offset_left = 320.0
+offset_top = 1544.0
+offset_right = 771.0
+offset_bottom = 1670.0
+theme_override_fonts/font = ExtResource("1_2g1fk")
+theme_override_font_sizes/font_size = 40
+text = "Entrar
+"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 320.0
+offset_top = 128.0
+offset_right = 755.0
+offset_bottom = 248.0
+theme_override_fonts/font = ExtResource("1_2g1fk")
+theme_override_font_sizes/font_size = 120
+text = "Login"
+horizontal_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="."]
+offset_left = 200.0
+offset_top = 456.0
+offset_right = 888.0
+offset_bottom = 584.0
+theme_override_fonts/font = ExtResource("1_2g1fk")
+theme_override_font_sizes/font_size = 40
+placeholder_text = "Usuario"
+
+[node name="LineEdit3" type="LineEdit" parent="."]
+offset_left = 200.0
+offset_top = 712.0
+offset_right = 888.0
+offset_bottom = 840.0
+theme_override_fonts/font = ExtResource("1_2g1fk")
+theme_override_font_sizes/font_size = 40
+placeholder_text = "Senha"
+secret = true
+
+[connection signal="pressed" from="Entrar" to="." method="_on_entrar_pressed"]

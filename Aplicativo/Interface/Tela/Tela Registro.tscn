@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3fq0pvg8eeun"]
+
+[ext_resource type="FontFile" uid="uid://b3j2yi165hne7" path="res://Recursos/Fontes/Bestoom Bold.ttf" id="1_8btm2"]
+[ext_resource type="Script" path="res://Script/Tela Registro.gd" id="1_sk7tt"]
+
+[node name="Tela Registro" type="Node2D"]
+script = ExtResource("1_sk7tt")
+
+[node name="Cadastro" type="Button" parent="."]
+offset_left = 320.0
+offset_top = 1544.0
+offset_right = 771.0
+offset_bottom = 1670.0
+theme_override_fonts/font = ExtResource("1_8btm2")
+theme_override_font_sizes/font_size = 40
+text = "Criar
+"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 320.0
+offset_top = 128.0
+offset_right = 755.0
+offset_bottom = 248.0
+theme_override_fonts/font = ExtResource("1_8btm2")
+theme_override_font_sizes/font_size = 120
+text = "Cadastro"
+
+[node name="LineEdit" type="LineEdit" parent="."]
+offset_left = 200.0
+offset_top = 456.0
+offset_right = 888.0
+offset_bottom = 584.0
+theme_override_fonts/font = ExtResource("1_8btm2")
+theme_override_font_sizes/font_size = 40
+placeholder_text = "Usuario"
+
+[node name="LineEdit2" type="LineEdit" parent="."]
+offset_left = 200.0
+offset_top = 704.0
+offset_right = 888.0
+offset_bottom = 832.0
+theme_override_fonts/font = ExtResource("1_8btm2")
+theme_override_font_sizes/font_size = 40
+placeholder_text = "Email"
+
+[node name="LineEdit3" type="LineEdit" parent="."]
+offset_left = 192.0
+offset_top = 960.0
+offset_right = 880.0
+offset_bottom = 1088.0
+theme_override_fonts/font = ExtResource("1_8btm2")
+theme_override_font_sizes/font_size = 40
+placeholder_text = "Senha"
+secret = true
+
+[connection signal="pressed" from="Cadastro" to="." method="_on_cadastro_pressed"]
