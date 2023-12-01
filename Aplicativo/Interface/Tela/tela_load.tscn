@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://co7c4tnvn7bjp"]
+
+[ext_resource type="Texture2D" uid="uid://civaueis2y1gr" path="res://Recursos/logo azul.png" id="1_kx6up"]
+[ext_resource type="Script" path="res://Script/tela_load.gd" id="1_kypfu"]
+[ext_resource type="FontFile" uid="uid://b3j2yi165hne7" path="res://Recursos/Fontes/Bestoom Bold.ttf" id="2_2xgiu"]
+
+[node name="Tela Load" type="Node2D"]
+script = ExtResource("1_kypfu")
+
+[node name="LogoAzul" type="Sprite2D" parent="."]
+position = Vector2(544, 570)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_kx6up")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(0, 130)
+
+[node name="Login" type="Button" parent="Node2D"]
+offset_left = 314.0
+offset_top = 776.0
+offset_right = 765.0
+offset_bottom = 902.0
+theme_override_fonts/font = ExtResource("2_2xgiu")
+theme_override_font_sizes/font_size = 40
+text = "Login"
+
+[node name="EntrarSemCadastro" type="Button" parent="Node2D"]
+offset_left = 314.0
+offset_top = 963.0
+offset_right = 765.0
+offset_bottom = 1089.0
+theme_override_fonts/font = ExtResource("2_2xgiu")
+theme_override_font_sizes/font_size = 40
+text = "Entrar sem cadastro"
+
+[node name="Registrar" type="Button" parent="Node2D"]
+offset_left = 319.0
+offset_top = 1155.0
+offset_right = 770.0
+offset_bottom = 1281.0
+theme_override_fonts/font = ExtResource("2_2xgiu")
+theme_override_font_sizes/font_size = 40
+text = "Registrar"
+
+[connection signal="pressed" from="Node2D/Login" to="." method="_on_login_pressed"]
+[connection signal="pressed" from="Node2D/EntrarSemCadastro" to="." method="_on_entrar_sem_cadastro_pressed"]
+[connection signal="pressed" from="Node2D/Registrar" to="." method="_on_registrar_pressed"]

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuehwp2e65jry"]
+
+[ext_resource type="Texture2D" uid="uid://civaueis2y1gr" path="res://Recursos/logo azul.png" id="1_6aqne"]
+[ext_resource type="Texture2D" uid="uid://dvyb0yadkaci6" path="res://Recursos/Modelo 2d.png" id="2_ri7u8"]
+
+[node name="TelaPrincipal" type="Node2D"]
+
+[node name="LogoAzul" type="Sprite2D" parent="."]
+position = Vector2(536, 560)
+texture = ExtResource("1_6aqne")
+
+[node name="Modelo2d" type="Sprite2D" parent="."]
+position = Vector2(680, 1440)
+texture = ExtResource("2_ri7u8")
