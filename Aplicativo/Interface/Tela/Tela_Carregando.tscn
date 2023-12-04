@@ -1,0 +1,82 @@
+[gd_scene load_steps=9 format=3 uid="uid://b6v5lkrmdhgkc"]
+
+[ext_resource type="Texture2D" uid="uid://civaueis2y1gr" path="res://Recursos/logo azul.png" id="1_0rwfb"]
+[ext_resource type="Script" path="res://Script/Tela_Carregando.gd" id="1_fi5sq"]
+[ext_resource type="Texture2D" uid="uid://dkc8tgo0se7rl" path="res://Recursos/load circulo.png" id="2_vtr08"]
+
+[sub_resource type="Gradient" id="Gradient_yhkpw"]
+offsets = PackedFloat32Array(0, 0.0060241)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_r4s8w"]
+gradient = SubResource("Gradient_yhkpw")
+
+[sub_resource type="Animation" id="Animation_06mmd"]
+resource_name = "Load"
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LoadCirculo:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0472, 2.0944, 3.14159, 4.18879, 5.23599, 6.28319]
+}
+
+[sub_resource type="Animation" id="Animation_djeyw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LoadCirculo:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_obmkg"]
+_data = {
+"Load": SubResource("Animation_06mmd"),
+"RESET": SubResource("Animation_djeyw")
+}
+
+[node name="TelaCarregando" type="Node2D"]
+script = ExtResource("1_fi5sq")
+
+[node name="LogoAzul" type="Sprite2D" parent="."]
+position = Vector2(540, 712)
+scale = Vector2(1.2, 1.132)
+texture = ExtResource("1_0rwfb")
+metadata/_edit_lock_ = true
+
+[node name="LoadCirculo" type="Sprite2D" parent="."]
+position = Vector2(543, 1429)
+scale = Vector2(0.322, 0.322)
+texture = ExtResource("2_vtr08")
+metadata/_edit_lock_ = true
+
+[node name="Fundo" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(544, 957.875)
+scale = Vector2(4.25, 1924.25)
+texture = SubResource("GradientTexture1D_r4s8w")
+metadata/_edit_lock_ = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="AnimacaoRodando" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_obmkg")
+}
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

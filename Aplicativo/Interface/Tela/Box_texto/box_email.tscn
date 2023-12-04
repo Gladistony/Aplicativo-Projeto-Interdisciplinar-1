@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfnsdy6fekrfm"]
+
+[ext_resource type="Texture2D" uid="uid://bf0qtg7qjwaq1" path="res://Recursos/Box/box_email.png" id="1_xgc53"]
+[ext_resource type="FontFile" uid="uid://cxj6bbo60xjk4" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="2_vf6lh"]
+
+[node name="BoxEmail" type="Node2D"]
+
+[node name="Email" type="Sprite2D" parent="."]
+scale = Vector2(1.71867, 1.65789)
+texture = ExtResource("1_xgc53")
+centered = false
+
+[node name="Usuario" type="LineEdit" parent="Email"]
+offset_left = 70.985
+offset_top = 6.63492
+offset_right = 396.985
+offset_bottom = 70.6349
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_fonts/font = ExtResource("2_vf6lh")
+theme_override_font_sizes/font_size = 25
+placeholder_text = "Digite o seu email"
+flat = true

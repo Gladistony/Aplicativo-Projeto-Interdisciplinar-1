@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://djva6mi80ee1o"]
+
+[ext_resource type="Texture2D" uid="uid://brilndjiqeygi" path="res://Recursos/Box/box_senha.png" id="1_6lmfe"]
+[ext_resource type="FontFile" uid="uid://cxj6bbo60xjk4" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="2_f4ong"]
+[ext_resource type="Script" path="res://Script/box_senha_button.gd" id="2_o16o5"]
+[ext_resource type="Shader" path="res://Recursos/Cinza.gdshader" id="4_iedcl"]
+[ext_resource type="Texture2D" uid="uid://bug2i5isgku38" path="res://Recursos/Box/open_eye.png" id="5_8l8b8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hkcbg"]
+shader = ExtResource("4_iedcl")
+
+[node name="BoxEmail" type="Node2D"]
+
+[node name="fundo" type="Sprite2D" parent="."]
+scale = Vector2(1.71867, 1.65789)
+texture = ExtResource("1_6lmfe")
+centered = false
+script = ExtResource("2_o16o5")
+
+[node name="Usuario" type="LineEdit" parent="fundo"]
+offset_left = 71.0
+offset_top = 7.0
+offset_right = 344.0
+offset_bottom = 71.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_fonts/font = ExtResource("2_f4ong")
+theme_override_font_sizes/font_size = 25
+placeholder_text = "Digite sua senha"
+flat = true
+secret = true
+
+[node name="Olho" type="Sprite2D" parent="fundo"]
+material = SubResource("ShaderMaterial_hkcbg")
+position = Vector2(367.726, 38.6033)
+scale = Vector2(0.0565929, 0.0805914)
+texture = ExtResource("5_8l8b8")
+
+[node name="Visibilidade" type="Button" parent="fundo"]
+offset_left = 349.107
+offset_top = 19.3016
+offset_right = 386.107
+offset_bottom = 58.3016
+flat = true
+
+[connection signal="pressed" from="fundo/Visibilidade" to="fundo" method="_on_visibilidade_pressed"]

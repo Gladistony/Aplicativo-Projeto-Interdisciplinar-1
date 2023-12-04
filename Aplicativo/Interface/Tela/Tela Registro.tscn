@@ -1,56 +1,55 @@
-[gd_scene load_steps=3 format=3 uid="uid://c3fq0pvg8eeun"]
+[gd_scene load_steps=7 format=3 uid="uid://c3fq0pvg8eeun"]
 
-[ext_resource type="FontFile" uid="uid://b3j2yi165hne7" path="res://Recursos/Fontes/Bestoom Bold.ttf" id="1_8btm2"]
 [ext_resource type="Script" path="res://Script/Tela Registro.gd" id="1_sk7tt"]
+[ext_resource type="FontFile" uid="uid://cxj6bbo60xjk4" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="2_816ql"]
+[ext_resource type="PackedScene" uid="uid://ds1k3mh0sc3au" path="res://Tela/Box_texto/box_usuario.tscn" id="3_g1uy8"]
+[ext_resource type="PackedScene" uid="uid://bfnsdy6fekrfm" path="res://Tela/Box_texto/box_email.tscn" id="4_bsysu"]
+
+[sub_resource type="Gradient" id="Gradient_l12ne"]
+offsets = PackedFloat32Array(0, 0.0060241)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_acl78"]
+gradient = SubResource("Gradient_l12ne")
 
 [node name="Tela Registro" type="Node2D"]
 script = ExtResource("1_sk7tt")
 
-[node name="Cadastro" type="Button" parent="."]
-offset_left = 320.0
-offset_top = 1544.0
-offset_right = 771.0
-offset_bottom = 1670.0
-theme_override_fonts/font = ExtResource("1_8btm2")
-theme_override_font_sizes/font_size = 40
-text = "Criar
-"
+[node name="Fundo" type="Sprite2D" parent="."]
+z_index = -1
+scale = Vector2(4.25, 1924.25)
+texture = SubResource("GradientTexture1D_acl78")
+centered = false
+metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="."]
-offset_left = 320.0
-offset_top = 128.0
-offset_right = 755.0
-offset_bottom = 248.0
-theme_override_fonts/font = ExtResource("1_8btm2")
-theme_override_font_sizes/font_size = 120
-text = "Cadastro"
+[node name="Label-Login" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 208.0
+offset_right = 1088.0
+offset_bottom = 400.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_816ql")
+theme_override_font_sizes/font_size = 50
+text = "Cadastrar"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
-[node name="LineEdit" type="LineEdit" parent="."]
-offset_left = 200.0
-offset_top = 456.0
-offset_right = 888.0
-offset_bottom = 584.0
-theme_override_fonts/font = ExtResource("1_8btm2")
-theme_override_font_sizes/font_size = 40
-placeholder_text = "Usuario"
+[node name="Botão Voltar" type="Button" parent="."]
+offset_left = 208.0
+offset_top = 272.0
+offset_right = 244.0
+offset_bottom = 351.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_816ql")
+theme_override_font_sizes/font_size = 50
+text = "<"
+flat = true
+metadata/_edit_use_anchors_ = true
 
-[node name="LineEdit2" type="LineEdit" parent="."]
-offset_left = 200.0
-offset_top = 704.0
-offset_right = 888.0
-offset_bottom = 832.0
-theme_override_fonts/font = ExtResource("1_8btm2")
-theme_override_font_sizes/font_size = 40
-placeholder_text = "Email"
+[node name="BoxEmail" parent="." instance=ExtResource("3_g1uy8")]
+position = Vector2(208, 496)
 
-[node name="LineEdit3" type="LineEdit" parent="."]
-offset_left = 192.0
-offset_top = 960.0
-offset_right = 880.0
-offset_bottom = 1088.0
-theme_override_fonts/font = ExtResource("1_8btm2")
-theme_override_font_sizes/font_size = 40
-placeholder_text = "Senha"
-secret = true
+[node name="BoxEmail2" parent="." instance=ExtResource("4_bsysu")]
+position = Vector2(208, 664)
 
-[connection signal="pressed" from="Cadastro" to="." method="_on_cadastro_pressed"]
+[connection signal="pressed" from="Botão Voltar" to="." method="_on_botão_voltar_pressed"]

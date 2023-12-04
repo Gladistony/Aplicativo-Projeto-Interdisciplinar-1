@@ -11,15 +11,16 @@ config_version=5
 [application]
 
 config/name="Interface"
-run/main_scene="res://Tela/tela_load.tscn"
+run/main_scene="res://Tela/Tela_Carregando.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://icone app.png"
 
 [display]
 
 window/size/viewport_width=1080
 window/size/viewport_height=1920
-window/stretch/aspect="expand"
+window/size/mode=3
+window/stretch/mode="viewport"
 window/handheld/orientation=1
 
 [rendering]
