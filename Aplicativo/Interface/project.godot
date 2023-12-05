@@ -25,7 +25,7 @@ window/handheld/orientation=1
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/calendar_button/plugin.cfg")
+enabled=PackedStringArray()
 
 [rendering]
 
