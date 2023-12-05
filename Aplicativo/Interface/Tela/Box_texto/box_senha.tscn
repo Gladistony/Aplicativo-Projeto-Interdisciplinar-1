@@ -9,7 +9,7 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hkcbg"]
 shader = ExtResource("4_iedcl")
 
-[node name="BoxEmail" type="Node2D"]
+[node name="BoxSenha" type="Node2D"]
 
 [node name="fundo" type="Sprite2D" parent="."]
 scale = Vector2(1.71867, 1.65789)

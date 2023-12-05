@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dn3338ikol3x"]
+
+[ext_resource type="Script" path="res://Script/Botão_Check.gd" id="1_r50jl"]
+[ext_resource type="Texture2D" uid="uid://cawc3lb614lip" path="res://Recursos/Box/checkbox-unchecked.png" id="2_ccltt"]
+
+[node name="BotãoCheck" type="Node2D"]
+script = ExtResource("1_r50jl")
+
+[node name="ButtonCheck" type="TextureButton" parent="."]
+offset_right = 800.0
+offset_bottom = 800.0
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("2_ccltt")
+
+[connection signal="pressed" from="ButtonCheck" to="." method="_on_button_check_pressed"]

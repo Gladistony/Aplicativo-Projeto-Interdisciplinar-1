@@ -20,4 +20,5 @@ theme_override_colors/font_placeholder_color = Color(0.470588, 0.470588, 0.47058
 theme_override_fonts/font = ExtResource("2_vf6lh")
 theme_override_font_sizes/font_size = 25
 placeholder_text = "Digite o seu email"
+virtual_keyboard_type = 5
 flat = true

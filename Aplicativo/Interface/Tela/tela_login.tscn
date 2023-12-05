@@ -6,11 +6,11 @@
 [ext_resource type="FontFile" uid="uid://cxj6bbo60xjk4" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="4_o478l"]
 [ext_resource type="Texture2D" uid="uid://cyl7okkw6bpb" path="res://Recursos/button base.png" id="5_yipsd"]
 
-[sub_resource type="Gradient" id="Gradient_bapd4"]
+[sub_resource type="Gradient" id="Gradient_i5463"]
 offsets = PackedFloat32Array(0, 0.0060241)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_ay4y1"]
-gradient = SubResource("Gradient_bapd4")
+gradient = SubResource("Gradient_i5463")
 
 [node name="Tela Login" type="Node2D"]
 script = ExtResource("1_4150r")
@@ -89,7 +89,7 @@ offset_bottom = 351.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_o478l")
 theme_override_font_sizes/font_size = 50
-text = "<"
+text = "   <    "
 flat = true
 metadata/_edit_use_anchors_ = true
 
