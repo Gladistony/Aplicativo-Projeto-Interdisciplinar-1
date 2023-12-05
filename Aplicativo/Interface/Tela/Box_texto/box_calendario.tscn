@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://wx5whhqgusvp"]
+
+[ext_resource type="Texture2D" uid="uid://b8wgwmq8r46ik" path="res://Recursos/Box/box_calendario.png" id="1_2s2h8"]
+[ext_resource type="FontFile" uid="uid://cxj6bbo60xjk4" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="2_g2w7j"]
+
+[node name="BoxCalendario" type="Node2D"]
+
+[node name="Email" type="Sprite2D" parent="."]
+scale = Vector2(1.71867, 1.65789)
+texture = ExtResource("1_2s2h8")
+centered = false
+
+[node name="Data_Edit" type="LineEdit" parent="Email"]
+offset_left = 70.985
+offset_top = 6.63492
+offset_right = 396.985
+offset_bottom = 70.6349
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/font_uneditable_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_g2w7j")
+theme_override_font_sizes/font_size = 25
+placeholder_text = "Data de Nascimento"
+max_length = 8
+virtual_keyboard_type = 2
+flat = true

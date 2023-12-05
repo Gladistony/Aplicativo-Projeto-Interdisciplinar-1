@@ -1,15 +1,15 @@
 extends Node2D
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func _on_botão_voltar_pressed():
+	get_tree().change_scene_to_file("res://Tela/tela_load.tscn")
 
 
-func _on_cadastro_pressed():
+func _on_botão_registro_pressed():
+	get_tree().change_scene_to_file("res://Tela/tela_login.tscn")
+
+
+func _on_login_pressed():
 	get_tree().change_scene_to_file("res://Tela/tela_principal.tscn")

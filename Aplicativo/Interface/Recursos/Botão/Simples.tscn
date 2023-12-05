@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cojj4v3w6fto"]
+
+[ext_resource type="Texture2D" uid="uid://cyl7okkw6bpb" path="res://Recursos/button base.png" id="1_8ofl3"]
+[ext_resource type="FontFile" uid="uid://cxj6bbo60xjk4" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="2_5m886"]
+
+[node name="BotãoSimples" type="Node2D"]
+
+[node name="Login" type="TextureButton" parent="."]
+offset_right = 451.0
+offset_bottom = 126.0
+texture_normal = ExtResource("1_8ofl3")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Login"]
+layout_mode = 0
+offset_right = 451.0
+offset_bottom = 126.0
+theme_override_fonts/font = ExtResource("2_5m886")
+theme_override_font_sizes/font_size = 50
+text = "Entrar"
+horizontal_alignment = 1
+vertical_alignment = 1
