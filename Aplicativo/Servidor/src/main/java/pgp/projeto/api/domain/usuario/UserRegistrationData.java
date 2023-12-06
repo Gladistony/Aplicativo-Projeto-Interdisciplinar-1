@@ -5,8 +5,6 @@ import java.time.LocalDate;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-
 
 public record UserRegistrationData(
 
@@ -20,9 +18,10 @@ public record UserRegistrationData(
     @NotBlank
     String senha,
 
-    @NotNull
-    LocalDate dataNascimento
+    LocalDate dataNascimento,
 
+    byte[] perfilFoto
+    
        ) {
 
 }
