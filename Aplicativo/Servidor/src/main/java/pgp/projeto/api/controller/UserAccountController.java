@@ -4,7 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -55,11 +57,21 @@ public class UserAccountController {
     
     @DeleteMapping("/{id}")
     @Transactional
-    public ResponseEntity remover(@PathVariable Long id) {
+    public ResponseEntity remover(@PathVariable Long id, Authentication authentication) {
+        
+        // Obtém os detalhes do usuário autenticado a partir da autenticação
+        UserAccount usuarioAutenticado = (UserAccount) authentication.getPrincipal();
+
+        // Verifica se o ID passado na URL é igual ao ID do usuário autenticado
+        if (!usuarioAutenticado.getId().equals(id)) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+        }
+
         var usuario = repository.getReferenceById(id);
         repository.delete(usuario);
         return ResponseEntity.noContent().build();
     }
+
 
     @GetMapping("/{id}")
     public ResponseEntity detalhar(@PathVariable Long id){
