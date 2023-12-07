@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 @onready var menuLateral = get_node("MenuLateral")
 var recuar = false

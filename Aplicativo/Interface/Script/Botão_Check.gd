@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 var checked = preload("res://Recursos/Box/checkbox-checked.png")
 var uncheked = preload("res://Recursos/Box/checkbox-unchecked.png")

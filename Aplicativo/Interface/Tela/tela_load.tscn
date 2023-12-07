@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://civaueis2y1gr" path="res://Recursos/logo azul.png" id="1_kx6up"]
 [ext_resource type="Script" path="res://Script/tela_load.gd" id="1_kypfu"]
-[ext_resource type="Texture2D" uid="uid://cyl7okkw6bpb" path="res://Recursos/button base.png" id="3_y3fsk"]
-[ext_resource type="FontFile" uid="uid://cxj6bbo60xjk4" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="4_q2tcg"]
-[ext_resource type="Texture2D" uid="uid://bpxobxb0b4tbm" path="res://Recursos/button 2 base.png" id="5_g7l8a"]
+[ext_resource type="Texture2D" uid="uid://2qdlgs5ec3iw" path="res://Recursos/button base.png" id="3_y3fsk"]
+[ext_resource type="FontFile" uid="uid://b2ollwwqaf816" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="4_q2tcg"]
+[ext_resource type="Texture2D" uid="uid://hetts8neqf6p" path="res://Recursos/button 2 base.png" id="5_g7l8a"]
 
 [sub_resource type="Gradient" id="Gradient_45wmr"]
 offsets = PackedFloat32Array(0, 0.0060241)
@@ -12,7 +12,9 @@ offsets = PackedFloat32Array(0, 0.0060241)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_3oeqa"]
 gradient = SubResource("Gradient_45wmr")
 
-[node name="Tela Load" type="Node2D"]
+[node name="Tela Load" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_kypfu")
 
 [node name="LogoAzul" type="Sprite2D" parent="."]
@@ -22,10 +24,13 @@ texture = ExtResource("1_kx6up")
 centered = false
 offset = Vector2(512, 0)
 
-[node name="Node2D" type="Node2D" parent="."]
-position = Vector2(0, 130)
+[node name="Botões" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 130.0
+offset_bottom = 130.0
 
-[node name="Login" type="TextureButton" parent="Node2D"]
+[node name="Login" type="TextureButton" parent="Botões"]
 offset_left = 314.0
 offset_top = 924.0
 offset_right = 765.0
@@ -33,7 +38,7 @@ offset_bottom = 1050.0
 texture_normal = ExtResource("3_y3fsk")
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Node2D/Login"]
+[node name="Label" type="Label" parent="Botões/Login"]
 layout_mode = 0
 offset_right = 451.0
 offset_bottom = 126.0
@@ -43,7 +48,7 @@ text = "Entrar"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="EntrarSemCadastro" type="TextureButton" parent="Node2D"]
+[node name="EntrarSemCadastro" type="TextureButton" parent="Botões"]
 offset_left = 314.0
 offset_top = 1111.0
 offset_right = 765.0
@@ -51,7 +56,7 @@ offset_bottom = 1237.0
 texture_normal = ExtResource("3_y3fsk")
 stretch_mode = 0
 
-[node name="Label2" type="Label" parent="Node2D/EntrarSemCadastro"]
+[node name="Label2" type="Label" parent="Botões/EntrarSemCadastro"]
 layout_mode = 0
 offset_left = 5.0
 offset_right = 456.0
@@ -62,7 +67,7 @@ text = "Entrar Sem Cadastro"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Registrar" type="TextureButton" parent="Node2D"]
+[node name="Registrar" type="TextureButton" parent="Botões"]
 offset_left = 319.0
 offset_top = 1303.0
 offset_right = 770.0
@@ -70,7 +75,7 @@ offset_bottom = 1429.0
 texture_normal = ExtResource("5_g7l8a")
 stretch_mode = 0
 
-[node name="Label2" type="Label" parent="Node2D/Registrar"]
+[node name="Label2" type="Label" parent="Botões/Registrar"]
 layout_mode = 0
 offset_right = 451.0
 offset_bottom = 126.0
@@ -88,6 +93,6 @@ scale = Vector2(4.25, 1924.25)
 texture = SubResource("GradientTexture1D_3oeqa")
 metadata/_edit_lock_ = true
 
-[connection signal="pressed" from="Node2D/Login" to="." method="_on_login_pressed"]
-[connection signal="pressed" from="Node2D/EntrarSemCadastro" to="." method="_on_entrar_sem_cadastro_pressed"]
-[connection signal="pressed" from="Node2D/Registrar" to="." method="_on_registrar_pressed"]
+[connection signal="pressed" from="Botões/Login" to="." method="_on_login_pressed"]
+[connection signal="pressed" from="Botões/EntrarSemCadastro" to="." method="_on_entrar_sem_cadastro_pressed"]
+[connection signal="pressed" from="Botões/Registrar" to="." method="_on_registrar_pressed"]

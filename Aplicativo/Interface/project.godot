@@ -15,6 +15,11 @@ run/main_scene="res://Tela/Tela_Carregando.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icone app.png"
 
+[autoload]
+
+NetWork="*res://Script/NetWork.gd"
+DadosCliente="*res://Script/DadosCliente.gd"
+
 [display]
 
 window/size/viewport_width=1080
