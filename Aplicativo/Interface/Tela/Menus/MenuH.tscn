@@ -1,8 +1,10 @@
 [gd_scene load_steps=2 format=3 uid="uid://bdskk0aw2cqem"]
 
-[ext_resource type="Texture2D" uid="uid://bmbke5c2jn4tc" path="res://Recursos/MenuH.png" id="1_bqm4f"]
+[ext_resource type="Texture2D" uid="uid://cghrfs6orqugn" path="res://Recursos/MenuH.png" id="1_bqm4f"]
 
-[node name="MenuH" type="Node2D"]
+[node name="MenuH" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 
 [node name="Fundo" type="Sprite2D" parent="."]
 position = Vector2(538.5, 104)

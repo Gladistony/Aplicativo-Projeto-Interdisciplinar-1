@@ -1,13 +1,13 @@
 [gd_scene load_steps=11 format=3 uid="uid://c3fq0pvg8eeun"]
 
 [ext_resource type="Script" path="res://Script/Tela Registro.gd" id="1_sk7tt"]
-[ext_resource type="FontFile" uid="uid://cxj6bbo60xjk4" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="2_816ql"]
+[ext_resource type="FontFile" uid="uid://b2ollwwqaf816" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="2_816ql"]
 [ext_resource type="PackedScene" uid="uid://ds1k3mh0sc3au" path="res://Tela/Box_texto/box_usuario.tscn" id="3_g1uy8"]
 [ext_resource type="PackedScene" uid="uid://bfnsdy6fekrfm" path="res://Tela/Box_texto/box_email.tscn" id="4_bsysu"]
 [ext_resource type="PackedScene" uid="uid://wx5whhqgusvp" path="res://Tela/Box_texto/box_calendario.tscn" id="5_vpck0"]
 [ext_resource type="PackedScene" uid="uid://djva6mi80ee1o" path="res://Tela/Box_texto/box_senha.tscn" id="6_hhue6"]
 [ext_resource type="PackedScene" uid="uid://dn3338ikol3x" path="res://Recursos/Botão/Botão_Check.tscn" id="7_8heqo"]
-[ext_resource type="Texture2D" uid="uid://cyl7okkw6bpb" path="res://Recursos/button base.png" id="8_kcl0k"]
+[ext_resource type="Texture2D" uid="uid://2qdlgs5ec3iw" path="res://Recursos/button base.png" id="8_kcl0k"]
 
 [sub_resource type="Gradient" id="Gradient_l12ne"]
 offsets = PackedFloat32Array(0, 0.0060241)
@@ -15,7 +15,9 @@ offsets = PackedFloat32Array(0, 0.0060241)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_acl78"]
 gradient = SubResource("Gradient_l12ne")
 
-[node name="Tela Registro" type="Node2D"]
+[node name="Tela Registro" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_sk7tt")
 
 [node name="Fundo" type="Sprite2D" parent="."]
@@ -51,10 +53,16 @@ flat = true
 metadata/_edit_use_anchors_ = true
 
 [node name="BoxUsuario" parent="." instance=ExtResource("3_g1uy8")]
-position = Vector2(208, 512)
+offset_left = 208.0
+offset_top = 512.0
+offset_right = 208.0
+offset_bottom = 512.0
 
 [node name="BoxEmail" parent="." instance=ExtResource("4_bsysu")]
-position = Vector2(208, 664)
+offset_left = 208.0
+offset_top = 664.0
+offset_right = 208.0
+offset_bottom = 664.0
 
 [node name="BoxCalendario" parent="." instance=ExtResource("5_vpck0")]
 offset_left = 208.0
@@ -63,13 +71,22 @@ offset_right = 208.0
 offset_bottom = 808.0
 
 [node name="BoxSenha" parent="." instance=ExtResource("6_hhue6")]
-position = Vector2(208, 952)
+offset_left = 208.0
+offset_top = 952.0
+offset_right = 208.0
+offset_bottom = 952.0
 
 [node name="BoxSenha2" parent="." instance=ExtResource("6_hhue6")]
-position = Vector2(208, 1096)
+offset_left = 208.0
+offset_top = 1096.0
+offset_right = 208.0
+offset_bottom = 1096.0
 
 [node name="BotãoCheck" parent="." instance=ExtResource("7_8heqo")]
-position = Vector2(208, 1248)
+offset_left = 208.0
+offset_top = 1248.0
+offset_right = 208.0
+offset_bottom = 1248.0
 
 [node name="Label Termos" type="Label" parent="."]
 offset_left = 296.0
@@ -102,10 +119,16 @@ theme_override_fonts/font = ExtResource("2_816ql")
 theme_override_font_sizes/font_size = 30
 text = "Politicas de privacidade"
 
-[node name="BotãoSimples" type="Node2D" parent="."]
-position = Vector2(320, 1656)
+[node name="BotãoSimples" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 320.0
+offset_top = 1656.0
+offset_right = 320.0
+offset_bottom = 1656.0
 
 [node name="Login" type="TextureButton" parent="BotãoSimples"]
+layout_mode = 0
 offset_left = -112.0
 offset_top = -70.0
 offset_right = 560.0

@@ -1,9 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://ds1k3mh0sc3au"]
 
-[ext_resource type="Texture2D" uid="uid://bp0cm0utl52s1" path="res://Recursos/Box/box_usuario.png" id="1_iaqoa"]
-[ext_resource type="FontFile" uid="uid://cxj6bbo60xjk4" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="2_yvmqr"]
+[ext_resource type="Texture2D" uid="uid://beashn8vqu8ye" path="res://Recursos/Box/box_usuario.png" id="1_iaqoa"]
+[ext_resource type="FontFile" uid="uid://b2ollwwqaf816" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="2_yvmqr"]
 
-[node name="BoxUsuario" type="Node2D"]
+[node name="BoxUsuario" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 
 [node name="Email" type="Sprite2D" parent="."]
 scale = Vector2(1.71867, 1.65789)

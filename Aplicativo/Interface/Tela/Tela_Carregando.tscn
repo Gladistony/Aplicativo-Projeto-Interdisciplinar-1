@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://civaueis2y1gr" path="res://Recursos/logo azul.png" id="1_0rwfb"]
 [ext_resource type="Script" path="res://Script/Tela_Carregando.gd" id="1_fi5sq"]
-[ext_resource type="Texture2D" uid="uid://dkc8tgo0se7rl" path="res://Recursos/load circulo.png" id="2_vtr08"]
+[ext_resource type="Texture2D" uid="uid://dyux3i88ie83i" path="res://Recursos/load circulo.png" id="2_vtr08"]
 
 [sub_resource type="Gradient" id="Gradient_yhkpw"]
 offsets = PackedFloat32Array(0, 0.0060241)
@@ -48,7 +48,9 @@ _data = {
 "RESET": SubResource("Animation_djeyw")
 }
 
-[node name="TelaCarregando" type="Node2D"]
+[node name="TelaCarregando" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_fi5sq")
 
 [node name="LogoAzul" type="Sprite2D" parent="."]

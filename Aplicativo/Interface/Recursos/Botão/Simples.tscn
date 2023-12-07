@@ -1,9 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://cojj4v3w6fto"]
 
-[ext_resource type="Texture2D" uid="uid://cyl7okkw6bpb" path="res://Recursos/button base.png" id="1_8ofl3"]
-[ext_resource type="FontFile" uid="uid://cxj6bbo60xjk4" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="2_5m886"]
+[ext_resource type="Texture2D" uid="uid://2qdlgs5ec3iw" path="res://Recursos/button base.png" id="1_8ofl3"]
+[ext_resource type="FontFile" uid="uid://b2ollwwqaf816" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="2_5m886"]
 
-[node name="BotãoSimples" type="Node2D"]
+[node name="BotãoSimples" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 
 [node name="Login" type="TextureButton" parent="."]
 offset_right = 451.0

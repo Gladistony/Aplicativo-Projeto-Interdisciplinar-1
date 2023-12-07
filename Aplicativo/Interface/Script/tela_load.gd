@@ -1,14 +1,14 @@
-extends Node2D
+extends Control
 
+#@onready var TexturaCinza = preload("res://Recursos/Cinza.gdshader")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+	if DadosCliente._modoOffLine:
+		$"Botões/Login".disabled = true
+		$"Botões/Registrar".disabled = true
+		$"Botões/Login/Label".text = "----"
+		$"Botões/Registrar/Label2".text = "----"
 
 
 func _on_login_pressed():

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cawoxp7qsr0km"]
 
-[ext_resource type="FontFile" uid="uid://cxj6bbo60xjk4" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="1_16u5m"]
-[ext_resource type="Texture2D" uid="uid://d3n6nsivmkyjb" path="res://Recursos/fundoCinz.png" id="1_teg7y"]
+[ext_resource type="FontFile" uid="uid://b2ollwwqaf816" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="1_16u5m"]
+[ext_resource type="Texture2D" uid="uid://bg4irlgy8qxqh" path="res://Recursos/fundoCinz.png" id="1_teg7y"]
 [ext_resource type="PackedScene" uid="uid://bu0ob1q6bkcpw" path="res://Tela/Menus/ItemMenuRemedio.tscn" id="3_sr402"]
 
 [node name="MenuProximoRemedio" type="Control"]
