@@ -1,14 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://cuehwp2e65jry"]
+[gd_scene load_steps=8 format=3 uid="uid://cuehwp2e65jry"]
 
+[ext_resource type="Script" path="res://Script/tela_principal.gd" id="1_8r0gj"]
 [ext_resource type="Texture2D" uid="uid://gq18uwiwkbfd" path="res://Recursos/fundoBranco.png" id="1_i18lh"]
 [ext_resource type="Texture2D" uid="uid://cev82502b74gb" path="res://Recursos/MenuLateral.png" id="1_s8skd"]
 [ext_resource type="PackedScene" uid="uid://bdskk0aw2cqem" path="res://Tela/Menus/MenuH.tscn" id="2_cxgog"]
 [ext_resource type="PackedScene" uid="uid://cawoxp7qsr0km" path="res://Tela/Menus/MenuProximoRemedio.tscn" id="3_n6g7j"]
 [ext_resource type="Texture2D" uid="uid://cpnm5sbunx21g" path="res://Recursos/AdicionarEAgenda.png" id="5_pdtdy"]
+[ext_resource type="PackedScene" uid="uid://dj77c1lmkym68" path="res://Tela/Menus/MenuLateral.tscn" id="7_lsm5a"]
 
 [node name="TelaPrincipal" type="Node2D"]
+script = ExtResource("1_8r0gj")
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="BotãoMenuLateral" type="TextureButton" parent="."]
 offset_left = 72.0
 offset_top = 200.0
 offset_right = 200.0
@@ -39,3 +42,10 @@ centered = false
 [node name="AdicionarEAgenda" type="Sprite2D" parent="."]
 position = Vector2(544, 1408)
 texture = ExtResource("5_pdtdy")
+
+[node name="MenuLateral" parent="." instance=ExtResource("7_lsm5a")]
+visible = false
+offset_left = -512.0
+offset_right = -512.0
+
+[connection signal="pressed" from="BotãoMenuLateral" to="." method="_on_botão_menu_lateral_pressed"]
