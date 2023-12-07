@@ -23,10 +23,7 @@ texture_normal = ExtResource("1_s8skd")
 stretch_mode = 0
 
 [node name="MenuH" parent="." instance=ExtResource("2_cxgog")]
-offset_left = 8.0
-offset_top = 1712.0
-offset_right = 8.0
-offset_bottom = 1712.0
+position = Vector2(8, 1712)
 
 [node name="HSeparator" type="HSeparator" parent="."]
 layout_mode = 0
