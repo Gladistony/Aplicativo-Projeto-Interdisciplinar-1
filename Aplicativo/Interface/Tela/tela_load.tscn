@@ -31,6 +31,7 @@ offset_top = 130.0
 offset_bottom = 130.0
 
 [node name="Login" type="TextureButton" parent="Botões"]
+layout_mode = 0
 offset_left = 314.0
 offset_top = 924.0
 offset_right = 765.0
@@ -49,6 +50,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="EntrarSemCadastro" type="TextureButton" parent="Botões"]
+layout_mode = 0
 offset_left = 314.0
 offset_top = 1111.0
 offset_right = 765.0
@@ -68,6 +70,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Registrar" type="TextureButton" parent="Botões"]
+layout_mode = 0
 offset_left = 319.0
 offset_top = 1303.0
 offset_right = 770.0

@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://dj77c1lmkym68"]
 
 [ext_resource type="Script" path="res://Script/MenuLateral.gd" id="1_tdxnn"]
-[ext_resource type="Texture2D" uid="uid://ch67eudk6sul1" path="res://Recursos/fundoAzul.png" id="1_xenym"]
-[ext_resource type="FontFile" uid="uid://cxj6bbo60xjk4" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="2_xvo6x"]
+[ext_resource type="Texture2D" uid="uid://bl4wn6smi2dje" path="res://Recursos/fundoAzul.png" id="1_xenym"]
+[ext_resource type="FontFile" uid="uid://b2ollwwqaf816" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="2_xvo6x"]
 
 [node name="MenuLateral" type="Control"]
 layout_mode = 3

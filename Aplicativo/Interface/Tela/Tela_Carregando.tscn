@@ -48,7 +48,9 @@ _data = {
 "RESET": SubResource("Animation_djeyw")
 }
 
-[node name="TelaCarregando" type="Node2D"]
+[node name="TelaCarregando" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_fi5sq")
 
 [node name="LogoAzul" type="Sprite2D" parent="."]

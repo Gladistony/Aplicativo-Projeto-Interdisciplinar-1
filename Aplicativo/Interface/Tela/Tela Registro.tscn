@@ -15,7 +15,9 @@ offsets = PackedFloat32Array(0, 0.0060241)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_acl78"]
 gradient = SubResource("Gradient_l12ne")
 
-[node name="Tela Registro" type="Node2D"]
+[node name="Tela Registro" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_sk7tt")
 
 [node name="Fundo" type="Sprite2D" parent="."]
@@ -81,7 +83,10 @@ offset_right = 208.0
 offset_bottom = 1096.0
 
 [node name="BotãoCheck" parent="." instance=ExtResource("7_8heqo")]
-position = Vector2(208, 1248)
+offset_left = 208.0
+offset_top = 1248.0
+offset_right = 208.0
+offset_bottom = 1248.0
 
 [node name="Label Termos" type="Label" parent="."]
 offset_left = 296.0
@@ -114,10 +119,16 @@ theme_override_fonts/font = ExtResource("2_816ql")
 theme_override_font_sizes/font_size = 30
 text = "Politicas de privacidade"
 
-[node name="BotãoSimples" type="Node2D" parent="."]
-position = Vector2(320, 1656)
+[node name="BotãoSimples" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 320.0
+offset_top = 1656.0
+offset_right = 320.0
+offset_bottom = 1656.0
 
 [node name="Login" type="TextureButton" parent="BotãoSimples"]
+layout_mode = 0
 offset_left = -112.0
 offset_top = -70.0
 offset_right = 560.0

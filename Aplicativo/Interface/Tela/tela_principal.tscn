@@ -14,6 +14,7 @@ anchors_preset = 0
 script = ExtResource("1_8r0gj")
 
 [node name="BotãoMenuLateral" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 72.0
 offset_top = 200.0
 offset_right = 200.0
@@ -25,6 +26,7 @@ stretch_mode = 0
 position = Vector2(8, 1712)
 
 [node name="HSeparator" type="HSeparator" parent="."]
+layout_mode = 0
 offset_left = -8.0
 offset_top = 1696.0
 offset_right = 1096.0
