@@ -1,5 +1,7 @@
 .godot
 .idea
+.godot/
+.idea/
 *.mp4
 *.import
 *.godot
