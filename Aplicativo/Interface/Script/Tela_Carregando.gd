@@ -4,6 +4,9 @@ extends Control
 func _ready():
 	#OS.alert(str(DisplayServer.screen_get_size())+" / "+str(get_viewport().size))
 	#get_viewport().size = DisplayServer.screen_get_size()
+	if OS.get_name() == "Windows":
+		get_tree().root.set_content_scale_aspect(Window.CONTENT_SCALE_ASPECT_KEEP)
+		#display/window/stretch/aspect
 	$AnimacaoRodando.play("Load")
 	#verificar se o servidor está online
 	if NetWork._verificarOnline():
