@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://dj77c1lmkym68"]
+
+[ext_resource type="Script" path="res://Script/MenuLateral.gd" id="1_tdxnn"]
+[ext_resource type="Texture2D" uid="uid://ch67eudk6sul1" path="res://Recursos/fundoAzul.png" id="1_xenym"]
+[ext_resource type="FontFile" uid="uid://cxj6bbo60xjk4" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="2_xvo6x"]
+
+[node name="MenuLateral" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tdxnn")
+
+[node name="FundoAzul" type="Sprite2D" parent="."]
+scale = Vector2(0.474074, 1)
+texture = ExtResource("1_xenym")
+centered = false
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_top = 456.0
+offset_right = 512.0
+offset_bottom = 512.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_xvo6x")
+theme_override_font_sizes/font_size = 40
+text = "Configurações"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 512.0
+offset_right = 1088.0
+offset_bottom = 1920.0
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

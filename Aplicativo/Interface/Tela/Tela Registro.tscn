@@ -57,7 +57,10 @@ position = Vector2(208, 512)
 position = Vector2(208, 664)
 
 [node name="BoxCalendario" parent="." instance=ExtResource("5_vpck0")]
-position = Vector2(208, 808)
+offset_left = 208.0
+offset_top = 808.0
+offset_right = 208.0
+offset_bottom = 808.0
 
 [node name="BoxSenha" parent="." instance=ExtResource("6_hhue6")]
 position = Vector2(208, 952)
