@@ -1,10 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://co7c4tnvn7bjp"]
 
-[ext_resource type="Texture2D" uid="uid://civaueis2y1gr" path="res://Recursos/logo azul.png" id="1_kx6up"]
+[ext_resource type="Texture2D" uid="uid://c8vnet2465hll" path="res://Recursos/logo final.png" id="1_kx6up"]
 [ext_resource type="Script" path="res://Script/tela_load.gd" id="1_kypfu"]
 [ext_resource type="Texture2D" uid="uid://2qdlgs5ec3iw" path="res://Recursos/button base.png" id="3_y3fsk"]
 [ext_resource type="FontFile" uid="uid://b2ollwwqaf816" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="4_q2tcg"]
 [ext_resource type="Texture2D" uid="uid://hetts8neqf6p" path="res://Recursos/button 2 base.png" id="5_g7l8a"]
+
 
 [sub_resource type="Gradient" id="Gradient_45wmr"]
 offsets = PackedFloat32Array(0, 0.0060241)

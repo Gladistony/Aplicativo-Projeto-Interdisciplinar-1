@@ -25,7 +25,9 @@ DadosCliente="*res://Script/DadosCliente.gd"
 window/size/viewport_width=1080
 window/size/viewport_height=1920
 window/size/mode=3
-window/stretch/mode="viewport"
+window/size/resizable=false
+window/stretch/mode="canvas_items"
+window/stretch/aspect="ignore"
 window/handheld/orientation=1
 
 [editor_plugins]

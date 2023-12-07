@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://b6v5lkrmdhgkc"]
 
-[ext_resource type="Texture2D" uid="uid://civaueis2y1gr" path="res://Recursos/logo azul.png" id="1_0rwfb"]
+[ext_resource type="Texture2D" uid="uid://c8vnet2465hll" path="res://Recursos/logo final.png" id="1_0rwfb"]
 [ext_resource type="Script" path="res://Script/Tela_Carregando.gd" id="1_fi5sq"]
 [ext_resource type="Texture2D" uid="uid://dyux3i88ie83i" path="res://Recursos/load circulo.png" id="2_vtr08"]
 

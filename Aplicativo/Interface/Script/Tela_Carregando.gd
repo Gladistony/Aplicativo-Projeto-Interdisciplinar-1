@@ -2,6 +2,8 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	#OS.alert(str(DisplayServer.screen_get_size())+" / "+str(get_viewport().size))
+	#get_viewport().size = DisplayServer.screen_get_size()
 	$AnimacaoRodando.play("Load")
 	#verificar se o servidor está online
 	if NetWork._verificarOnline():
