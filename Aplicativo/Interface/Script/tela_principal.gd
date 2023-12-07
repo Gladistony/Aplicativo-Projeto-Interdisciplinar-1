@@ -12,6 +12,9 @@ var Swiper = 2000
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	menuLateral.connect("foraDaTela",_fecharMenu)
+	if len(DadosCliente._data.remediosAgendados) == 0:
+		_SemItemCadastrado()
+	
 	
 func _fecharMenu():
 	recuar = true
@@ -50,3 +53,7 @@ func _calculate_swipe(swipe_end):
 			_on_botão_menu_lateral_pressed() # chama a função que você quer executar quando o swipe acontecer
 		elif  swipe.x < 0:
 			_fecharMenu()
+
+func _SemItemCadastrado():
+	$MenuProximoRemedio.visible = false
+	$AdicionarEAgenda.position.y = 620 #else: 1408

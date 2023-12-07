@@ -2,10 +2,11 @@ extends Node
 
 var _modoOffLine = true
 var _logado = false
-var _data = []
+var _data = {}
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	_data.remediosAgendados = []
 	_loadData()
 
 

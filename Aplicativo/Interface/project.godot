@@ -19,6 +19,7 @@ config/icon="res://icone app.png"
 
 NetWork="*res://Script/NetWork.gd"
 DadosCliente="*res://Script/DadosCliente.gd"
+BancoDeDados="*res://Script/BancoDeDados.gd"
 
 [display]
 
