@@ -20,6 +20,7 @@ var buscarSubstancia = false #1 por nome 2 por substancia
 var old_text = ""
 
 func monstraPopUpInfo(nomeRemedio):
+	$JanelaPOP.move_to_center()
 	$JanelaPOP.visible = true
 	popIDFabricante = 0
 	daraRemedioPop = BancoDeDados._dataRemedio(nomeRemedio)
