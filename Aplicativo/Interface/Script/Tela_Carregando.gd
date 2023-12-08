@@ -7,11 +7,11 @@ func _ready():
 	if OS.get_name() == "Windows":
 		get_tree().root.set_content_scale_aspect(Window.CONTENT_SCALE_ASPECT_KEEP)
 		#display/window/stretch/aspect
-	$AnimacaoRodando.play("Load")	
+	$AnimacaoRodando.play("Load")
+	NetWork._respostaRecebida.connect(resposta)
 	#DadosCliente._modoOffLine = false
 
-func _on_timer_timeout():
-	#verificar se o servidor está online
+func resposta():
 	if NetWork._verificarOnline():
 		DadosCliente._modoOffLine = false
 		print("O servidor está online")
@@ -19,3 +19,7 @@ func _on_timer_timeout():
 		print("O servidor não está online, ajustar o cliente para o modo offline")
 	#fazer a conexão com o servidor
 	get_tree().change_scene_to_file("res://Tela/tela_load.tscn")
+
+func _on_timer_timeout():
+	#Ativar a resposta se muito tempo se passar sem conectar ao servidor
+	resposta()
