@@ -1,15 +1,22 @@
 extends Control
 
 signal  foraDaTela;
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+signal BotaoRemedio;
+signal BotaoConfiguracao;
+signal BotaoAdicionar;
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func _on_botão_remedios_pressed():
+	emit_signal("BotaoRemedio")
 
 
-func _on_button_pressed():
+func _on_botão_configuracao_pressed():
+	emit_signal("BotaoConfiguracao")
+
+
+func _on_botão_adicionar_pressed():
+	emit_signal("BotaoAdicionar")
+
+func _on_area_vazia_pressed():
 	emit_signal("foraDaTela")
+	#$AreaVazia.release_focus()

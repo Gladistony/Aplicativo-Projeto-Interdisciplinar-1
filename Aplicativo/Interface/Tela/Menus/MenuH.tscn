@@ -1,12 +1,57 @@
-[gd_scene load_steps=2 format=3 uid="uid://bdskk0aw2cqem"]
+[gd_scene load_steps=6 format=3 uid="uid://bdskk0aw2cqem"]
 
 [ext_resource type="Texture2D" uid="uid://cghrfs6orqugn" path="res://Recursos/MenuH.png" id="1_bqm4f"]
+[ext_resource type="Script" path="res://Script/MenuH.gd" id="1_lp165"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jniwn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4p6is"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_evbhr"]
 
 [node name="MenuH" type="Control"]
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_lp165")
 
 [node name="Fundo" type="Sprite2D" parent="."]
 position = Vector2(538.5, 104)
 scale = Vector2(1.34367, 1)
 texture = ExtResource("1_bqm4f")
+
+[node name="HSeparator" type="HSeparator" parent="."]
+layout_mode = 0
+offset_left = -8.0
+offset_right = 1082.0
+offset_bottom = 11.0
+
+[node name="ButtonBusca" type="Button" parent="."]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 21.0
+offset_right = 315.0
+offset_bottom = 195.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jniwn")
+flat = true
+
+[node name="ButtonInicio" type="Button" parent="."]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 21.0
+offset_right = 676.0
+offset_bottom = 195.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4p6is")
+flat = true
+
+[node name="ButtonPerfil" type="Button" parent="."]
+layout_mode = 0
+offset_left = 800.0
+offset_top = 21.0
+offset_right = 1060.0
+offset_bottom = 195.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_evbhr")
+flat = true
+
+[connection signal="pressed" from="ButtonBusca" to="." method="_on_button_busca_pressed"]
+[connection signal="pressed" from="ButtonInicio" to="." method="_on_button_inicio_pressed"]
+[connection signal="pressed" from="ButtonPerfil" to="." method="_on_button_perfil_pressed"]
