@@ -17,6 +17,7 @@ extends Control
 var popIDFabricante = 0
 var daraRemedioPop = {}
 var buscarSubstancia = false #1 por nome 2 por substancia
+var old_text = ""
 
 func monstraPopUpInfo(nomeRemedio):
 	$JanelaPOP.visible = true
@@ -60,6 +61,7 @@ func menuPrincipal():
 	get_tree().change_scene_to_file("res://Tela/tela_principal.tscn")
 
 func clearBox():
+	$ScrollContainer.scroll_vertical = 0
 	for filhos in listaResultados.get_children():
 		filhos.queue_free()
 
@@ -99,6 +101,7 @@ func _on_option_button_item_selected(index):
 
 
 func _on_link_button_pressed():
+	$"Caixa de Busca".text = ""
 	buscarSubstancia = not buscarSubstancia
 	if buscarSubstancia:
 		$LabelMedicamentos.text = "Substancia:"
@@ -119,3 +122,13 @@ func _on_buscar_substancia_pressed():
 		daraRemedioPop = {}
 	$"Caixa de Busca".text = subsTemp
 	_on_caixa_de_busca_text_changed(subsTemp)
+
+
+func _on_funcao_busca_timeout():
+	if old_text != $"Caixa de Busca".text:
+		old_text = $"Caixa de Busca".text
+		_on_caixa_de_busca_text_changed(old_text)
+
+
+func _on_caixa_de_busca_focus_entered():
+	$JanelaPOP.visible = false

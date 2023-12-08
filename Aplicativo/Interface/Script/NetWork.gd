@@ -34,6 +34,7 @@ func _request_completed(_result, _response_code, _headers, body):
 	else:
 		_servidorOnline = true
 		_lastRespost = response
+	print(response)
 
 func _verificarOnline():
 	return _servidorOnline

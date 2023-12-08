@@ -78,9 +78,9 @@ offset_bottom = 264.0
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 0
-offset_left = 100.0
+offset_left = 92.0
 offset_top = 288.0
-offset_right = 1000.0
+offset_right = 1008.0
 offset_bottom = 1696.0
 
 [node name="ListaResultadosBusca" type="VBoxContainer" parent="ScrollContainer"]
@@ -89,7 +89,6 @@ layout_mode = 2
 [node name="JanelaPOP" type="Window" parent="."]
 initial_position = 1
 size = Vector2i(850, 750)
-visible = false
 unresizable = true
 
 [node name="FundoBranco" type="Sprite2D" parent="JanelaPOP"]
@@ -120,6 +119,7 @@ size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_ciy8h")
 theme_override_font_sizes/font_size = 40
+clip_text = true
 
 [node name="SubstanciaBox" type="HBoxContainer" parent="JanelaPOP/BoxPop"]
 layout_mode = 2
@@ -286,8 +286,13 @@ alignment = 1
 layout_mode = 2
 texture_normal = ExtResource("6_7o1b2")
 
-[connection signal="text_changed" from="Caixa de Busca" to="." method="_on_caixa_de_busca_text_changed"]
+[node name="FuncaoBusca" type="Timer" parent="."]
+autostart = true
+
+[connection signal="focus_entered" from="." to="." method="_on_caixa_de_busca_focus_entered"]
+[connection signal="focus_entered" from="Caixa de Busca" to="." method="_on_caixa_de_busca_focus_entered"]
 [connection signal="pressed" from="LabelMedicamentos/LinkButton" to="." method="_on_link_button_pressed"]
 [connection signal="close_requested" from="JanelaPOP" to="." method="_on_window_close_requested"]
 [connection signal="item_selected" from="JanelaPOP/BoxPop/NomeBox/ValorSubstancia" to="." method="_on_option_button_item_selected"]
 [connection signal="pressed" from="JanelaPOP/BoxPop/BuscarSubstancia" to="." method="_on_buscar_substancia_pressed"]
+[connection signal="timeout" from="FuncaoBusca" to="." method="_on_funcao_busca_timeout"]
