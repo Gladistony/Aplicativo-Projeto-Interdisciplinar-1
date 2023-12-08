@@ -1,6 +1,8 @@
 extends Control
 
 @onready var menuLateral = get_node("MenuLateral")
+@onready var menuBaixo = get_node("MenuH")
+
 var recuar = false
 #=======================
 var swipe_start = null # guarda a posição inicial do toque
@@ -12,10 +14,24 @@ var Swiper = 2000
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	menuLateral.connect("foraDaTela",_fecharMenu)
+	menuLateral.connect("BotaoConfiguracao",_configuracao)
+	menuLateral.connect("BotaoAdicionar",_adicionarLembrete)
+	menuLateral.connect("BotaoRemedio",_pesquisaRemedio)
+	menuBaixo.connect("BotaoPesquisa",_pesquisaRemedio)
+	
 	if len(DadosCliente._data.remediosAgendados) == 0:
 		_SemItemCadastrado()
-	
-	
+
+func _pesquisaRemedio():
+	recuar = true
+	get_tree().change_scene_to_file("res://Tela/Tela_Pesquisa.tscn")
+
+func _adicionarLembrete():
+	recuar = true
+
+func _configuracao():
+	recuar = true
+
 func _fecharMenu():
 	recuar = true
 

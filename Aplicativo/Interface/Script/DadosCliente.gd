@@ -2,13 +2,19 @@ extends Node
 
 var _modoOffLine = true
 var _logado = false
+var _autoLogin = false
 var _data = {}
+
+
+func _loginAutoOffLine():
+	_modoOffLine = true
+	_logado = false
+	_autoLogin = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	_data.remediosAgendados = []
 	_loadData()
-
 
 func _loadData():
 	if FileAccess.file_exists("res://dadosLocais.datLife"):

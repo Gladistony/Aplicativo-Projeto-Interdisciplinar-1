@@ -11,9 +11,35 @@ func _ready():
 		var data = JSON.new()
 		data.parse(jsonstr)
 		dados = data.data
-		print(dados["Z"].keys())
+		#print(dados["Z"].keys())
 
+func LetraInicial(string):
+	var first_letter = string.left(1)
+	return first_letter.to_upper()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func _buscaRemedio(nome):
+	nome = nome.to_upper()
+	var retorno = []
+	var previa = dados.keys()
+	for item in previa:
+		if item.contains(nome):
+			retorno.append(item)
+	retorno.sort()
+	return retorno
+
+func _buscaSubstancia(nome):
+	nome = nome.to_upper()
+	var retorno = []
+	var previa = dados.values()
+	for item in previa:
+		if item[0].substancia.contains(nome):
+			retorno.append(item[0].produto)
+	retorno.sort()
+	return retorno 
+
+func _dataRemedio(nome):
+	if dados.has(nome):
+		return dados[nome]
+	else:
+		return {}
+	

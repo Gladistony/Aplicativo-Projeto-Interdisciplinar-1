@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://br335fr3kchah"]
+
+[ext_resource type="Script" path="res://Script/BoxMedicamentoPesquisa.gd" id="1_djti3"]
+[ext_resource type="Texture2D" uid="uid://uf3j1cltxl2j" path="res://Recursos/fundoBranco.png" id="1_ufs6q"]
+[ext_resource type="FontFile" uid="uid://b2ollwwqaf816" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="2_vaj3m"]
+[ext_resource type="Texture2D" uid="uid://2rbea7scfe7d" path="res://Recursos/Botão/pilulaConfig.png" id="3_x2neu"]
+
+[node name="BoxMedicamentoPesquisa" type="Control"]
+custom_minimum_size = Vector2(900, 130)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -180.0
+offset_bottom = -1790.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_djti3")
+metadata/_edit_lock_ = true
+
+[node name="FundoBranco" type="Sprite2D" parent="."]
+scale = Vector2(0.833333, 0.0677083)
+texture = ExtResource("1_ufs6q")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="NomeRemedio" type="Label" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 32.0
+offset_right = 832.0
+offset_bottom = 104.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_vaj3m")
+theme_override_font_sizes/font_size = 30
+text = "NOME DO MEDICAMENTO. TEM MUITO ESPAÇO"
+vertical_alignment = 1
+
+[node name="BotaoInfoRemedio" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 40.0
+offset_right = 103.0
+offset_bottom = 100.0
+texture_normal = ExtResource("3_x2neu")
+
+[connection signal="pressed" from="BotaoInfoRemedio" to="." method="_on_botao_info_remedio_pressed"]

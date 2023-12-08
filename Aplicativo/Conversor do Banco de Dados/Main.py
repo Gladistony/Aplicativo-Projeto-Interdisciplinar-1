@@ -24,10 +24,10 @@ for i in range(linhaInicial, linhaFinal+1):
     nome = df["PRODUTO"][i]
     primeiraLetra = nome[0]
     #verificar se existe uma pasta com esse nome
-    if primeiraLetra not in dados:
-        dados[primeiraLetra] = {}
-    if nome not in dados[primeiraLetra]:
-        dados[primeiraLetra][nome] = []
+    #if primeiraLetra not in dados:
+    #    dados[primeiraLetra] = {}
+    if nome not in dados:
+        dados[nome] = []
     data = {}
     data["produto"] = df["PRODUTO"][i]
     data["substancia"] = df["SUBSTÂNCIA"][i]
@@ -36,7 +36,9 @@ for i in range(linhaInicial, linhaFinal+1):
     data["classe"] = df["CLASSE TERAPÊUTICA"][i]
     data["tipo"] = df["TIPO DE PRODUTO (STATUS DO PRODUTO)"][i]
     data["tarja"] = df["TARJA"][i]
-    dados[primeiraLetra][nome].append(data)
+    data["estimativa"] = str(df["PMC 12%"][i])
+    data["liberado2022"] = df["COMERCIALIZAÇÃO 2022"][i]
+    dados[nome].append(data)
 
 #print(df["PRODUTO"]) # imprime o DataFram
 #converter dados para string
