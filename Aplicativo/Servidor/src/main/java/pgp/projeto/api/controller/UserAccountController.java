@@ -47,7 +47,7 @@ public class UserAccountController {
 
     @PutMapping
     @Transactional
-    public ResponseEntity atualizar(@RequestBody @Valid UserUpdateData dados){
+    public ResponseEntity atualizar(@RequestBody @Valid UserUpdateData dados, Authentication authentication){
         var usuario = repository.getReferenceById(dados.id());
         usuario.atualizarInformacoes(dados);
         
@@ -82,7 +82,7 @@ public class UserAccountController {
 
 
     @GetMapping("/{id}")
-    public ResponseEntity detalhar(@PathVariable Long id){
+    public ResponseEntity detalhar(@PathVariable Long id,  Authentication authentication){
         var usuario = repository.getReferenceById(id);
          // Obtém os detalhes do usuário autenticado a partir da autenticação
          UserAccount usuarioAutenticado = (UserAccount) authentication.getPrincipal();
