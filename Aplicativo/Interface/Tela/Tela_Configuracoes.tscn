@@ -1,0 +1,114 @@
+[gd_scene load_steps=11 format=3 uid="uid://bgh7ni4dbb6ce"]
+
+[ext_resource type="Script" path="res://Script/Tela_Configuracoes.gd" id="1_j4exg"]
+[ext_resource type="Texture2D" uid="uid://uf3j1cltxl2j" path="res://Recursos/fundoBranco.png" id="2_ssgq6"]
+[ext_resource type="PackedScene" uid="uid://bdskk0aw2cqem" path="res://Tela/Menus/MenuH.tscn" id="3_6k34t"]
+[ext_resource type="Texture2D" uid="uid://cu5teoohs387o" path="res://Recursos/Perfil/Foto_padrão.png" id="4_rx8e4"]
+[ext_resource type="Texture2D" uid="uid://c3t6w7v11kmb5" path="res://Recursos/Perfil/Moldura.png" id="5_57hv8"]
+[ext_resource type="FontFile" uid="uid://b2ollwwqaf816" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="6_tjwba"]
+[ext_resource type="Texture2D" uid="uid://byrs77h3k552q" path="res://Recursos/Botão/Alterar dados salvos.png" id="7_3ygrw"]
+[ext_resource type="Texture2D" uid="uid://b7d0sf8ejdnl0" path="res://Recursos/Botão/Termos de condição.png" id="8_a4i6e"]
+[ext_resource type="Texture2D" uid="uid://bwodkxqwe5o4q" path="res://Recursos/Botão/Deletar Conta.png" id="9_p7aoh"]
+[ext_resource type="Texture2D" uid="uid://b872m28hmylsa" path="res://Recursos/Botão/addConfig.png" id="10_uhwaa"]
+
+[node name="TelaPerfil" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j4exg")
+metadata/_edit_lock_ = true
+
+[node name="FundoBranco" type="Sprite2D" parent="."]
+z_index = -2
+texture = ExtResource("2_ssgq6")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="MenuH" parent="." instance=ExtResource("3_6k34t")]
+offset_top = 1712.0
+offset_bottom = 1712.0
+metadata/_edit_lock_ = true
+
+[node name="FotoPadrão" type="Sprite2D" parent="."]
+position = Vector2(544, 512)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_rx8e4")
+
+[node name="Moldura" type="Sprite2D" parent="."]
+position = Vector2(547, 510.5)
+scale = Vector2(2.69, 2.785)
+texture = ExtResource("5_57hv8")
+
+[node name="Botão Voltar" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0592593
+anchor_top = -0.0833333
+anchor_right = 0.012037
+anchor_bottom = -0.0833333
+offset_left = 208.0
+offset_top = 272.0
+offset_right = 244.0
+offset_bottom = 351.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_tjwba")
+theme_override_font_sizes/font_size = 50
+text = "   <    "
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Label-Login" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.2875
+anchor_bottom = 0.2875
+offset_left = 8.0
+offset_top = 208.0
+offset_right = 1088.0
+offset_bottom = 400.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_tjwba")
+theme_override_font_sizes/font_size = 50
+text = "Nome do usuario"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="BotaoAlterar Dados Salvos" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 1040.0
+offset_right = 891.0
+offset_bottom = 1168.0
+texture_normal = ExtResource("7_3ygrw")
+
+[node name="BotaoTermos e Condicoes" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 264.0
+offset_top = 1224.0
+offset_right = 887.0
+offset_bottom = 1377.0
+texture_normal = ExtResource("8_a4i6e")
+
+[node name="BotaoExcluirConta" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 264.0
+offset_top = 1408.0
+offset_right = 887.0
+offset_bottom = 1512.0
+texture_normal = ExtResource("9_p7aoh")
+
+[node name="BotaoEditarFoto" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 744.0
+offset_top = 240.0
+offset_right = 804.0
+offset_bottom = 298.0
+texture_normal = ExtResource("10_uhwaa")
+
+[connection signal="pressed" from="Botão Voltar" to="." method="_on_botão_voltar_pressed"]
+[connection signal="pressed" from="BotaoEditarFoto" to="." method="_on_botao_editar_foto_pressed"]

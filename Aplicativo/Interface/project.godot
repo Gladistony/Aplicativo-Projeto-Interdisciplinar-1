@@ -33,7 +33,7 @@ window/handheld/orientation=1
 
 [editor_plugins]
 
-enabled=PackedStringArray()
+enabled=PackedStringArray("res://addons/GodotGetImage/plugin.cfg")
 
 [input_devices]
 
