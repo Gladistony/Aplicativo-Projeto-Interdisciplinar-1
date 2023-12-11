@@ -17,7 +17,12 @@ func processEstado():
 			Stado = 1
 			_tokenLogin = _lastRespost.token
 			get_tree().change_scene_to_file("res://Tela/tela_principal.tscn")
-		print(_lastRespost)
+			print(_lastRespost)
+			var body = JSON.stringify({"token": _tokenLogin})
+			var toke = "Authorization: Bearer "+_tokenLogin
+			var error = http_request.request(servidor+"/cadastro/1", ["Content-Type: application/json", toke], HTTPClient.METHOD_GET , "{}")
+	elif Stado == 1:
+		print("teste ",_lastRespost)
 
 func _tryLogin(email,senha):
 	if _servidorOnline and not _esperando:
@@ -50,6 +55,7 @@ func converter_ASCIIToString(lista):
 	
 func _request_completed(_result, _response_code, _headers, body):
 	var response = converter_ASCIIToString(body)
+	print(_response_code, response)
 	_esperando = false
 	if not posTest:
 		if (response == null) or (response.contains("suspend")):
