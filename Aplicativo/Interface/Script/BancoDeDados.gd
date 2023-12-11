@@ -20,12 +20,17 @@ func LetraInicial(string):
 func _buscaRemedio(nome):
 	nome = nome.to_upper()
 	var retorno = []
+	var retorno2 = []
 	var previa = dados.keys()
 	for item in previa:
-		if item.contains(nome):
+		var pos = item.find(nome)
+		if pos == 0:
 			retorno.append(item)
+		elif pos > 0:
+			retorno2.append(item)
 	retorno.sort()
-	return retorno
+	retorno2.sort()
+	return retorno+retorno2
 
 func _buscaSubstancia(nome):
 	nome = nome.to_upper()

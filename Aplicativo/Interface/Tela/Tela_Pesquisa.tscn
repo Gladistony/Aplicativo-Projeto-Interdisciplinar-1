@@ -89,6 +89,7 @@ layout_mode = 2
 [node name="JanelaPOP" type="Window" parent="."]
 initial_position = 1
 size = Vector2i(850, 750)
+visible = false
 unresizable = true
 
 [node name="FundoBranco" type="Sprite2D" parent="JanelaPOP"]
@@ -114,11 +115,21 @@ theme_override_font_sizes/font_size = 40
 text = "Nome:"
 
 [node name="ValorSubstancia" type="OptionButton" parent="JanelaPOP/BoxPop/NomeBox"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_ciy8h")
 theme_override_font_sizes/font_size = 40
+clip_text = true
+
+[node name="ValorSubstancia2" type="Label" parent="JanelaPOP/BoxPop/NomeBox"]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_ciy8h")
+theme_override_font_sizes/font_size = 40
+text = "Descrição da substancia"
 clip_text = true
 
 [node name="SubstanciaBox" type="HBoxContainer" parent="JanelaPOP/BoxPop"]
@@ -145,7 +156,7 @@ layout_mode = 2
 size_flags_horizontal = 8
 theme_override_colors/font_color = Color(0.25098, 0.482353, 1, 1)
 theme_override_fonts/font = ExtResource("4_slej4")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 35
 text = "Buscar Substancia"
 flat = true
 
@@ -261,6 +272,7 @@ theme_override_font_sizes/font_size = 40
 text = "Descrição da Substancia"
 
 [node name="VendaLiberada" type="HBoxContainer" parent="JanelaPOP/BoxPop"]
+visible = false
 layout_mode = 2
 
 [node name="Label" type="Label" parent="JanelaPOP/BoxPop/VendaLiberada"]

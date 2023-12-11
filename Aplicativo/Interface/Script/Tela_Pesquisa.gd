@@ -6,6 +6,7 @@ extends Control
 @onready var preloadBox = preload("res://Recursos/Box/BoxMedicamentoPesquisa.tscn")
 #BoxRemedio
 @onready var popNome = get_node("JanelaPOP/BoxPop/NomeBox/ValorSubstancia")
+@onready var popNome2 = get_node("JanelaPOP/BoxPop/NomeBox/ValorSubstancia2")
 @onready var popSubstancia = get_node("JanelaPOP/BoxPop/SubstanciaBox/ValorSubstancia")
 @onready var popFabricante = get_node("JanelaPOP/BoxPop/FabricanteBox/OptionButton")
 @onready var popDosagem = get_node("JanelaPOP/BoxPop/DosagemBox/ValorDosagens")
@@ -31,6 +32,7 @@ func monstraPopUpInfo(nomeRemedio):
 
 func attPopInfo():
 	#popNome.text = daraRemedioPop[popIDFabricante].produto
+	popNome2.text = daraRemedioPop[popIDFabricante].produto
 	popSubstancia.text = daraRemedioPop[popIDFabricante].substancia
 	popSubstancia.text = popSubstancia.text.replace(";","\n")
 	popDosagem.text = daraRemedioPop[popIDFabricante].apresentacao
@@ -133,3 +135,16 @@ func _on_funcao_busca_timeout():
 
 func _on_caixa_de_busca_focus_entered():
 	$JanelaPOP.visible = false
+
+func _input(event):
+	#Fecha janela caso click fora dela
+	if event is InputEventScreenTouch or event is InputEventMouseButton: # verifica se o evento é um toque na tela
+		if event.pressed: # verifica se o toque foi iniciado
+			var posClick = event.get_position()
+			var posJanela = $JanelaPOP.position
+			var tamJanela = $JanelaPOP.size
+			var dentroX = (posClick.x >= posJanela.x) and (posClick.x <= (posJanela.x + tamJanela.x))
+			var dentroY = (posClick.y >= posJanela.y) and (posClick.y <= (posJanela.y + tamJanela.y))
+			if (not (dentroX and dentroY)):
+				$JanelaPOP.visible = false
+				#print(dentroX and dentroY)
