@@ -1,5 +1,5 @@
 package pgp.projeto.api.infra.security;
 
-public record DadosTokenJWT(String token) {
+public record DadosTokenJWT(String token, Long contaId) {
 
 }

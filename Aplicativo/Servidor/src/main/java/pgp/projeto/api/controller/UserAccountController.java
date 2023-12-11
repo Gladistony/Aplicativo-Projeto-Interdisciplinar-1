@@ -50,8 +50,16 @@ public class UserAccountController {
     public ResponseEntity atualizar(@RequestBody @Valid UserUpdateData dados){
         var usuario = repository.getReferenceById(dados.id());
         usuario.atualizarInformacoes(dados);
-
-        return ResponseEntity.ok(new UserDetailsData(usuario));
+        
+        // Obtém os detalhes do usuário autenticado a partir da autenticação
+        UserAccount usuarioAutenticado = (UserAccount) authentication.getPrincipal();
+       
+         // Verifica se o ID passado na URL é igual ao ID do usuário autenticado
+        
+        if (!usuarioAutenticado.getId().equals(dados.id())) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+        }
+            return ResponseEntity.ok(new UserDetailsData(usuario));
 
     }
     
@@ -76,6 +84,14 @@ public class UserAccountController {
     @GetMapping("/{id}")
     public ResponseEntity detalhar(@PathVariable Long id){
         var usuario = repository.getReferenceById(id);
-        return ResponseEntity.ok(new UserDetailsData(usuario));
+         // Obtém os detalhes do usuário autenticado a partir da autenticação
+         UserAccount usuarioAutenticado = (UserAccount) authentication.getPrincipal();
+
+         // Verifica se o ID passado na URL é igual ao ID do usuário autenticado
+         if (!usuarioAutenticado.getId().equals(id)) {
+             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+         }
+         
+         return ResponseEntity.ok(new UserDetailsData(usuario));
     }
 }
