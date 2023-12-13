@@ -36,6 +36,12 @@ public class UserAccount implements UserDetails {
     private String login;
     private String senha;
 
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+
+
     public UserAccount(UserRegistrationData user) {
         this.nome = user.nome();
         this.login = user.email();

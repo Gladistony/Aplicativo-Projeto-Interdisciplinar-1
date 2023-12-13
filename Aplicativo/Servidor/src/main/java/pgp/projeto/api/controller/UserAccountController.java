@@ -7,6 +7,7 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -35,16 +36,21 @@ public class UserAccountController {
     
     @Autowired
     private UserRepository repository;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
     @PostMapping
     @Transactional
     public ResponseEntity cadastrar(@RequestBody @Valid UserRegistrationData dados, UriComponentsBuilder uriBuilder) {
-       var usuario = new UserAccount(dados);
-       repository.save(usuario);
-       var uri = uriBuilder.path("/usuarios/{id}").buildAndExpand(usuario.getId()).toUri();
-   
-       return ResponseEntity.created(uri).body(new UserDetailsData(usuario));
-    }
+        var usuario = new UserAccount(dados);
+        usuario.setSenha(passwordEncoder.encode(dados.senha()));
+        repository.save(usuario);
+        var uri = uriBuilder.path("/usuarios/{id}").buildAndExpand(usuario.getId()).toUri();
 
+        return ResponseEntity.created(uri).body(new UserDetailsData(usuario));
+    }
+    
     @PutMapping
     @Transactional
     public ResponseEntity atualizar(@RequestBody @Valid UserUpdateData dados, Authentication authentication){
