@@ -43,8 +43,8 @@ public class UserAccountController {
     @PostMapping
     @Transactional
     public ResponseEntity cadastrar(@RequestBody @Valid UserRegistrationData dados, UriComponentsBuilder uriBuilder) {
-        var usuario = new UserAccount(dados);
-        usuario.setSenha(passwordEncoder.encode(dados.senha()));
+        
+        var usuario = new UserAccount(dados,passwordEncoder);
         repository.save(usuario);
         var uri = uriBuilder.path("/cadastro/{id}").buildAndExpand(usuario.getId()).toUri();
 
@@ -54,18 +54,17 @@ public class UserAccountController {
     @PutMapping
     @Transactional
     public ResponseEntity atualizar(@RequestBody @Valid UserUpdateData dados, Authentication authentication){
-        var usuario = repository.getReferenceById(dados.id());
-        usuario.atualizarInformacoes(dados);
-        
-        // Obtém os detalhes do usuário autenticado a partir da autenticação
+      
         UserAccount usuarioAutenticado = (UserAccount) authentication.getPrincipal();
-       
-         // Verifica se o ID passado na URL é igual ao ID do usuário autenticado
-        
+      
         if (!usuarioAutenticado.getId().equals(dados.id())) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
         }
-            return ResponseEntity.ok(new UserDetailsData(usuario));
+
+        var usuario = repository.getReferenceById(dados.id());
+        usuario.atualizarInformacoes(dados, passwordEncoder);
+        
+        return ResponseEntity.ok(new UserDetailsData(usuario));
 
     }
     
@@ -73,10 +72,8 @@ public class UserAccountController {
     @Transactional
     public ResponseEntity remover(@PathVariable Long id, Authentication authentication) {
         
-        // Obtém os detalhes do usuário autenticado a partir da autenticação
         UserAccount usuarioAutenticado = (UserAccount) authentication.getPrincipal();
 
-        // Verifica se o ID passado na URL é igual ao ID do usuário autenticado
         if (!usuarioAutenticado.getId().equals(id)) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
         }
@@ -89,15 +86,16 @@ public class UserAccountController {
 
     @GetMapping("/{id}")
     public ResponseEntity detalhar(@PathVariable Long id,  Authentication authentication){
-        var usuario = repository.getReferenceById(id);
-         // Obtém os detalhes do usuário autenticado a partir da autenticação
+        
          UserAccount usuarioAutenticado = (UserAccount) authentication.getPrincipal();
 
-         // Verifica se o ID passado na URL é igual ao ID do usuário autenticado
          if (!usuarioAutenticado.getId().equals(id)) {
              return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
          }
-         
+
+         var usuario = repository.getReferenceById(id);
          return ResponseEntity.ok(new UserDetailsData(usuario));
     }
+
+    
 }
