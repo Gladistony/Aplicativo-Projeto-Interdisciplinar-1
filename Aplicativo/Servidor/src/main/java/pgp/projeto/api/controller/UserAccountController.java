@@ -46,7 +46,7 @@ public class UserAccountController {
         var usuario = new UserAccount(dados);
         usuario.setSenha(passwordEncoder.encode(dados.senha()));
         repository.save(usuario);
-        var uri = uriBuilder.path("/usuarios/{id}").buildAndExpand(usuario.getId()).toUri();
+        var uri = uriBuilder.path("/cadastro/{id}").buildAndExpand(usuario.getId()).toUri();
 
         return ResponseEntity.created(uri).body(new UserDetailsData(usuario));
     }
