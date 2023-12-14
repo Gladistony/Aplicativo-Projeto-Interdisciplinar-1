@@ -15,6 +15,7 @@ offset_right = -180.0
 offset_bottom = -1790.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_djti3")
 metadata/_edit_lock_ = true
 
@@ -40,7 +41,7 @@ vertical_alignment = 1
 layout_mode = 0
 offset_left = 56.0
 offset_top = 40.0
-offset_right = 103.0
+offset_right = 832.0
 offset_bottom = 100.0
 texture_normal = ExtResource("3_x2neu")
 

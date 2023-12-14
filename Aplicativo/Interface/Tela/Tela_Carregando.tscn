@@ -67,7 +67,7 @@ texture = ExtResource("4_byefy")
 metadata/_edit_lock_ = true
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 5.0
 autostart = true
 
 [node name="AnimacaoRodando" type="AnimationPlayer" parent="."]
