@@ -24,6 +24,7 @@ import pgp.projeto.api.domain.usuario.UserDetailsData;
 import pgp.projeto.api.domain.usuario.UserRegistrationData;
 import pgp.projeto.api.domain.usuario.UserUpdateData;
 import pgp.projeto.api.domain.usuario.authentication.UserRepository;
+import pgp.projeto.api.domain.usuario.email.EmailService;
 
 
 
@@ -40,6 +41,10 @@ public class UserAccountController {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
+    @Autowired
+    private EmailService EmailService;
+
+
     @PostMapping
     @Transactional
     public ResponseEntity cadastrar(@RequestBody @Valid UserRegistrationData dados, UriComponentsBuilder uriBuilder) {
@@ -47,6 +52,9 @@ public class UserAccountController {
         var usuario = new UserAccount(dados,passwordEncoder);
         repository.save(usuario);
         var uri = uriBuilder.path("/cadastro/{id}").buildAndExpand(usuario.getId()).toUri();
+
+
+        EmailService.sendWelcomeEmail(usuario);
 
         return ResponseEntity.created(uri).body(new UserDetailsData(usuario));
     }
