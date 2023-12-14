@@ -42,7 +42,7 @@ public class UserAccountController {
     private PasswordEncoder passwordEncoder;
 
     @Autowired
-    private EmailService EmailService;
+    private EmailService emailService;
 
 
     @PostMapping
@@ -54,7 +54,7 @@ public class UserAccountController {
         var uri = uriBuilder.path("/cadastro/{id}").buildAndExpand(usuario.getId()).toUri();
 
 
-        EmailService.sendWelcomeEmail(usuario);
+        emailService.sendWelcomeEmail(usuario);
 
         return ResponseEntity.created(uri).body(new UserDetailsData(usuario));
     }

@@ -38,6 +38,12 @@ public class UserAccount implements UserDetails {
     private String senha;
     
    
+    public void setSenha(String senha, PasswordEncoder passwordEncoder) {
+        this.senha = passwordEncoder.encode(senha);
+    }
+
+
+
     public UserAccount(UserRegistrationData user, PasswordEncoder passwordEncoder) {
         this.nome = user.nome();
         this.login = user.email();
