@@ -1,34 +1,35 @@
-package med.voll.api.controller;
+package pgp.projeto.api.controller;
 
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
-import med.voll.api.domain.consulta.AgendaDeConsultas;
-import med.voll.api.domain.consulta.DadosAgendamentoConsulta;
-import med.voll.api.domain.consulta.DadosCancelamentoConsulta;
+import pgp.projeto.api.domain.lembrete.AgendaDeLembretes;
+import pgp.projeto.api.domain.lembrete.DadosCancelamentoLembrete;
+import pgp.projeto.api.domain.lembrete.DadosRegistroLembrete;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("consultas")
+@RequestMapping("lembretes")
 @SecurityRequirement(name = "bearer-key")
-public class ConsultaController {
+public class LembreteController {
 
     @Autowired
-    private AgendaDeConsultas agenda;
+    private AgendaDeLembretes lembrete;
 
     @PostMapping
     @Transactional
-    public ResponseEntity agendar(@RequestBody @Valid DadosAgendamentoConsulta dados) {
-        var dto = agenda.agendar(dados);
+    public ResponseEntity criar(@RequestBody @Valid DadosRegistroLembrete dados) {
+        var dto = lembrete.agendar(dados);
         return ResponseEntity.ok(dto);
     }
 
     @DeleteMapping
     @Transactional
-    public ResponseEntity cancelar(@RequestBody @Valid DadosCancelamentoConsulta dados) {
-        agenda.cancelar(dados);
+    public ResponseEntity excluir(@RequestBody @Valid DadosCancelamentoLembrete dados) {
+        lembrete.excluir(dados);
         return ResponseEntity.noContent().build();
     }
 
