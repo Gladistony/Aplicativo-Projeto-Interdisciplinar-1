@@ -1,0 +1,13 @@
+[gd_scene format=2]
+
+[node name="TesteScene" type="Node2D"]
+
+[node name="Button" type="Button" parent="."]
+margin_left = 53.0
+margin_top = 51.0
+margin_right = 177.0
+margin_bottom = 84.0
+text = "Teste"
+__meta__ = {
+"_edit_use_anchors_": false
+}
