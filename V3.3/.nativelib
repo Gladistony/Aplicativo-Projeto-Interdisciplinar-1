@@ -1,0 +1,20 @@
+{
+    "id": "a67d37fc-4eb4-4655-b05f-ce1c10fff110",
+    "platforms": [
+        "all",
+        "android"
+    ],
+    "packages": {
+        "local-notification": {
+            "version": "0.2.2",
+            "platforms": [
+                "all",
+                "android"
+            ],
+            "dependencies": [],
+            "autoload": {
+                "localnotification": "*res://scripts/localnotification.gd"
+            }
+        }
+    }
+}
