@@ -1,7 +1,7 @@
 extends Node
 
 var _data = {}
-
+signal _readEnd;
 
 func _fileExist(name):
 	var dir = Directory.new()
@@ -19,7 +19,6 @@ func _ready():
 	_data.senha = ""
 	_data.token = true
 	_data.loginStatus = false
-	_loadData()
 
 func _loadData():
 	if _fileExist("res://dadosLocais.datLife"):
@@ -31,6 +30,7 @@ func _loadData():
 		var data = JSON.new()
 		data.parse(jsonstr)
 		_data = data.data
+	emit_signal("_readEnd")
 
 func _saveData():
 	var file = File.new()

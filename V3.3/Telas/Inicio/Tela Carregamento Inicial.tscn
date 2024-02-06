@@ -1,3 +1,64 @@
-[gd_scene format=2]
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Recursos/Imagens/load circulo.png" type="Texture" id=1]
+[ext_resource path="res://Recursos/Imagens/fundoBranco.png" type="Texture" id=2]
+[ext_resource path="res://Recursos/Imagens/logo final.png" type="Texture" id=3]
+[ext_resource path="res://Recursos/Fontes/Poppins/Poppins-MediumItalic.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://scripts/Inicio/Tela Carregamento Inicial.gd" type="Script" id=5]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Rotacionar"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("load circulo:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 60.0, 120.0, 180.0, 240.0, 300.0, 360.0 ]
+}
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = ExtResource( 4 )
 
 [node name="Tela Carregamento Inicial" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="fundoBranco" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="load circulo" type="Sprite" parent="."]
+position = Vector2( 543, 1339 )
+rotation = 1.86502
+scale = Vector2( 0.322, 0.322 )
+texture = ExtResource( 1 )
+
+[node name="logo final" type="Sprite" parent="."]
+position = Vector2( 544, 645 )
+scale = Vector2( 1.19111, 1 )
+texture = ExtResource( 3 )
+
+[node name="Animar Circulo" type="AnimationPlayer" parent="."]
+autoplay = "Rotacionar"
+anims/Rotacionar = SubResource( 1 )
+
+[node name="Status" type="Label" parent="."]
+margin_left = 7.99994
+margin_top = 1517.0
+margin_right = 1088.0
+margin_bottom = 1709.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Carregando dados do usuario ..."
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
