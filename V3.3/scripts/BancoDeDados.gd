@@ -12,21 +12,28 @@ func _fileExist(name):
 	return  dir.file_exists(name)
 
 func _loadData():
-	if _fileExist("res://Recursos/Banco de Dados/dados.json"):
+	if _fileExist("res://Recursos/Banco de Dados/data.dat"):
 		var file = File.new()
-		#file.open("res://Recursos/Banco de Dados/dados.json", File.READ)
-		#var jsonstr =  file.get_as_text()
-	#	file.close()
-		#var data = JSON.parse(jsonstr)
-		var jf := JSONFile.new()
-		jf.open("res://Recursos/Banco de Dados/dados.json", File.READ)
-		var my_data = jf.load_data()
-		print(my_data)
-		#print(data.result)
-		#data = data.result
-		#JSON.print(jsonstr, "\t")
-		#data.parse(jsonstr)
-		#_dados = data.data
+		file.open("res://Recursos/Banco de Dados/data.dat", File.READ)
+		while !file.eof_reached():
+			var data = file.get_line()
+			data = data.split("@")
+			var produto = {}
+			var nome = "desconhecido"
+			for i in range(data.size()):
+				var lendo = data[i].split("!")
+				if len(lendo) == 2:
+					produto[lendo[0]] = lendo[1]
+			if produto.has("produto"):
+				nome = produto["produto"]
+			#var produto = {"produto":nome, "substancia":substancia, "laboratorio":laboratorio, "apresentacao":apresentacao, "preco":preco, "tarja":tarja, "tipo":tipo, "classe":classe, "registro":registro, "ean":ean}
+			if _dados.has(nome):
+				_dados[nome].append(produto)
+			else:
+				_dados[nome] = [produto]
+		file.close()
+		#print(_dados)
+
 	emit_signal("_readEnd")
 
 func LetraInicial(string):

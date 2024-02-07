@@ -1,6 +1,11 @@
 extends Node
 
-var _data = {}
+
+var login = ""
+var senha = ""
+var token = ""
+var loginStatus = false
+
 signal _readEnd;
 
 func _fileExist(name):
@@ -9,31 +14,32 @@ func _fileExist(name):
 
 
 func _logOff():
-	_data.login = ""
-	_data.senha = ""
-	_data.token = true
-	_data.loginStatus = false
+	login = ""
+	senha = ""
+	token = ""
+	loginStatus = false
+	_saveData()
 
 func _ready():
-	_data.login = ""
-	_data.senha = ""
-	_data.token = true
-	_data.loginStatus = false
+	pass
 
 func _loadData():
 	if _fileExist("res://dadosLocais.datLife"):
 		var file = File.new()
 		file.open("res://dadosLocais.datLife", File.READ)
-		#var arq = FileAccess.open("",FileAccess.READ)
-		var jsonstr =  file.get_as_text()
+		login = file.get_line()
+		senha = file.get_line()
+		token = file.get_line()
+		loginStatus = bool(file.get_line())
 		file.close()
-		var data = JSON.new()
-		data.parse(jsonstr)
-		_data = data.data
+		
 	emit_signal("_readEnd")
 
 func _saveData():
 	var file = File.new()
 	file.open("res://dadosLocais.datLife", File.WRITE)
-	file.store_line(JSON.stringify(_data))
+	file.store_string(login)
+	file.store_string(senha)
+	file.store_string(token)
+	file.store_string(str(loginStatus))
 	file.close()
