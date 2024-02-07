@@ -22,7 +22,14 @@ func loadBancoDeDados():
 
 func finalLeituraBanco():
 	_charceStade("Tentando conectar ao servidor ...")
-	print(BancoDeDados._buscaRemedio("Dipirona"))
+	if NetWork.posTest:
+		statusDoServidorDefinido()
+	else:
+		NetWork.connect("resposta", self, "statusDoServidorDefinido")
+	#print(BancoDeDados._buscaRemedio("Dipirona"))
+
+func statusDoServidorDefinido():
+	print("Servidor definido")
 
 
 func _on_Iniciar_timeout():
