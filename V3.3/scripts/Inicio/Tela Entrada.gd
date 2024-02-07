@@ -5,4 +5,5 @@ func _ready():
 		$BotaoLogin.visible = false
 		$BotaoRegistro.visible = false
 
-
+func _on_BotaoRegistro_pressed():
+	get_tree().change_scene("res://Telas/Inicio/Tela Cadastro.tscn")

@@ -20,7 +20,6 @@ texture = ExtResource( 2 )
 
 [node name="BotaoRegistro" parent="." instance=ExtResource( 4 )]
 position = Vector2( 310, 1578 )
-scale = Vector2( 1.89474, 1.96923 )
 
 [node name="Informacao" parent="BotaoRegistro" index="0"]
 text = "Cadastra"
@@ -37,6 +36,8 @@ position = Vector2( 310, 1400 )
 [node name="Informacao" parent="BotaoEntraSLogin" index="0"]
 margin_right = 267.0
 text = "Entra Sem Cadastro"
+
+[connection signal="pressed" from="BotaoRegistro" to="." method="_on_BotaoRegistro_pressed"]
 
 [editable path="BotaoRegistro"]
 [editable path="BotaoLogin"]
