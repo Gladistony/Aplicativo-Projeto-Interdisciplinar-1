@@ -67,4 +67,9 @@ __meta__ = {
 one_shot = true
 autostart = true
 
+[node name="EsgotadoResposta" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+
 [connection signal="timeout" from="Iniciar" to="." method="_on_Iniciar_timeout"]
+[connection signal="timeout" from="EsgotadoResposta" to="." method="_on_EsgotadoResposta_timeout"]

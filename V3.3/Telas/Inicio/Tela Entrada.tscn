@@ -1,3 +1,43 @@
-[gd_scene format=2]
+[gd_scene load_steps=6 format=2]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource path="res://Recursos/Imagens/fundoBranco.png" type="Texture" id=1]
+[ext_resource path="res://Recursos/Imagens/logo final.png" type="Texture" id=2]
+[ext_resource path="res://Recursos/Componentes/Botao.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Recursos/Componentes/Botao Branco.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scripts/Inicio/Tela Entrada.gd" type="Script" id=5]
+
+[node name="Tela Entrada" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="fundoBranco" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="logo final" type="Sprite" parent="."]
+position = Vector2( 544, 645 )
+scale = Vector2( 1.19111, 1 )
+texture = ExtResource( 2 )
+
+[node name="BotaoRegistro" parent="." instance=ExtResource( 4 )]
+position = Vector2( 310, 1578 )
+scale = Vector2( 1.89474, 1.96923 )
+
+[node name="Informacao" parent="BotaoRegistro" index="0"]
+text = "Cadastra"
+
+[node name="BotaoLogin" parent="." instance=ExtResource( 3 )]
+position = Vector2( 310, 1224 )
+
+[node name="Informacao" parent="BotaoLogin" index="0"]
+text = "Entrar"
+
+[node name="BotaoEntraSLogin" parent="." instance=ExtResource( 3 )]
+position = Vector2( 310, 1400 )
+
+[node name="Informacao" parent="BotaoEntraSLogin" index="0"]
+margin_right = 267.0
+text = "Entra Sem Cadastro"
+
+[editable path="BotaoRegistro"]
+[editable path="BotaoLogin"]
+[editable path="BotaoEntraSLogin"]

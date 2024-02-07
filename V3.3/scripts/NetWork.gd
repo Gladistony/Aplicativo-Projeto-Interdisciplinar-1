@@ -42,7 +42,7 @@ func converter_ASCIIToString(lista):
 func _on_request_completed(_result, _response_code, _headers, body):
 	var response = converter_ASCIIToString(body)
 	if not posTest:
-		if (response == null) or (response.count("suspend") > 0):
+		if (response == null) or (response.count("suspend") > 0) or (len(response) < 10):
 			_servidorLigado = false
 			_lastRespost = "suspend"
 		else:
