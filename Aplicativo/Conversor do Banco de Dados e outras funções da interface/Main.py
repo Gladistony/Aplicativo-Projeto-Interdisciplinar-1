@@ -14,7 +14,7 @@ tarja = df["TARJA"][linhaInicial:linhaFinal+1]
 
 #Variavel para armazenar os produtos 
 dados = {}
-
+arqu = open("data.dat", "w")
 
 for i in range(linhaInicial, linhaFinal+1):
     por = round((i/linhaFinal)*100)
@@ -39,6 +39,16 @@ for i in range(linhaInicial, linhaFinal+1):
     data["estimativa"] = str(df["PMC 12%"][i])
     data["liberado2022"] = df["COMERCIALIZAÇÃO 2022"][i]
     dados[nome].append(data)
+    arqu.write(data["produto"] + "\n")
+    arqu.write(data["substancia"] + "\n")
+    arqu.write(data["laboratorio"] + "\n")
+    arqu.write(data["apresentacao"] + "\n")
+    arqu.write(data["classe"] + "\n")
+    arqu.write(data["tipo"] + "\n")
+    arqu.write(data["tarja"] + "\n")
+    arqu.write(data["estimativa"] + "\n")
+    arqu.write(data["liberado2022"] + "\n")
+    arqu.write("\n")
 
 #print(df["PRODUTO"]) # imprime o DataFram
 #converter dados para string
@@ -46,4 +56,7 @@ for i in range(linhaInicial, linhaFinal+1):
 arquivo = open("dados.json", "w") # abre um arquivo chamado dados.json em modo de escrita
 json.dump(dados, arquivo) # escreve o dicionário como uma string JSON no arquivo
 arquivo.close() # fecha o arquivo
+arqu.close()
+
+
 
