@@ -10,4 +10,5 @@ func _on_botão_registro_pressed():
 
 func _on_login_pressed():
 	NetWork._tryLogin($BoxEmail/Email/Usuario.text, $BoxSenha/fundo/Usuario.text)
+	get_tree().change_scene_to_file("res://Tela/Tela_Carregando_Login.tscn")
 	#get_tree().change_scene_to_file("res://Tela/tela_principal.tscn")

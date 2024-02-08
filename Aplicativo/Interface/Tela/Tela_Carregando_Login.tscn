@@ -1,9 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://b6v5lkrmdhgkc"]
+[gd_scene load_steps=8 format=3 uid="uid://0lnu7f47iquu"]
 
-[ext_resource type="Texture2D" uid="uid://c33xbq3hrrvya" path="res://Recursos/logo final.png" id="1_0rwfb"]
-[ext_resource type="Script" path="res://Script/Tela_Carregando.gd" id="1_26jo2"]
-[ext_resource type="Texture2D" uid="uid://dejs1hl8jj1ae" path="res://Recursos/load circulo.png" id="2_vtr08"]
-[ext_resource type="Texture2D" uid="uid://c4uchy7a1durx" path="res://Recursos/fundoBranco.png" id="4_byefy"]
+[ext_resource type="Script" path="res://Script/Tela_Carregando_Login.gd" id="1_1l5m4"]
+[ext_resource type="Texture2D" uid="uid://c33xbq3hrrvya" path="res://Recursos/logo final.png" id="2_5ymag"]
+[ext_resource type="Texture2D" uid="uid://dejs1hl8jj1ae" path="res://Recursos/load circulo.png" id="3_swrpo"]
+[ext_resource type="Texture2D" uid="uid://c4uchy7a1durx" path="res://Recursos/fundoBranco.png" id="4_nxw5p"]
 
 [sub_resource type="Animation" id="Animation_06mmd"]
 resource_name = "Load"
@@ -43,36 +43,37 @@ _data = {
 "RESET": SubResource("Animation_djeyw")
 }
 
-[node name="TelaCarregando" type="Control"]
+[node name="TelaCarregando_Login" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_26jo2")
+script = ExtResource("1_1l5m4")
 
 [node name="LogoAzul" type="Sprite2D" parent="."]
 position = Vector2(540, 712)
 scale = Vector2(1.2, 1.132)
-texture = ExtResource("1_0rwfb")
+texture = ExtResource("2_5ymag")
 metadata/_edit_lock_ = true
 
 [node name="LoadCirculo" type="Sprite2D" parent="."]
 position = Vector2(543, 1429)
 scale = Vector2(0.322, 0.322)
-texture = ExtResource("2_vtr08")
+texture = ExtResource("3_swrpo")
 metadata/_edit_lock_ = true
 
 [node name="Fundo" type="Sprite2D" parent="."]
 z_index = -1
 position = Vector2(544, 957.875)
-texture = ExtResource("4_byefy")
+texture = ExtResource("4_nxw5p")
 metadata/_edit_lock_ = true
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 5.0
-autostart = true
 
 [node name="AnimacaoRodando" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_obmkg")
 }
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

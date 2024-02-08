@@ -1,23 +1,23 @@
 [gd_scene load_steps=10 format=3 uid="uid://c3fq0pvg8eeun"]
 
-[ext_resource type="Script" path="res://Script/Tela Registro.gd" id="1_sk7tt"]
-[ext_resource type="FontFile" uid="uid://b2ollwwqaf816" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="2_816ql"]
-[ext_resource type="Texture2D" uid="uid://uf3j1cltxl2j" path="res://Recursos/fundoBranco.png" id="2_qmqxq"]
-[ext_resource type="PackedScene" uid="uid://ds1k3mh0sc3au" path="res://Tela/Box_texto/box_usuario.tscn" id="3_g1uy8"]
-[ext_resource type="PackedScene" uid="uid://bfnsdy6fekrfm" path="res://Tela/Box_texto/box_email.tscn" id="4_bsysu"]
-[ext_resource type="PackedScene" uid="uid://wx5whhqgusvp" path="res://Tela/Box_texto/box_calendario.tscn" id="5_vpck0"]
-[ext_resource type="PackedScene" uid="uid://djva6mi80ee1o" path="res://Tela/Box_texto/box_senha.tscn" id="6_hhue6"]
-[ext_resource type="PackedScene" uid="uid://dn3338ikol3x" path="res://Recursos/Botão/Botão_Check.tscn" id="7_8heqo"]
-[ext_resource type="Texture2D" uid="uid://2qdlgs5ec3iw" path="res://Recursos/button base.png" id="8_kcl0k"]
+[ext_resource type="Script" path="res://Script/Tela Registro.gd" id="1_l1i2j"]
+[ext_resource type="Texture2D" uid="uid://c4uchy7a1durx" path="res://Recursos/fundoBranco.png" id="2_pnag5"]
+[ext_resource type="FontFile" uid="uid://do12ew2vrafua" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="3_r5cqh"]
+[ext_resource type="PackedScene" uid="uid://ds1k3mh0sc3au" path="res://Tela/Box_texto/box_usuario.tscn" id="4_i18dy"]
+[ext_resource type="PackedScene" uid="uid://bfnsdy6fekrfm" path="res://Tela/Box_texto/box_email.tscn" id="5_1itfr"]
+[ext_resource type="PackedScene" uid="uid://wx5whhqgusvp" path="res://Tela/Box_texto/box_calendario.tscn" id="6_ca5am"]
+[ext_resource type="PackedScene" uid="uid://djva6mi80ee1o" path="res://Tela/Box_texto/box_senha.tscn" id="7_gxu84"]
+[ext_resource type="PackedScene" uid="uid://dn3338ikol3x" path="res://Recursos/Botão/Botão_Check.tscn" id="8_c28bx"]
+[ext_resource type="Texture2D" uid="uid://b6laquvksiide" path="res://Recursos/button base.png" id="9_4xrbg"]
 
 [node name="Tela Registro" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_sk7tt")
+script = ExtResource("1_l1i2j")
 
 [node name="Fundo" type="Sprite2D" parent="."]
 z_index = -1
-texture = ExtResource("2_qmqxq")
+texture = ExtResource("2_pnag5")
 centered = false
 metadata/_edit_lock_ = true
 
@@ -28,7 +28,7 @@ offset_top = 208.0
 offset_right = 1088.0
 offset_bottom = 400.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_816ql")
+theme_override_fonts/font = ExtResource("3_r5cqh")
 theme_override_font_sizes/font_size = 50
 text = "Cadastrar"
 horizontal_alignment = 1
@@ -42,43 +42,43 @@ offset_top = 272.0
 offset_right = 244.0
 offset_bottom = 351.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_816ql")
+theme_override_fonts/font = ExtResource("3_r5cqh")
 theme_override_font_sizes/font_size = 50
 text = "   <    "
 flat = true
 metadata/_edit_use_anchors_ = true
 
-[node name="BoxUsuario" parent="." instance=ExtResource("3_g1uy8")]
+[node name="BoxUsuario" parent="." instance=ExtResource("4_i18dy")]
 offset_left = 208.0
 offset_top = 512.0
 offset_right = 208.0
 offset_bottom = 512.0
 
-[node name="BoxEmail" parent="." instance=ExtResource("4_bsysu")]
+[node name="BoxEmail" parent="." instance=ExtResource("5_1itfr")]
 offset_left = 208.0
 offset_top = 664.0
 offset_right = 208.0
 offset_bottom = 664.0
 
-[node name="BoxCalendario" parent="." instance=ExtResource("5_vpck0")]
+[node name="BoxCalendario" parent="." instance=ExtResource("6_ca5am")]
 offset_left = 208.0
 offset_top = 808.0
 offset_right = 208.0
 offset_bottom = 808.0
 
-[node name="BoxSenha" parent="." instance=ExtResource("6_hhue6")]
+[node name="BoxSenha" parent="." instance=ExtResource("7_gxu84")]
 offset_left = 208.0
 offset_top = 952.0
 offset_right = 208.0
 offset_bottom = 952.0
 
-[node name="BoxSenha2" parent="." instance=ExtResource("6_hhue6")]
+[node name="BoxSenha2" parent="." instance=ExtResource("7_gxu84")]
 offset_left = 208.0
 offset_top = 1096.0
 offset_right = 208.0
 offset_bottom = 1096.0
 
-[node name="BotãoCheck" parent="." instance=ExtResource("7_8heqo")]
+[node name="BotãoCheck" parent="." instance=ExtResource("8_c28bx")]
 offset_left = 208.0
 offset_top = 1248.0
 offset_right = 208.0
@@ -91,7 +91,7 @@ offset_top = 1264.0
 offset_right = 616.0
 offset_bottom = 1368.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_816ql")
+theme_override_fonts/font = ExtResource("3_r5cqh")
 theme_override_font_sizes/font_size = 30
 text = "Eu concordo com os
 e as"
@@ -103,7 +103,7 @@ offset_top = 1264.0
 offset_right = 928.0
 offset_bottom = 1320.0
 theme_override_colors/font_color = Color(0.184314, 0.552941, 0.909804, 1)
-theme_override_fonts/font = ExtResource("2_816ql")
+theme_override_fonts/font = ExtResource("3_r5cqh")
 theme_override_font_sizes/font_size = 30
 text = "Termos de serviço"
 
@@ -114,7 +114,7 @@ offset_top = 1310.0
 offset_right = 685.0
 offset_bottom = 1366.0
 theme_override_colors/font_color = Color(0.184314, 0.552941, 0.909804, 1)
-theme_override_fonts/font = ExtResource("2_816ql")
+theme_override_fonts/font = ExtResource("3_r5cqh")
 theme_override_font_sizes/font_size = 30
 text = "Politicas de privacidade"
 
@@ -126,21 +126,21 @@ offset_top = 1656.0
 offset_right = 320.0
 offset_bottom = 1656.0
 
-[node name="Login" type="TextureButton" parent="BotãoSimples"]
+[node name="CriarConta" type="TextureButton" parent="BotãoSimples"]
 layout_mode = 0
 offset_left = -112.0
 offset_top = -70.0
 offset_right = 560.0
 offset_bottom = 56.0
-texture_normal = ExtResource("8_kcl0k")
+texture_normal = ExtResource("9_4xrbg")
 stretch_mode = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="BotãoSimples/Login"]
+[node name="Label" type="Label" parent="BotãoSimples/CriarConta"]
 layout_mode = 0
 offset_right = 664.0
 offset_bottom = 126.0
-theme_override_fonts/font = ExtResource("2_816ql")
+theme_override_fonts/font = ExtResource("3_r5cqh")
 theme_override_font_sizes/font_size = 50
 text = "Criar"
 horizontal_alignment = 1
@@ -154,26 +154,26 @@ offset_top = 1736.0
 offset_right = 720.0
 offset_bottom = 1807.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_816ql")
+theme_override_fonts/font = ExtResource("3_r5cqh")
 theme_override_font_sizes/font_size = 30
 text = "Já possui uma conta? "
 horizontal_alignment = 2
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Botão Registro" type="Button" parent="."]
+[node name="Botão Entrar" type="Button" parent="."]
 layout_mode = 0
 offset_left = 726.0
 offset_top = 1748.0
 offset_right = 918.0
 offset_bottom = 1799.0
 theme_override_colors/font_color = Color(0.184314, 0.552941, 0.909804, 1)
-theme_override_fonts/font = ExtResource("2_816ql")
+theme_override_fonts/font = ExtResource("3_r5cqh")
 theme_override_font_sizes/font_size = 30
 text = "Entre aqui"
 flat = true
 metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Botão Voltar" to="." method="_on_botão_voltar_pressed"]
-[connection signal="pressed" from="BotãoSimples/Login" to="." method="_on_login_pressed"]
-[connection signal="pressed" from="Botão Registro" to="." method="_on_botão_registro_pressed"]
+[connection signal="pressed" from="BotãoSimples/CriarConta" to="." method="_on_criar_conta_pressed"]
+[connection signal="pressed" from="Botão Entrar" to="." method="_on_botão_entrar_pressed"]
