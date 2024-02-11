@@ -1,0 +1,79 @@
+[gd_scene load_steps=8 format=3 uid="uid://0lnu7f47iquu"]
+
+[ext_resource type="Script" path="res://Script/Tela_Carregando_Login.gd" id="1_1l5m4"]
+[ext_resource type="Texture2D" uid="uid://c33xbq3hrrvya" path="res://Recursos/logo final.png" id="2_5ymag"]
+[ext_resource type="Texture2D" uid="uid://dejs1hl8jj1ae" path="res://Recursos/load circulo.png" id="3_swrpo"]
+[ext_resource type="Texture2D" uid="uid://c4uchy7a1durx" path="res://Recursos/fundoBranco.png" id="4_nxw5p"]
+
+[sub_resource type="Animation" id="Animation_06mmd"]
+resource_name = "Load"
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LoadCirculo:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0472, 2.0944, 3.14159, 4.18879, 5.23599, 6.28319]
+}
+
+[sub_resource type="Animation" id="Animation_djeyw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LoadCirculo:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_obmkg"]
+_data = {
+"Load": SubResource("Animation_06mmd"),
+"RESET": SubResource("Animation_djeyw")
+}
+
+[node name="TelaCarregando_Login" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_1l5m4")
+
+[node name="LogoAzul" type="Sprite2D" parent="."]
+position = Vector2(540, 712)
+scale = Vector2(1.2, 1.132)
+texture = ExtResource("2_5ymag")
+metadata/_edit_lock_ = true
+
+[node name="LoadCirculo" type="Sprite2D" parent="."]
+position = Vector2(543, 1429)
+scale = Vector2(0.322, 0.322)
+texture = ExtResource("3_swrpo")
+metadata/_edit_lock_ = true
+
+[node name="Fundo" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(544, 957.875)
+texture = ExtResource("4_nxw5p")
+metadata/_edit_lock_ = true
+
+[node name="AnimacaoRodando" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_obmkg")
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

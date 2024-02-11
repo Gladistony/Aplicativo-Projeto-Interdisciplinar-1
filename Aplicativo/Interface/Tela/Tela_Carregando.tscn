@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://b6v5lkrmdhgkc"]
 
-[ext_resource type="Texture2D" uid="uid://c8vnet2465hll" path="res://Recursos/logo final.png" id="1_0rwfb"]
-[ext_resource type="Script" path="res://Script/Tela_Carregando.gd" id="1_fi5sq"]
-[ext_resource type="Texture2D" uid="uid://dyux3i88ie83i" path="res://Recursos/load circulo.png" id="2_vtr08"]
-[ext_resource type="Texture2D" uid="uid://uf3j1cltxl2j" path="res://Recursos/fundoBranco.png" id="4_byefy"]
+[ext_resource type="Texture2D" uid="uid://c33xbq3hrrvya" path="res://Recursos/logo final.png" id="1_0rwfb"]
+[ext_resource type="Script" path="res://Script/Tela_Carregando.gd" id="1_26jo2"]
+[ext_resource type="Texture2D" uid="uid://dejs1hl8jj1ae" path="res://Recursos/load circulo.png" id="2_vtr08"]
+[ext_resource type="Texture2D" uid="uid://c4uchy7a1durx" path="res://Recursos/fundoBranco.png" id="4_byefy"]
 
 [sub_resource type="Animation" id="Animation_06mmd"]
 resource_name = "Load"
@@ -46,7 +46,7 @@ _data = {
 [node name="TelaCarregando" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_fi5sq")
+script = ExtResource("1_26jo2")
 
 [node name="LogoAzul" type="Sprite2D" parent="."]
 position = Vector2(540, 712)

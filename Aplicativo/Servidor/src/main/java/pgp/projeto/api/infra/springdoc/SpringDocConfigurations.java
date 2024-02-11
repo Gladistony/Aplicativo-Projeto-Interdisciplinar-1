@@ -22,14 +22,14 @@ public class SpringDocConfigurations {
                                         .scheme("bearer")
                                         .bearerFormat("JWT")))
                 .info(new Info()
-                        .title("Voll.med API")
+                        .title("API Projeo Interdisciplinar - PGP")
                         .description(
-                                "API Rest da aplicação Voll.med, contendo as funcionalidades de CRUD de médicos e de pacientes, além de agendamento e cancelamento de consultas")
+                                "API Rest da aplicação de pgp, contendo as funcionalidades de CRUD de usuários, além de agendamento de consultas e lembretes.")
                         .contact(new Contact()
                                 .name("Time Backend")
                                 .email("backend@voll.med"))
                         .license(new License()
                                 .name("Apache 2.0")
-                                .url("http://voll.med/api/licenca")));
+                                .url("http://pgp/api/licenca")));
     }
 }

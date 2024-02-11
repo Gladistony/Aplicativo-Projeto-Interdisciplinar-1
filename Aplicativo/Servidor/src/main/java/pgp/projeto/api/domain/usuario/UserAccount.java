@@ -7,6 +7,7 @@ import java.util.List;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -35,20 +36,32 @@ public class UserAccount implements UserDetails {
     private byte[] perfilFoto;
     private String login;
     private String senha;
+    
+   
+    public void setSenha(String senha, PasswordEncoder passwordEncoder) {
+        this.senha = passwordEncoder.encode(senha);
+    }
 
-    public UserAccount(UserRegistrationData user) {
+
+
+    public UserAccount(UserRegistrationData user, PasswordEncoder passwordEncoder) {
         this.nome = user.nome();
         this.login = user.email();
-        this.senha = user.senha();
+        this.senha =  passwordEncoder.encode(user.senha());
         this.dataNascimento = user.dataNascimento();
         this.perfilFoto = user.perfilFoto();
     }
 
    
 
-    public void atualizarInformacoes(@Valid UserUpdateData dados) {
+    public void atualizarInformacoes(@Valid UserUpdateData dados, PasswordEncoder passwordEncoder) {
+        
         if (dados.nome() != null)
             this.nome = dados.nome();
+        if (dados.email() != null)
+            this.login = dados.email();
+        if (dados.senha() != null)
+            this.senha = passwordEncoder.encode(dados.senha());
         if (dados.dataNascimento() != null)
             this.dataNascimento = dados.dataNascimento();
         if (dados.fotoPerfil() != null)

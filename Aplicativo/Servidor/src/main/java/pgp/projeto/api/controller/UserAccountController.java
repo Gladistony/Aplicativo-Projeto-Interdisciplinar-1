@@ -7,6 +7,7 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,6 +24,7 @@ import pgp.projeto.api.domain.usuario.UserDetailsData;
 import pgp.projeto.api.domain.usuario.UserRegistrationData;
 import pgp.projeto.api.domain.usuario.UserUpdateData;
 import pgp.projeto.api.domain.usuario.authentication.UserRepository;
+import pgp.projeto.api.domain.usuario.email.EmailService;
 
 
 
@@ -35,22 +37,41 @@ public class UserAccountController {
     
     @Autowired
     private UserRepository repository;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
+    @Autowired
+    private EmailService emailService;
+
+
     @PostMapping
     @Transactional
     public ResponseEntity cadastrar(@RequestBody @Valid UserRegistrationData dados, UriComponentsBuilder uriBuilder) {
-       var usuario = new UserAccount(dados);
-       repository.save(usuario);
-       var uri = uriBuilder.path("/usuarios/{id}").buildAndExpand(usuario.getId()).toUri();
-   
-       return ResponseEntity.created(uri).body(new UserDetailsData(usuario));
-    }
+        
+        var usuario = new UserAccount(dados,passwordEncoder);
+        repository.save(usuario);
+        var uri = uriBuilder.path("/cadastro/{id}").buildAndExpand(usuario.getId()).toUri();
 
+
+        emailService.sendWelcomeEmail(usuario);
+
+        return ResponseEntity.created(uri).body(new UserDetailsData(usuario));
+    }
+    
     @PutMapping
     @Transactional
-    public ResponseEntity atualizar(@RequestBody @Valid UserUpdateData dados){
-        var usuario = repository.getReferenceById(dados.id());
-        usuario.atualizarInformacoes(dados);
+    public ResponseEntity atualizar(@RequestBody @Valid UserUpdateData dados, Authentication authentication){
+      
+        UserAccount usuarioAutenticado = (UserAccount) authentication.getPrincipal();
+      
+        if (!usuarioAutenticado.getId().equals(dados.id())) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+        }
 
+        var usuario = repository.getReferenceById(dados.id());
+        usuario.atualizarInformacoes(dados, passwordEncoder);
+        
         return ResponseEntity.ok(new UserDetailsData(usuario));
 
     }
@@ -59,10 +80,8 @@ public class UserAccountController {
     @Transactional
     public ResponseEntity remover(@PathVariable Long id, Authentication authentication) {
         
-        // Obtém os detalhes do usuário autenticado a partir da autenticação
         UserAccount usuarioAutenticado = (UserAccount) authentication.getPrincipal();
 
-        // Verifica se o ID passado na URL é igual ao ID do usuário autenticado
         if (!usuarioAutenticado.getId().equals(id)) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
         }
@@ -74,8 +93,17 @@ public class UserAccountController {
 
 
     @GetMapping("/{id}")
-    public ResponseEntity detalhar(@PathVariable Long id){
-        var usuario = repository.getReferenceById(id);
-        return ResponseEntity.ok(new UserDetailsData(usuario));
+    public ResponseEntity detalhar(@PathVariable Long id,  Authentication authentication){
+        
+         UserAccount usuarioAutenticado = (UserAccount) authentication.getPrincipal();
+
+         if (!usuarioAutenticado.getId().equals(id)) {
+             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+         }
+
+         var usuario = repository.getReferenceById(id);
+         return ResponseEntity.ok(new UserDetailsData(usuario));
     }
+
+    
 }

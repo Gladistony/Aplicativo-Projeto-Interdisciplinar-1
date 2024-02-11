@@ -6,6 +6,6 @@ import jakarta.validation.constraints.NotNull;
 
 
 
-public record UserUpdateData(@NotNull Long id, String nome, LocalDate dataNascimento, byte[] fotoPerfil) {
+public record UserUpdateData(@NotNull Long id, String nome, String email, String senha, LocalDate dataNascimento, byte[] fotoPerfil) {
     
 }
