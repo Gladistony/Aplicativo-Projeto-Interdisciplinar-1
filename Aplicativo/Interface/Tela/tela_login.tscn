@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://Script/tela_login.gd" id="1_4150r"]
 [ext_resource type="PackedScene" uid="uid://bfnsdy6fekrfm" path="res://Tela/Box_texto/box_email.tscn" id="2_eg37y"]
 [ext_resource type="PackedScene" uid="uid://djva6mi80ee1o" path="res://Tela/Box_texto/box_senha.tscn" id="3_fsmnu"]
-[ext_resource type="FontFile" uid="uid://b2ollwwqaf816" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="4_o478l"]
-[ext_resource type="Texture2D" uid="uid://2qdlgs5ec3iw" path="res://Recursos/button base.png" id="5_yipsd"]
+[ext_resource type="FontFile" uid="uid://do12ew2vrafua" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="4_o478l"]
+[ext_resource type="Texture2D" uid="uid://b6laquvksiide" path="res://Recursos/button base.png" id="5_yipsd"]
 
 [sub_resource type="Gradient" id="Gradient_i5463"]
 offsets = PackedFloat32Array(0, 0.0060241)

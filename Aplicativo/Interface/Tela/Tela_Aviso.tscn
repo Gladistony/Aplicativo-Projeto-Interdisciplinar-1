@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://cd4cd1y5wb7ct"]
+
+[ext_resource type="Texture2D" uid="uid://c4uchy7a1durx" path="res://Recursos/fundoBranco.png" id="1_1q1j6"]
+
+[sub_resource type="Theme" id="Theme_04lvt"]
+
+[node name="Tela Aviso" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 4.0
+offset_right = 8.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_04lvt")
+
+[node name="Fundo" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(64, 717)
+scale = Vector2(0.87037, 0.280208)
+texture = ExtResource("1_1q1j6")
+centered = false

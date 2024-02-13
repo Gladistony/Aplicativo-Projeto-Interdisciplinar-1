@@ -5,6 +5,9 @@ var _logado = false #variavel que guarda se o usuario está com dados logados
 var _autoLogin = false #Se torna verdade quando o usuario escolhe uma opção de login
 var _data = {} #Armazena os dados do usuario
 var _retornoPrincipal = false #Função usada pra controlar o retorno a tela principal com o botão voltar
+var _nomeMedicamento = "" #Usado na tela de criação de lembrete
+var _substanciaMedicamento = ""#Usado na tela de criação de lembrete
+var _fabricanteMedicamento = ""#Usado na tela de criação de lembrete
 
 
 func receberLastLogin(email,senha):

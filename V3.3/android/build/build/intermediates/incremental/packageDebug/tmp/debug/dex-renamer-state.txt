@@ -1,0 +1,4 @@
+#Mon Feb 05 22:30:35 GFT 2024
+base.0=C\:\\Users\\bisto\\OneDrive\\Documentos\\GitHub\\Aplicativo-Projeto-Interdisciplinar-1\\V3.3\\android\\build\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

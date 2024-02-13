@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://cuehwp2e65jry"]
 
 [ext_resource type="Script" path="res://Script/tela_principal.gd" id="1_8r0gj"]
-[ext_resource type="Texture2D" uid="uid://uf3j1cltxl2j" path="res://Recursos/fundoBranco.png" id="1_i18lh"]
-[ext_resource type="Texture2D" uid="uid://b7qxw244b5qkd" path="res://Recursos/MenuLateral.png" id="1_s8skd"]
+[ext_resource type="Texture2D" uid="uid://c4uchy7a1durx" path="res://Recursos/fundoBranco.png" id="1_i18lh"]
+[ext_resource type="Texture2D" uid="uid://d04sceb535ykx" path="res://Recursos/MenuLateral.png" id="1_s8skd"]
 [ext_resource type="PackedScene" uid="uid://bdskk0aw2cqem" path="res://Tela/Menus/MenuH.tscn" id="2_cxgog"]
 [ext_resource type="PackedScene" uid="uid://cawoxp7qsr0km" path="res://Tela/Menus/MenuProximoRemedio.tscn" id="3_n6g7j"]
-[ext_resource type="Texture2D" uid="uid://mp5da21h0upp" path="res://Recursos/AdicionarEAgenda.png" id="5_pdtdy"]
+[ext_resource type="Texture2D" uid="uid://xh514a4y8wto" path="res://Recursos/AdicionarEAgenda.png" id="5_pdtdy"]
 [ext_resource type="PackedScene" uid="uid://dj77c1lmkym68" path="res://Tela/Menus/MenuLateral.tscn" id="7_lsm5a"]
 
 [node name="TelaPrincipal" type="Control"]

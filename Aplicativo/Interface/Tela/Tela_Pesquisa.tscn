@@ -1,12 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://cmo4eh7d1j4p3"]
+[gd_scene load_steps=10 format=3 uid="uid://cmo4eh7d1j4p3"]
 
 [ext_resource type="Script" path="res://Script/Tela_Pesquisa.gd" id="1_apjgr"]
-[ext_resource type="Texture2D" uid="uid://uf3j1cltxl2j" path="res://Recursos/fundoBranco.png" id="1_vlo6d"]
+[ext_resource type="Texture2D" uid="uid://il1758xxc2sg" path="res://Recursos/fundoBranco.png" id="1_vlo6d"]
 [ext_resource type="PackedScene" uid="uid://bdskk0aw2cqem" path="res://Tela/Menus/MenuH.tscn" id="2_7c82m"]
-[ext_resource type="FontFile" uid="uid://b2ollwwqaf816" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="4_slej4"]
-[ext_resource type="FontFile" uid="uid://cxrpqb23n05g1" path="res://Recursos/Fontes/Poppins/Poppins-Italic.ttf" id="5_ciy8h"]
-[ext_resource type="FontFile" uid="uid://da7bfdul5jiqd" path="res://Recursos/Fontes/Poppins/Poppins-BoldItalic.ttf" id="5_tjrdw"]
-[ext_resource type="Texture2D" uid="uid://b872m28hmylsa" path="res://Recursos/Botão/addConfig.png" id="6_7o1b2"]
+[ext_resource type="FontFile" uid="uid://cpeaapfn2mi8t" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="4_slej4"]
+[ext_resource type="FontFile" uid="uid://ceeiru1w3ai0" path="res://Recursos/Fontes/Poppins/Poppins-Italic.ttf" id="5_ciy8h"]
+[ext_resource type="FontFile" uid="uid://bcyopqv36gygq" path="res://Recursos/Fontes/Poppins/Poppins-BoldItalic.ttf" id="5_tjrdw"]
+[ext_resource type="Texture2D" uid="uid://dqjn86y3lrt1f" path="res://Recursos/Botão/addConfig.png" id="6_7o1b2"]
+[ext_resource type="PackedScene" uid="uid://d4dwytf0kqhoo" path="res://Tela/Tela_Criacao_Alarme.tscn" id="8_4tbpu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qpdfp"]
 content_margin_left = 30.0
@@ -89,7 +90,6 @@ layout_mode = 2
 [node name="JanelaPOP" type="Window" parent="."]
 initial_position = 1
 size = Vector2i(850, 750)
-visible = false
 unresizable = true
 
 [node name="FundoBranco" type="Sprite2D" parent="JanelaPOP"]
@@ -131,6 +131,15 @@ theme_override_fonts/font = ExtResource("5_ciy8h")
 theme_override_font_sizes/font_size = 40
 text = "Descrição da substancia"
 clip_text = true
+
+[node name="CriarLembrete" type="Button" parent="JanelaPOP/BoxPop"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(0.25098, 0.482353, 1, 1)
+theme_override_fonts/font = ExtResource("4_slej4")
+theme_override_font_sizes/font_size = 35
+text = "Criar Lembrete"
+flat = true
 
 [node name="SubstanciaBox" type="HBoxContainer" parent="JanelaPOP/BoxPop"]
 layout_mode = 2
@@ -301,10 +310,35 @@ texture_normal = ExtResource("6_7o1b2")
 [node name="FuncaoBusca" type="Timer" parent="."]
 autostart = true
 
+[node name="Tela_Criação_Alarme" parent="." instance=ExtResource("8_4tbpu")]
+visible = false
+layout_mode = 1
+
+[node name="Botão Voltar" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.153704
+anchor_top = -0.120833
+anchor_right = -0.0824078
+anchor_bottom = -0.120833
+offset_left = 208.0
+offset_top = 272.0
+offset_right = 244.0
+offset_bottom = 351.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_slej4")
+theme_override_font_sizes/font_size = 50
+text = "   <    "
+flat = true
+metadata/_edit_use_anchors_ = true
+
 [connection signal="focus_entered" from="." to="." method="_on_caixa_de_busca_focus_entered"]
 [connection signal="focus_entered" from="Caixa de Busca" to="." method="_on_caixa_de_busca_focus_entered"]
 [connection signal="pressed" from="LabelMedicamentos/LinkButton" to="." method="_on_link_button_pressed"]
 [connection signal="close_requested" from="JanelaPOP" to="." method="_on_window_close_requested"]
 [connection signal="item_selected" from="JanelaPOP/BoxPop/NomeBox/ValorSubstancia" to="." method="_on_option_button_item_selected"]
+[connection signal="pressed" from="JanelaPOP/BoxPop/CriarLembrete" to="." method="_on_criar_lembrete_pressed"]
 [connection signal="pressed" from="JanelaPOP/BoxPop/BuscarSubstancia" to="." method="_on_buscar_substancia_pressed"]
 [connection signal="timeout" from="FuncaoBusca" to="." method="_on_funcao_busca_timeout"]
+[connection signal="pressed" from="Botão Voltar" to="." method="_on_botão_voltar_criar_lembrete_pressed"]

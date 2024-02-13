@@ -41,6 +41,10 @@ func attPopInfo():
 	popTipo.text = daraRemedioPop[popIDFabricante].tipo
 	popFabricante.text = daraRemedioPop[popIDFabricante].laboratorio
 	popPreco.text = daraRemedioPop[popIDFabricante].estimativa
+	
+	DadosCliente._nomeMedicamento = daraRemedioPop[popIDFabricante].produto
+	DadosCliente._substanciaMedicamento = daraRemedioPop[popIDFabricante].substancia
+	DadosCliente._fabricanteMedicamento = daraRemedioPop[popIDFabricante].laboratorio
 	if (len(popPreco.text) >= 9) or (len(popPreco.text) <= 1):
 		popPreco.text = "Sem cadastro"
 	else:
@@ -77,6 +81,7 @@ func addRemedio(nome):
 	caixa._setNomeRemedio(nome)
 	caixa.connect("abrirPop", monstraPopUpInfo)
 	listaResultados.add_child(caixa)
+	DadosCliente._nomeMedicamento = "nomeAqui"
 
 func addSubstancia(nome):
 	var caixa = preloadBox.instantiate()
@@ -152,3 +157,28 @@ func _input(event):
 			if (not (dentroX and dentroY)):
 				$JanelaPOP.visible = false
 				#print(dentroX and dentroY)
+				
+	
+
+func _on_criar_lembrete_pressed():
+	$"Tela_Criação_Alarme".visible = true
+	$"Botão Voltar".visible = true
+	$MenuH.visible = false
+	$LabelMedicamentos.visible = false
+	$HSeparator.visible = false
+	$ScrollContainer.visible = false
+	$JanelaPOP.visible = false
+	$FundoBranco.visible = false
+	$"Caixa de Busca".visible = false
+
+
+func _on_botão_voltar_criar_lembrete_pressed():
+	$"Tela_Criação_Alarme".visible = false
+	$"Botão Voltar".visible = false
+	$MenuH.visible = true
+	$LabelMedicamentos.visible = true
+	$HSeparator.visible = true
+	$ScrollContainer.visible = true
+	$JanelaPOP.visible = true
+	$FundoBranco.visible = true
+	$"Caixa de Busca".visible = true

@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://djva6mi80ee1o"]
 
-[ext_resource type="Texture2D" uid="uid://cqtldnf7uylac" path="res://Recursos/Box/box_senha.png" id="1_6lmfe"]
-[ext_resource type="FontFile" uid="uid://b2ollwwqaf816" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="2_f4ong"]
+[ext_resource type="Texture2D" uid="uid://eb531sbd2a6x" path="res://Recursos/Box/box_senha.png" id="1_6lmfe"]
+[ext_resource type="FontFile" uid="uid://do12ew2vrafua" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="2_f4ong"]
 [ext_resource type="Script" path="res://Script/box_senha_button.gd" id="2_o16o5"]
 [ext_resource type="Shader" path="res://Recursos/Cinza.gdshader" id="4_iedcl"]
-[ext_resource type="Texture2D" uid="uid://ciucw8cadks21" path="res://Recursos/Box/open_eye.png" id="5_8l8b8"]
+[ext_resource type="Texture2D" uid="uid://cf5ss3313ec25" path="res://Recursos/Box/open_eye.png" id="5_8l8b8"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hkcbg"]
 shader = ExtResource("4_iedcl")
