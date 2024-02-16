@@ -1,0 +1,185 @@
+[gd_scene load_steps=21 format=3 uid="uid://8wpvxvtcw5kc"]
+
+[ext_resource type="Script" path="res://Scripts/Inicio/03 - Tela de Registro.gd" id="1_r86kp"]
+[ext_resource type="Texture2D" uid="uid://8tytx7ni3jld" path="res://Recursos/Imagens/Fundos/fundoBranco.png" id="2_4e01t"]
+[ext_resource type="FontFile" uid="uid://dobpqy3p3tgo0" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="3_0cxpw"]
+[ext_resource type="PackedScene" uid="uid://nep5yir0nrba" path="res://Recursos/Componentes/Box Nome.tscn" id="4_gjpoe"]
+[ext_resource type="PackedScene" uid="uid://dbidxil2e8lk1" path="res://Recursos/Componentes/Box Email.tscn" id="5_b65t1"]
+[ext_resource type="PackedScene" uid="uid://ch17ebldpvs55" path="res://Recursos/Componentes/Box Senha.tscn" id="6_h60ru"]
+[ext_resource type="PackedScene" uid="uid://wx5whhqgusvp" path="res://Recursos/Componentes/Box Calendario.tscn" id="7_roy7c"]
+[ext_resource type="PackedScene" uid="uid://bgu2mg7cnmjdo" path="res://Recursos/Componentes/BotaoFundoAzul.tscn" id="8_me01q"]
+[ext_resource type="PackedScene" uid="uid://dn3338ikol3x" path="res://Recursos/Componentes/CheckBox.tscn" id="9_7awmx"]
+[ext_resource type="FontFile" uid="uid://dpwghe2sbl3ct" path="res://Recursos/Fontes/Poppins/Poppins-Regular.ttf" id="10_x3ilq"]
+[ext_resource type="PackedScene" uid="uid://cmeex3tld7s5e" path="res://Recursos/Componentes/BotaoSemFundo.tscn" id="11_7n56k"]
+[ext_resource type="PackedScene" uid="uid://b7xpilmtc12d2" path="res://Recursos/Componentes/Caixa Load.tscn" id="12_whec0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8tphy"]
+font = ExtResource("3_0cxpw")
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8r3il"]
+font = ExtResource("10_x3ilq")
+font_size = 33
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_avvme"]
+font = ExtResource("3_0cxpw")
+font_size = 70
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0veet"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_848ih"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_akaxb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6y22f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p08m5"]
+
+[node name="03-TelaDeRegistro" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_r86kp")
+
+[node name="Fundo" type="Sprite2D" parent="."]
+z_index = -1
+texture = ExtResource("2_4e01t")
+centered = false
+
+[node name="Textos" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Texto - Ja tem conta" type="Label" parent="Textos"]
+layout_mode = 0
+offset_left = 211.0
+offset_top = 1767.0
+offset_right = 688.0
+offset_bottom = 1810.0
+text = "Já possui uma conta? "
+label_settings = SubResource("LabelSettings_8tphy")
+horizontal_alignment = 2
+
+[node name="Texto - Concordo com ___" type="Label" parent="Textos"]
+layout_mode = 0
+offset_left = 232.0
+offset_top = 1238.0
+offset_right = 905.0
+offset_bottom = 1457.0
+text = "Eu concorto dom os termos de serviços e politicas de privacidade"
+label_settings = SubResource("LabelSettings_8r3il")
+autowrap_mode = 2
+
+[node name="Titulo" type="Label" parent="Textos"]
+layout_mode = 0
+offset_top = 152.0
+offset_right = 1080.0
+offset_bottom = 352.0
+text = "Cadastro"
+label_settings = SubResource("LabelSettings_avvme")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Botoes" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Botao Registro" parent="Botoes" instance=ExtResource("11_7n56k")]
+layout_mode = 0
+offset_left = 662.0
+offset_top = 1758.0
+offset_right = 822.0
+offset_bottom = 1822.0
+text = "Entrar"
+
+[node name="BotaoFundoAzul" parent="Botoes" instance=ExtResource("8_me01q")]
+layout_mode = 0
+offset_left = 227.0
+offset_top = 1632.0
+offset_right = 493.0
+offset_bottom = 1697.0
+scale = Vector2(2.36978, 2.17559)
+TextoBotao = "Registrar"
+
+[node name="Botao Volta" type="Button" parent="Botoes"]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 216.0
+offset_right = 272.0
+offset_bottom = 295.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_0cxpw")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0veet")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_848ih")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_akaxb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_6y22f")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p08m5")
+text = "<"
+flat = true
+
+[node name="Box" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BoxSenha2" parent="Box" instance=ExtResource("6_h60ru")]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 1072.0
+offset_right = 544.0
+offset_bottom = 1136.0
+
+[node name="BoxCalendario" parent="Box" instance=ExtResource("7_roy7c")]
+offset_left = 144.0
+offset_top = 760.0
+offset_right = 144.0
+offset_bottom = 760.0
+
+[node name="BoxSenha" parent="Box" instance=ExtResource("6_h60ru")]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 912.0
+offset_right = 544.0
+offset_bottom = 976.0
+
+[node name="BoxEmail" parent="Box" instance=ExtResource("5_b65t1")]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 608.0
+offset_right = 608.0
+offset_bottom = 672.0
+
+[node name="Box Nome" parent="Box" instance=ExtResource("4_gjpoe")]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 456.0
+offset_right = 608.0
+offset_bottom = 520.0
+
+[node name="Outros" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BotãoCheck" parent="Outros" instance=ExtResource("9_7awmx")]
+offset_left = 144.0
+offset_top = 1238.0
+offset_right = 144.0
+offset_bottom = 1238.0
+
+[node name="CaixaLoad" parent="." instance=ExtResource("12_whec0")]
+visible = false
+layout_mode = 1
+offset_left = 256.0
+offset_top = 720.0
+offset_right = 256.0
+offset_bottom = 720.0
+
+[connection signal="pressed" from="Botoes/Botao Registro" to="." method="_on_botao_registro_pressed"]
+[connection signal="pressed" from="Botoes/BotaoFundoAzul" to="." method="_on_botao_fundo_azul_pressed"]
+[connection signal="pressed" from="Botoes/Botao Volta" to="." method="_on_botao_volta_pressed"]

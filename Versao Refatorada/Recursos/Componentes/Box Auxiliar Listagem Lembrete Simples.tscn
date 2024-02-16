@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtq1a70kcggsv"]
+
+[ext_resource type="Script" path="res://Scripts/Componentes/Box Auxiliar Listagem Lembrete Simples.gd" id="1_lq55n"]
+[ext_resource type="LabelSettings" uid="uid://bvuncke6xvuxd" path="res://Recursos/Configuracoes/label cor azul normal size 50.tres" id="2_14qsf"]
+
+[node name="BoxAuxiliarListagemLembreteSimples" type="Control"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 0.999
+offset_right = 3.0
+offset_bottom = -0.0800781
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lq55n")
+
+[node name="Organizador" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="horario" type="Label" parent="Organizador"]
+layout_mode = 2
+text = "Nome Remedio"
+label_settings = ExtResource("2_14qsf")
+
+[node name="Excluir" type="Button" parent="Organizador"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "   X   "
+flat = true
+
+[connection signal="pressed" from="Organizador/Excluir" to="." method="_on_excluir_pressed"]

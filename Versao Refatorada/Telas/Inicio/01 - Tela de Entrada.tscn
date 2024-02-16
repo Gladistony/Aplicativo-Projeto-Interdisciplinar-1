@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=3 uid="uid://ld3ifvwjx1nf"]
+
+[ext_resource type="Script" path="res://Scripts/Inicio/01 - Tela de Entrada.gd" id="1_ecrac"]
+[ext_resource type="Texture2D" uid="uid://8tytx7ni3jld" path="res://Recursos/Imagens/Fundos/fundoBranco.png" id="1_wwvji"]
+[ext_resource type="Texture2D" uid="uid://drfnotfu07641" path="res://Recursos/Imagens/Icones/logo final.png" id="2_qf6oc"]
+[ext_resource type="PackedScene" uid="uid://bgu2mg7cnmjdo" path="res://Recursos/Componentes/BotaoFundoAzul.tscn" id="4_000se"]
+[ext_resource type="PackedScene" uid="uid://dm7cmd1vu3pp1" path="res://Recursos/Componentes/BotaoFundoBranco.tscn" id="5_ed3hb"]
+
+[node name="01-TelaDeEntrada" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ecrac")
+
+[node name="Fundo" type="Sprite2D" parent="."]
+texture = ExtResource("1_wwvji")
+centered = false
+
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(224, 256)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_qf6oc")
+centered = false
+
+[node name="Entrar" parent="." instance=ExtResource("4_000se")]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 1136.0
+offset_right = 304.0
+offset_bottom = 1136.0
+scale = Vector2(1.79699, 2.09231)
+TextoBotao = "Login"
+
+[node name="EntrarSemCadastro" parent="." instance=ExtResource("4_000se")]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 1312.0
+offset_right = 304.0
+offset_bottom = 1312.0
+scale = Vector2(1.79699, 2.09231)
+TextoBotao = "Entrar"
+
+[node name="Registrar" parent="." instance=ExtResource("5_ed3hb")]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 1480.0
+offset_right = 304.0
+offset_bottom = 1480.0
+scale = Vector2(1.80451, 2.09231)
+TextoBotao = "Registrar"
+
+[connection signal="pressed" from="Entrar" to="." method="_on_entrar_pressed"]
+[connection signal="pressed" from="EntrarSemCadastro" to="." method="_on_entrar_sem_cadastro_pressed"]
+[connection signal="pressed" from="Registrar" to="." method="_on_registrar_pressed"]

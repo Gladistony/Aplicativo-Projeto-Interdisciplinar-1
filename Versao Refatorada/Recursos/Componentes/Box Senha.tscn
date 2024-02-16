@@ -1,0 +1,65 @@
+[gd_scene load_steps=11 format=3 uid="uid://ch17ebldpvs55"]
+
+[ext_resource type="FontFile" uid="uid://dobpqy3p3tgo0" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="1_h4mti"]
+[ext_resource type="Script" path="res://Scripts/Componentes/Box Email.gd" id="2_jx5gx"]
+[ext_resource type="Texture2D" uid="uid://cq1ikfcgv3ial" path="res://Recursos/Imagens/Imagens Box/box_senha.png" id="3_144me"]
+[ext_resource type="Texture2D" uid="uid://dknbpi7n0js2b" path="res://Recursos/Imagens/Imagens Box/open_eye.png" id="4_op8r3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q5cst"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a6qf1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ghh1c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ri7e6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i63e0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_05f2f"]
+
+[node name="BoxSenha" type="LineEdit"]
+offset_left = 160.0
+offset_right = 400.0
+offset_bottom = 64.0
+scale = Vector2(1.98474, 2.09417)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/font_uneditable_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_h4mti")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_q5cst")
+placeholder_text = "Digite a sua senha"
+max_length = 20
+flat = true
+secret = true
+script = ExtResource("2_jx5gx")
+
+[node name="Imagem" type="Sprite2D" parent="."]
+z_index = -1
+z_as_relative = false
+position = Vector2(-80.6151, 0)
+scale = Vector2(0.942687, 0.842105)
+texture = ExtResource("3_144me")
+centered = false
+
+[node name="Olho" type="Sprite2D" parent="."]
+position = Vector2(272, 32)
+scale = Vector2(0.057, 0.081)
+texture = ExtResource("4_op8r3")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 13.0
+offset_right = 296.0
+offset_bottom = 53.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_a6qf1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ghh1c")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ri7e6")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_i63e0")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_05f2f")
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

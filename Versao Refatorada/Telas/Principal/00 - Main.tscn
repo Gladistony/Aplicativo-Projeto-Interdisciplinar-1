@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=3 uid="uid://djvi7yorx51ep"]
+
+[ext_resource type="Script" path="res://Scripts/Principal/00 - Main.gd" id="1_bxsrb"]
+[ext_resource type="Texture2D" uid="uid://8tytx7ni3jld" path="res://Recursos/Imagens/Fundos/fundoBranco.png" id="2_wgb3d"]
+[ext_resource type="PackedScene" uid="uid://dj77c1lmkym68" path="res://Telas/Menus/MenuLateral.tscn" id="3_v2dnv"]
+[ext_resource type="PackedScene" uid="uid://bdskk0aw2cqem" path="res://Telas/Menus/MenuAbaixo.tscn" id="4_jmwy6"]
+[ext_resource type="Texture2D" uid="uid://bcfho0fxyoeje" path="res://Recursos/Imagens/Imagem Botoes/MenuLateral.png" id="5_m23ud"]
+
+[node name="00-Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bxsrb")
+
+[node name="Fundo" type="Sprite2D" parent="."]
+texture = ExtResource("2_wgb3d")
+centered = false
+
+[node name="Botoes" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Botao Menu Lateral" type="TextureButton" parent="Botoes"]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 200.0
+offset_right = 200.0
+offset_bottom = 328.0
+texture_normal = ExtResource("5_m23ud")
+stretch_mode = 0
+
+[node name="Menus" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Menu Lateral" parent="Menus" instance=ExtResource("3_v2dnv")]
+visible = false
+layout_mode = 1
+offset_left = -512.0
+offset_right = -552.0
+offset_bottom = -40.0
+
+[node name="Menu Abaixo" parent="Menus" instance=ExtResource("4_jmwy6")]
+offset_top = 1712.0
+offset_bottom = 1712.0
+
+[connection signal="pressed" from="Botoes/Botao Menu Lateral" to="." method="_on_botao_menu_lateral_pressed"]

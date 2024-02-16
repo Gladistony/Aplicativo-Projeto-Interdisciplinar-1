@@ -1,0 +1,28 @@
+[gd_scene load_steps=7 format=3 uid="uid://cmeex3tld7s5e"]
+
+[ext_resource type="FontFile" uid="uid://dobpqy3p3tgo0" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="1_2gh6v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h1niy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n5q3n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dhicq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_chqx2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xernk"]
+
+[node name="BotaoSemFundo" type="Button"]
+offset_right = 266.0
+offset_bottom = 64.0
+scale = Vector2(1.20301, 1)
+theme_override_colors/font_color = Color(0.160784, 0.552941, 0.909804, 1)
+theme_override_fonts/font = ExtResource("1_2gh6v")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_h1niy")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_n5q3n")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_dhicq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_chqx2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xernk")
+text = "hgsfgsdfgsd"
+flat = true

@@ -1,0 +1,347 @@
+[gd_scene load_steps=17 format=3 uid="uid://endb8w32xgde"]
+
+[ext_resource type="Script" path="res://Scripts/Principal/04 - Tela de Adicionar Remedio.gd" id="1_sdkx5"]
+[ext_resource type="Texture2D" uid="uid://8tytx7ni3jld" path="res://Recursos/Imagens/Fundos/fundoBranco.png" id="2_fymg6"]
+[ext_resource type="PackedScene" uid="uid://bdskk0aw2cqem" path="res://Telas/Menus/MenuAbaixo.tscn" id="3_evgd1"]
+[ext_resource type="FontFile" uid="uid://bwfmeamcd7cws" path="res://Recursos/Fontes/Poppins/Poppins-Medium.ttf" id="5_bui44"]
+[ext_resource type="PackedScene" uid="uid://b8i8rilpswkor" path="res://Recursos/Componentes/Box Auxiliar Infor Pop.tscn" id="6_f2til"]
+[ext_resource type="FontFile" uid="uid://dobpqy3p3tgo0" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="6_vco7g"]
+[ext_resource type="FontFile" uid="uid://dpwghe2sbl3ct" path="res://Recursos/Fontes/Poppins/Poppins-Regular.ttf" id="7_ilmbh"]
+[ext_resource type="PackedScene" uid="uid://wx5whhqgusvp" path="res://Recursos/Componentes/Box Calendario.tscn" id="8_loaro"]
+[ext_resource type="PackedScene" uid="uid://bgu2mg7cnmjdo" path="res://Recursos/Componentes/BotaoFundoAzul.tscn" id="9_yhhbt"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4rp18"]
+font = ExtResource("6_vco7g")
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cltlu"]
+content_margin_left = 20.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g0tah"]
+content_margin_left = 20.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_exrv4"]
+font = ExtResource("6_vco7g")
+font_size = 50
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tqiyw"]
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qtoui"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_urooj"]
+font = ExtResource("6_vco7g")
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+
+[node name="03-TelaDeConfiguracao" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_sdkx5")
+
+[node name="Fundo" type="Sprite2D" parent="."]
+texture = ExtResource("2_fymg6")
+centered = false
+
+[node name="Menu Abaixo" parent="." instance=ExtResource("3_evgd1")]
+offset_top = 1712.0
+offset_bottom = 1712.0
+
+[node name="Dados do medicamento" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 141.0
+offset_right = 1051.0
+offset_bottom = 1605.0
+
+[node name="Nome" type="HBoxContainer" parent="Dados do medicamento"]
+layout_mode = 2
+
+[node name="LabelNome" type="Label" parent="Dados do medicamento/Nome"]
+layout_mode = 2
+text = "Nome:"
+label_settings = SubResource("LabelSettings_4rp18")
+
+[node name="Nome Remedio" type="LineEdit" parent="Dados do medicamento/Nome"]
+custom_minimum_size = Vector2(650, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_bui44")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cltlu")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g0tah")
+placeholder_text = "Nome do medicamento"
+flat = true
+
+[node name="Busca Medicamento" type="LinkButton" parent="Dados do medicamento/Nome"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.25098, 0.482353, 1, 1)
+theme_override_fonts/font = ExtResource("6_vco7g")
+theme_override_font_sizes/font_size = 50
+text = "Buscar"
+underline = 2
+
+[node name="Substancia" parent="Dados do medicamento" instance=ExtResource("6_f2til")]
+layout_mode = 2
+NomePropriedade = "Substancia:"
+
+[node name="Fabricante" parent="Dados do medicamento" instance=ExtResource("6_f2til")]
+layout_mode = 2
+NomePropriedade = "Fabricante"
+
+[node name="Tarja" parent="Dados do medicamento" instance=ExtResource("6_f2til")]
+layout_mode = 2
+NomePropriedade = "Tarja:"
+
+[node name="AvisoTarja" type="Label" parent="Dados do medicamento"]
+layout_mode = 2
+text = "A compra exclusiva com receita!!!"
+label_settings = SubResource("LabelSettings_exrv4")
+horizontal_alignment = 1
+
+[node name="Separacao" type="Label" parent="Dados do medicamento"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="Linha de separacao" type="HSeparator" parent="Dados do medicamento"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_tqiyw")
+
+[node name="LabelNome2" type="Label" parent="Dados do medicamento"]
+layout_mode = 2
+text = "Adicionar horarios"
+label_settings = SubResource("LabelSettings_4rp18")
+horizontal_alignment = 1
+
+[node name="Linha de separacao2" type="HSeparator" parent="Dados do medicamento"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_tqiyw")
+
+[node name="Horarios" type="HBoxContainer" parent="Dados do medicamento"]
+layout_mode = 2
+
+[node name="Separacao" type="Label" parent="Dados do medicamento/Horarios"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="Hora" type="LineEdit" parent="Dados do medicamento/Horarios"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_ilmbh")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_qtoui")
+placeholder_text = "HH"
+alignment = 1
+max_length = 2
+virtual_keyboard_type = 2
+
+[node name="Minutos" type="LineEdit" parent="Dados do medicamento/Horarios"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_ilmbh")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_qtoui")
+placeholder_text = "MM"
+alignment = 1
+max_length = 2
+virtual_keyboard_type = 2
+
+[node name="Repetir" type="LinkButton" parent="Dados do medicamento/Horarios"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_vco7g")
+theme_override_font_sizes/font_size = 50
+text = "      Repetir    "
+underline = 2
+
+[node name="Adicionar" type="LinkButton" parent="Dados do medicamento/Horarios"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_vco7g")
+theme_override_font_sizes/font_size = 50
+text = "  Adicionar  "
+underline = 2
+
+[node name="Datas" type="HBoxContainer" parent="Dados do medicamento"]
+layout_mode = 2
+alignment = 2
+
+[node name="Separacao" type="Label" parent="Dados do medicamento/Datas"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="Data Inicio" type="LinkButton" parent="Dados do medicamento/Datas"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_vco7g")
+theme_override_font_sizes/font_size = 50
+text = "      Data Inicio    "
+underline = 2
+
+[node name="Data Fim" type="LinkButton" parent="Dados do medicamento/Datas"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_vco7g")
+theme_override_font_sizes/font_size = 50
+text = "Data Final"
+underline = 2
+
+[node name="Dosagem" type="HBoxContainer" parent="Dados do medicamento"]
+layout_mode = 2
+
+[node name="Dose" type="Label" parent="Dados do medicamento/Dosagem"]
+layout_mode = 2
+text = "Dosagem:
+"
+label_settings = SubResource("LabelSettings_4rp18")
+horizontal_alignment = 1
+
+[node name="Dosagem" type="LineEdit" parent="Dados do medicamento/Dosagem"]
+custom_minimum_size = Vector2(650, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_bui44")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cltlu")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g0tah")
+placeholder_text = " > Dose a ser tomada <"
+flat = true
+
+[node name="Repeticao" type="HBoxContainer" parent="Dados do medicamento"]
+layout_mode = 2
+
+[node name="Repeticao" type="Label" parent="Dados do medicamento/Repeticao"]
+layout_mode = 2
+text = "A cada:"
+label_settings = SubResource("LabelSettings_4rp18")
+horizontal_alignment = 1
+
+[node name="B4hr" type="LinkButton" parent="Dados do medicamento/Repeticao"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_vco7g")
+theme_override_font_sizes/font_size = 50
+text = "4 Hrs "
+underline = 2
+
+[node name="B6hr" type="LinkButton" parent="Dados do medicamento/Repeticao"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_vco7g")
+theme_override_font_sizes/font_size = 50
+text = "6 Hrs "
+underline = 2
+
+[node name="B8hr" type="LinkButton" parent="Dados do medicamento/Repeticao"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_vco7g")
+theme_override_font_sizes/font_size = 50
+text = "8 Hrs "
+underline = 2
+
+[node name="B12hr" type="LinkButton" parent="Dados do medicamento/Repeticao"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_vco7g")
+theme_override_font_sizes/font_size = 50
+text = "12Hrs "
+underline = 2
+
+[node name="B24hr" type="LinkButton" parent="Dados do medicamento/Repeticao"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_vco7g")
+theme_override_font_sizes/font_size = 50
+text = "24Hrs"
+underline = 2
+
+[node name="LabelDataInicio" type="Label" parent="Dados do medicamento"]
+layout_mode = 2
+text = "Data Inicial"
+label_settings = SubResource("LabelSettings_4rp18")
+horizontal_alignment = 1
+
+[node name="BoxCalendario" parent="Dados do medicamento" instance=ExtResource("8_loaro")]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Separacao2" type="Label" parent="Dados do medicamento"]
+custom_minimum_size = Vector2(0, 130)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="LabelDataFim" type="Label" parent="Dados do medicamento"]
+layout_mode = 2
+text = "Data Final"
+label_settings = SubResource("LabelSettings_4rp18")
+horizontal_alignment = 1
+
+[node name="BoxCalendario2" parent="Dados do medicamento" instance=ExtResource("8_loaro")]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Separacao3" type="Label" parent="Dados do medicamento"]
+custom_minimum_size = Vector2(0, 130)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Aviso Data" type="Label" parent="Dados do medicamento"]
+layout_mode = 2
+text = "Deixe a data em branco para aplicar a todos os dias
+Deixar o ano em branco aplica ao ano atual"
+label_settings = SubResource("LabelSettings_urooj")
+horizontal_alignment = 1
+
+[node name="Linha de separacao3" type="HSeparator" parent="Dados do medicamento"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_tqiyw")
+
+[node name="Lembretes" type="Label" parent="Dados do medicamento"]
+layout_mode = 2
+text = "Lembretes Adicionados"
+label_settings = SubResource("LabelSettings_4rp18")
+horizontal_alignment = 1
+
+[node name="Lista de Lembretes" type="VBoxContainer" parent="Dados do medicamento"]
+layout_mode = 2
+
+[node name="Adicionar Medicamento" parent="." instance=ExtResource("9_yhhbt")]
+layout_mode = 0
+offset_left = 379.0
+offset_top = 1627.0
+offset_right = 645.0
+offset_bottom = 1692.0
+TextoBotao = "Adicionar"
+
+[connection signal="pressed" from="Dados do medicamento/Nome/Busca Medicamento" to="." method="_on_busca_medicamento_pressed"]
+[connection signal="focus_entered" from="Dados do medicamento/Horarios/Hora" to="." method="_on_hora_focus_entered"]
+[connection signal="text_changed" from="Dados do medicamento/Horarios/Hora" to="." method="_on_hora_text_changed"]
+[connection signal="focus_entered" from="Dados do medicamento/Horarios/Minutos" to="." method="_on_minutos_focus_entered"]
+[connection signal="text_changed" from="Dados do medicamento/Horarios/Minutos" to="." method="_on_minutos_text_changed"]
+[connection signal="pressed" from="Dados do medicamento/Horarios/Repetir" to="." method="_on_repetir_pressed"]
+[connection signal="pressed" from="Dados do medicamento/Horarios/Adicionar" to="." method="_on_adicionar_pressed"]
+[connection signal="pressed" from="Dados do medicamento/Datas/Data Inicio" to="." method="_on_data_inicio_pressed"]
+[connection signal="pressed" from="Dados do medicamento/Datas/Data Fim" to="." method="_on_data_fim_pressed"]
+[connection signal="pressed" from="Dados do medicamento/Repeticao/B4hr" to="." method="_on_b_4_hr_pressed"]
+[connection signal="pressed" from="Dados do medicamento/Repeticao/B6hr" to="." method="_on_b_6_hr_pressed"]
+[connection signal="pressed" from="Dados do medicamento/Repeticao/B8hr" to="." method="_on_b_8_hr_pressed"]
+[connection signal="pressed" from="Dados do medicamento/Repeticao/B12hr" to="." method="_on_b_12_hr_pressed"]
+[connection signal="pressed" from="Dados do medicamento/Repeticao/B24hr" to="." method="_on_b_24_hr_pressed"]
+[connection signal="pressed" from="Adicionar Medicamento" to="." method="_on_adicionar_medicamento_pressed"]
