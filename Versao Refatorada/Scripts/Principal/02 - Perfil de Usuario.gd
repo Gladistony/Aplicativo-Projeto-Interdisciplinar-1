@@ -127,3 +127,7 @@ func _on_error(e):
 func _on_permission_not_granted_by_user(permission):
 	VariaveisGlobais.print("A permissão é nescessaria")
 	plugin.resendPermission()
+
+
+func _on_salvos_pressed():
+	get_tree().change_scene_to_file("res://Telas/Principal/05 Tela de Remedios Salvos.tscn")

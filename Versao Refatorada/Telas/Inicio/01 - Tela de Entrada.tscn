@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://ld3ifvwjx1nf"]
 
 [ext_resource type="Script" path="res://Scripts/Inicio/01 - Tela de Entrada.gd" id="1_ecrac"]
-[ext_resource type="Texture2D" uid="uid://8tytx7ni3jld" path="res://Recursos/Imagens/Fundos/fundoBranco.png" id="1_wwvji"]
-[ext_resource type="Texture2D" uid="uid://drfnotfu07641" path="res://Recursos/Imagens/Icones/logo final.png" id="2_qf6oc"]
+[ext_resource type="Texture2D" uid="uid://cgavlolq1yri2" path="res://Recursos/Imagens/Fundos/fundoBranco.png" id="1_wwvji"]
+[ext_resource type="Texture2D" uid="uid://c8lqtkhctw7d0" path="res://Recursos/Imagens/Icones/logo final.png" id="2_qf6oc"]
 [ext_resource type="PackedScene" uid="uid://bgu2mg7cnmjdo" path="res://Recursos/Componentes/BotaoFundoAzul.tscn" id="4_000se"]
 [ext_resource type="PackedScene" uid="uid://dm7cmd1vu3pp1" path="res://Recursos/Componentes/BotaoFundoBranco.tscn" id="5_ed3hb"]
 

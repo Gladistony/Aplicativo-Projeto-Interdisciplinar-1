@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=3 uid="uid://carjadceqisar"]
 
-[ext_resource type="Texture2D" uid="uid://8tytx7ni3jld" path="res://Recursos/Imagens/Fundos/fundoBranco.png" id="1_pdmri"]
+[ext_resource type="Texture2D" uid="uid://cgavlolq1yri2" path="res://Recursos/Imagens/Fundos/fundoBranco.png" id="1_pdmri"]
 [ext_resource type="Script" path="res://Scripts/Principal/01 - Tela de Busca.gd" id="1_q7yff"]
 [ext_resource type="PackedScene" uid="uid://bdskk0aw2cqem" path="res://Telas/Menus/MenuAbaixo.tscn" id="2_v3ir0"]
-[ext_resource type="FontFile" uid="uid://dpwghe2sbl3ct" path="res://Recursos/Fontes/Poppins/Poppins-Regular.ttf" id="4_khvdf"]
+[ext_resource type="FontFile" uid="uid://jdhdqglwuy8c" path="res://Recursos/Fontes/Poppins/Poppins-Regular.ttf" id="4_khvdf"]
 [ext_resource type="StyleBox" uid="uid://bn3w0ulngnkkc" path="res://Recursos/Configuracoes/01 - Tela de Busca.tres" id="5_t45j5"]
-[ext_resource type="FontFile" uid="uid://bwfmeamcd7cws" path="res://Recursos/Fontes/Poppins/Poppins-Medium.ttf" id="5_y5ooi"]
+[ext_resource type="FontFile" uid="uid://c0sopqboxqdhx" path="res://Recursos/Fontes/Poppins/Poppins-Medium.ttf" id="5_y5ooi"]
 [ext_resource type="PackedScene" uid="uid://b8i8rilpswkor" path="res://Recursos/Componentes/Box Auxiliar Infor Pop.tscn" id="6_hnfsw"]
 [ext_resource type="PackedScene" uid="uid://bgu2mg7cnmjdo" path="res://Recursos/Componentes/BotaoFundoAzul.tscn" id="7_mvxqu"]
 
