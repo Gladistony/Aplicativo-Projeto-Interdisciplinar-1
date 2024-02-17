@@ -5,8 +5,8 @@
 [ext_resource type="FontFile" uid="uid://b3qs137o2m78r" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="3_arwcy"]
 [ext_resource type="PackedScene" uid="uid://bgu2mg7cnmjdo" path="res://Recursos/Componentes/BotaoFundoAzul.tscn" id="4_omvij"]
 [ext_resource type="PackedScene" uid="uid://dbidxil2e8lk1" path="res://Recursos/Componentes/Box Email.tscn" id="5_hjn55"]
+[ext_resource type="PackedScene" uid="uid://bjf0wd7or8apo" path="res://Recursos/Componentes/Box Alterar Senha.tscn" id="6_2ofuf"]
 [ext_resource type="PackedScene" uid="uid://nep5yir0nrba" path="res://Recursos/Componentes/Box Nome.tscn" id="6_hevip"]
-[ext_resource type="PackedScene" uid="uid://ch17ebldpvs55" path="res://Recursos/Componentes/Box Senha.tscn" id="7_1bnql"]
 [ext_resource type="PackedScene" uid="uid://wx5whhqgusvp" path="res://Recursos/Componentes/Box Calendario.tscn" id="8_g6lty"]
 [ext_resource type="Texture2D" uid="uid://c0fsxjr0c661s" path="res://Recursos/Imagens/Icones/Create.png" id="9_qnxrd"]
 
@@ -70,6 +70,29 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="BoxCalendario" parent="Box" instance=ExtResource("8_g6lty")]
+offset_left = 156.0
+offset_top = 824.0
+offset_right = 156.0
+offset_bottom = 824.0
+
+[node name="BoxAlterarSenha" parent="Box" instance=ExtResource("6_2ofuf")]
+layout_mode = 0
+offset_left = 276.0
+offset_top = 1024.0
+offset_right = 516.0
+offset_bottom = 1088.0
+placeholder_text = "Senha do usuario"
+
+[node name="Box Nome" parent="Box" instance=ExtResource("6_hevip")]
+layout_mode = 0
+offset_left = 313.0
+offset_top = 464.0
+offset_right = 617.0
+offset_bottom = 528.0
+text = "Nome do usuário"
+placeholder_text = ""
+
 [node name="BoxEmail" parent="Box" instance=ExtResource("5_hjn55")]
 layout_mode = 0
 offset_left = 312.0
@@ -78,41 +101,43 @@ offset_right = 616.0
 offset_bottom = 704.0
 placeholder_text = "Email"
 
-[node name="Box Nome" parent="." instance=ExtResource("6_hevip")]
+[node name="Renomear Nome" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 313.0
-offset_top = 464.0
-offset_right = 617.0
-offset_bottom = 528.0
-placeholder_text = "Nome"
+offset_left = 808.0
+offset_top = 496.0
+offset_right = 888.0
+offset_bottom = 556.0
 
-[node name="BoxSenha" parent="." instance=ExtResource("7_1bnql")]
-layout_mode = 0
-offset_left = 316.0
-offset_top = 1000.0
-offset_right = 556.0
-offset_bottom = 1064.0
-placeholder_text = "***********"
-
-[node name="BoxCalendario" parent="." instance=ExtResource("8_g6lty")]
-offset_left = 156.0
-offset_top = 824.0
-offset_right = 156.0
-offset_bottom = 824.0
-
-[node name="Create" type="Sprite2D" parent="."]
-position = Vector2(852, 696)
+[node name="Create" type="Sprite2D" parent="Renomear Nome"]
+position = Vector2(36, 24)
 scale = Vector2(3.81, 2.83667)
 texture = ExtResource("9_qnxrd")
+metadata/_edit_lock_ = true
 
-[node name="Create2" type="Sprite2D" parent="."]
-position = Vector2(852, 512)
-scale = Vector2(3.66666, 2.87754)
-texture = ExtResource("9_qnxrd")
+[node name="Renomear Email" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 806.0
+offset_top = 672.0
+offset_right = 886.0
+offset_bottom = 732.0
 
-[node name="Create3" type="Sprite2D" parent="."]
-position = Vector2(848.94, 887.92)
-scale = Vector2(3.745, 2.67334)
+[node name="Create" type="Sprite2D" parent="Renomear Email"]
+position = Vector2(36, 24)
+scale = Vector2(3.81, 2.83667)
 texture = ExtResource("9_qnxrd")
+metadata/_edit_lock_ = true
+
+[node name="Renomear Data" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 816.0
+offset_top = 864.0
+offset_right = 896.0
+offset_bottom = 924.0
+
+[node name="Create" type="Sprite2D" parent="Renomear Data"]
+position = Vector2(36, 24)
+scale = Vector2(3.81, 2.83667)
+texture = ExtResource("9_qnxrd")
+metadata/_edit_lock_ = true
 
 [connection signal="pressed" from="Botoes/Voltar" to="." method="_on_voltar_pressed"]

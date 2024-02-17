@@ -30,6 +30,7 @@ func load_foto():
 func _ready():
 	menuBaixo.connect("BotaoMenu",menuPrincipal)
 	menuBaixo.connect("BotaoPesquisa",_pesquisaRemedio)
+	
 	usuario.text = DadosCliente.get_nome()
 	email.text = DadosCliente.get_email()
 	var idade = DadosCliente.get_idade()

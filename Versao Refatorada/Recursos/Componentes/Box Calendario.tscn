@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://wx5whhqgusvp"]
 
-[ext_resource type="Texture2D" uid="uid://dsgm07o030vtb" path="res://Recursos/Imagens/Imagens Box/box_calendario.png" id="1_2s2h8"]
+[ext_resource type="Texture2D" uid="uid://hmb5s88vh78c" path="res://Recursos/Imagens/Imagens Box/box_calendario.png" id="1_2s2h8"]
 [ext_resource type="Script" path="res://Scripts/Componentes/Box Calendario.gd" id="1_3phht"]
-[ext_resource type="FontFile" uid="uid://dobpqy3p3tgo0" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="2_g2w7j"]
+[ext_resource type="FontFile" uid="uid://b3qs137o2m78r" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="2_g2w7j"]
 
 [node name="BoxCalendario" type="Control"]
 layout_mode = 3
