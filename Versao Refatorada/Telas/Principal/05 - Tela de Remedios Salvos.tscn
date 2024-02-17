@@ -24,10 +24,11 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Voltar" type="Button" parent="Botoes"]
-offset_left = 224.0
-offset_top = 190.0
-offset_right = 264.0
-offset_bottom = 269.0
+layout_mode = 0
+offset_left = 104.0
+offset_top = 176.0
+offset_right = 144.0
+offset_bottom = 255.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_id2lg")
 theme_override_font_sizes/font_size = 50
@@ -37,5 +38,15 @@ flat = true
 [node name="Menu Abaixo" parent="." instance=ExtResource("2_iadwj")]
 offset_top = 1712.0
 offset_bottom = 1712.0
+
+[node name="Box de Scroll" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 288.0
+offset_right = 1008.0
+offset_bottom = 1696.0
+
+[node name="Lista de Resultados" type="VBoxContainer" parent="Box de Scroll"]
+layout_mode = 2
 
 [connection signal="pressed" from="Botoes/Voltar" to="." method="_on_voltar_pressed"]

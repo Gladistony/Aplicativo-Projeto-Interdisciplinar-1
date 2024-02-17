@@ -75,11 +75,11 @@ stretch_mode = 0
 
 [node name="Salvos" type="TextureButton" parent="Botoes"]
 layout_mode = 0
-offset_left = 264.0
-offset_top = 1272.0
-offset_right = 699.0
-offset_bottom = 1356.0
-scale = Vector2(1.5361, 1.46924)
+offset_left = 272.0
+offset_top = 1264.0
+offset_right = 707.0
+offset_bottom = 1348.0
+scale = Vector2(1.51161, 1.4956)
 texture_normal = ExtResource("8_tlbam")
 
 [node name="Dados" type="Control" parent="."]

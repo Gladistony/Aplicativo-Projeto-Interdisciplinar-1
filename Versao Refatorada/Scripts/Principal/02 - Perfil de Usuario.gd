@@ -130,4 +130,4 @@ func _on_permission_not_granted_by_user(permission):
 
 
 func _on_salvos_pressed():
-	get_tree().change_scene_to_file("res://Telas/Principal/05 Tela de Remedios Salvos.tscn")
+	get_tree().change_scene_to_file("res://Telas/Principal/05 - Tela de Remedios Salvos.tscn")

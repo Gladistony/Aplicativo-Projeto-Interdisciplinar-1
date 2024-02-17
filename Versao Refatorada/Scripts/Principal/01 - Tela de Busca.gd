@@ -62,7 +62,6 @@ func attPopInfo():
 		popPreco.text = "Sem cadastro"
 	else:
 		popPreco.text = "R$ "+popPreco.text 
-
 func clearBox():
 	BoxdeScroll.scroll_vertical = 0
 	for filhos in listaResultados.get_children():
