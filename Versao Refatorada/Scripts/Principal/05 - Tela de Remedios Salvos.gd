@@ -36,3 +36,7 @@ func addRemedio(nome,hora):
 	listaResultados.add_child(caixa)
 func _on_voltar_pressed():
 	get_tree().change_scene_to_file("res://Telas/Principal/02 - Perfil de Usuario.tscn")
+
+
+func _on_adicionar_mais_pressed():
+	get_tree().change_scene_to_file("res://Telas/Principal/04 - Tela de Adicionar Remedio.tscn")
