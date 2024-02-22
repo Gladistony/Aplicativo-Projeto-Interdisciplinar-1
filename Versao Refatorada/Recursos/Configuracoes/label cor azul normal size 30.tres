@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://cwt2bpk1l4pfx"]
+
+[ext_resource type="FontFile" uid="uid://dobpqy3p3tgo0" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="1_8k5xe"]
+
+[resource]
+font = ExtResource("1_8k5xe")
+font_size = 30
+font_color = Color(0.184314, 0.552941, 0.909804, 1)

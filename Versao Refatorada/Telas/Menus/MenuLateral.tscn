@@ -1,0 +1,97 @@
+[gd_scene load_steps=8 format=3 uid="uid://dj77c1lmkym68"]
+
+[ext_resource type="Script" path="res://Scripts/Menus/MenuLateral.gd" id="1_tdxnn"]
+[ext_resource type="Texture2D" uid="uid://b2bxmw6wucbct" path="res://Recursos/Imagens/Fundos/fundoAzul.png" id="1_xenym"]
+[ext_resource type="FontFile" uid="uid://b3qs137o2m78r" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="2_xvo6x"]
+[ext_resource type="Texture2D" uid="uid://dlq65lmllrf6m" path="res://Recursos/Imagens/Menus/pilulaConfig.png" id="4_ppa7n"]
+[ext_resource type="Texture2D" uid="uid://cv2d6f0yxe25y" path="res://Recursos/Imagens/Menus/engrenagemConfig.png" id="5_qs6rr"]
+[ext_resource type="Texture2D" uid="uid://wgncemakqd2m" path="res://Recursos/Imagens/Menus/addConfig.png" id="6_x2w1s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q6j62"]
+
+[node name="MenuLateral" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tdxnn")
+
+[node name="FundoAzul" type="Sprite2D" parent="."]
+scale = Vector2(0.474074, 1)
+texture = ExtResource("1_xenym")
+centered = false
+
+[node name="AreaVazia" type="Button" parent="."]
+layout_mode = 0
+offset_left = 512.0
+offset_right = 1088.0
+offset_bottom = 1920.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_q6j62")
+flat = true
+
+[node name="Botoes" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BotãoRemedios" type="Button" parent="Botoes"]
+layout_mode = 0
+offset_left = 101.0
+offset_top = 512.0
+offset_right = 477.0
+offset_bottom = 580.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_xvo6x")
+theme_override_font_sizes/font_size = 40
+text = "Remedios"
+flat = true
+
+[node name="BotãoConfiguracao" type="Button" parent="Botoes"]
+layout_mode = 0
+offset_left = 101.0
+offset_top = 266.0
+offset_right = 485.0
+offset_bottom = 334.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_xvo6x")
+theme_override_font_sizes/font_size = 40
+text = "Configurações
+"
+flat = true
+
+[node name="BotãoAdicionar" type="Button" parent="Botoes"]
+layout_mode = 0
+offset_left = 106.0
+offset_top = 394.0
+offset_right = 490.0
+offset_bottom = 462.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_xvo6x")
+theme_override_font_sizes/font_size = 40
+text = "Lembretes"
+flat = true
+
+[node name="Icones Botoes" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AddConfig" type="Sprite2D" parent="Icones Botoes"]
+position = Vector2(82, 430)
+texture = ExtResource("6_x2w1s")
+
+[node name="EngrenagemConfig" type="Sprite2D" parent="Icones Botoes"]
+position = Vector2(80, 304)
+texture = ExtResource("5_qs6rr")
+
+[node name="PilulaConfig" type="Sprite2D" parent="Icones Botoes"]
+position = Vector2(80, 544)
+texture = ExtResource("4_ppa7n")
+
+[connection signal="pressed" from="AreaVazia" to="." method="_on_area_vazia_pressed"]
+[connection signal="pressed" from="Botoes/BotãoRemedios" to="." method="_on_botão_remedios_pressed"]
+[connection signal="pressed" from="Botoes/BotãoConfiguracao" to="." method="_on_botão_configuracao_pressed"]
+[connection signal="pressed" from="Botoes/BotãoAdicionar" to="." method="_on_botão_adicionar_pressed"]

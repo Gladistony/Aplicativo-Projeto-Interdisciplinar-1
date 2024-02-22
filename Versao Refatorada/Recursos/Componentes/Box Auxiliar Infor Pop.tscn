@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://b8i8rilpswkor"]
+
+[ext_resource type="Script" path="res://Scripts/Componentes/Box Auxiliar Infor Pop.gd" id="1_qm7rm"]
+[ext_resource type="FontFile" uid="uid://dobpqy3p3tgo0" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="1_uerht"]
+[ext_resource type="FontFile" uid="uid://bgusm8b3fbrys" path="res://Recursos/Fontes/Poppins/Poppins-BoldItalic.ttf" id="2_5vqgl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wd0c2"]
+content_margin_left = 20.0
+
+[node name="BoxAuxiliarInforPop" type="HBoxContainer"]
+script = ExtResource("1_qm7rm")
+
+[node name="Propriedade" type="Label" parent="."]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_uerht")
+theme_override_font_sizes/font_size = 40
+text = "Propriedade:"
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.25098, 0.482353, 1, 1)
+theme_override_fonts/font = ExtResource("2_5vqgl")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wd0c2")
+text = "Informação Resultante
+"
+clip_text = true

@@ -1,0 +1,138 @@
+[gd_scene load_steps=16 format=3 uid="uid://b0dpwhh08rrj8"]
+
+[ext_resource type="Script" path="res://Scripts/Inicio/02 - Tela de Login.gd" id="1_vpcu6"]
+[ext_resource type="PackedScene" uid="uid://dbidxil2e8lk1" path="res://Recursos/Componentes/Box Email.tscn" id="2_a7sts"]
+[ext_resource type="Texture2D" uid="uid://cgavlolq1yri2" path="res://Recursos/Imagens/Fundos/fundoBranco.png" id="2_eqthv"]
+[ext_resource type="PackedScene" uid="uid://ch17ebldpvs55" path="res://Recursos/Componentes/Box Senha.tscn" id="3_yg0al"]
+[ext_resource type="FontFile" uid="uid://b3qs137o2m78r" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="4_o33mo"]
+[ext_resource type="PackedScene" uid="uid://bgu2mg7cnmjdo" path="res://Recursos/Componentes/BotaoFundoAzul.tscn" id="6_8eoph"]
+[ext_resource type="PackedScene" uid="uid://cmeex3tld7s5e" path="res://Recursos/Componentes/BotaoSemFundo.tscn" id="7_hx30u"]
+[ext_resource type="PackedScene" uid="uid://b7xpilmtc12d2" path="res://Recursos/Componentes/Caixa Load.tscn" id="8_b6aqa"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bwanh"]
+font = ExtResource("4_o33mo")
+font_size = 70
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xpiu3"]
+font = ExtResource("4_o33mo")
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_est2r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_js8yk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yj72d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wfao4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_81box"]
+
+[node name="02-TelaDeLogin" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_vpcu6")
+
+[node name="FundoBranco" type="Sprite2D" parent="."]
+z_index = -2
+texture = ExtResource("2_eqthv")
+centered = false
+
+[node name="Textos" type="Control" parent="."]
+anchors_preset = 0
+
+[node name="Titulo" type="Label" parent="Textos"]
+layout_mode = 0
+offset_top = 152.0
+offset_right = 1080.0
+offset_bottom = 352.0
+text = "Login"
+label_settings = SubResource("LabelSettings_bwanh")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Texto - Não tem conta" type="Label" parent="Textos"]
+layout_mode = 0
+offset_left = 249.0
+offset_top = 1707.0
+offset_right = 726.0
+offset_bottom = 1750.0
+text = "Não possui uma conta? "
+label_settings = SubResource("LabelSettings_xpiu3")
+horizontal_alignment = 2
+
+[node name="Box e Botoes" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Box" type="Control" parent="Box e Botoes"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BoxSenha" parent="Box e Botoes/Box" instance=ExtResource("3_yg0al")]
+layout_mode = 0
+offset_left = 328.0
+offset_top = 632.0
+offset_right = 568.0
+offset_bottom = 696.0
+
+[node name="BoxEmail" parent="Box e Botoes/Box" instance=ExtResource("2_a7sts")]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 480.0
+offset_right = 624.0
+offset_bottom = 544.0
+
+[node name="Botoes" type="Control" parent="Box e Botoes"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Botao Registro" parent="Box e Botoes/Botoes" instance=ExtResource("7_hx30u")]
+layout_mode = 0
+offset_left = 722.0
+offset_top = 1698.0
+offset_right = 882.0
+offset_bottom = 1762.0
+text = "Registrar"
+
+[node name="Botao Volta" type="Button" parent="Box e Botoes/Botoes"]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 216.0
+offset_right = 272.0
+offset_bottom = 295.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_o33mo")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_est2r")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_js8yk")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yj72d")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_wfao4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_81box")
+text = "<"
+flat = true
+
+[node name="Botao Login" parent="Box e Botoes/Botoes" instance=ExtResource("6_8eoph")]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 1600.0
+offset_right = 176.0
+offset_bottom = 1600.0
+scale = Vector2(2.76692, 1.49231)
+TextoBotao = "Entrar"
+
+[node name="CaixaLoad" parent="." instance=ExtResource("8_b6aqa")]
+visible = false
+layout_mode = 1
+offset_left = 259.0
+offset_top = 848.0
+offset_right = 259.0
+offset_bottom = 848.0
+
+[connection signal="pressed" from="Box e Botoes/Botoes/Botao Registro" to="." method="_on_botao_registro_pressed"]
+[connection signal="pressed" from="Box e Botoes/Botoes/Botao Volta" to="." method="_on_botao_volta_pressed"]
+[connection signal="pressed" from="Box e Botoes/Botoes/Botao Login" to="." method="_on_botao_login_pressed"]

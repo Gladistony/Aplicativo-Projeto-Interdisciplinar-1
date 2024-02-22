@@ -1,0 +1,73 @@
+[gd_scene load_steps=7 format=3 uid="uid://b7xpilmtc12d2"]
+
+[ext_resource type="Texture2D" uid="uid://8tytx7ni3jld" path="res://Recursos/Imagens/Fundos/fundoBranco.png" id="1_2xr5o"]
+[ext_resource type="Texture2D" uid="uid://drfnotfu07641" path="res://Recursos/Imagens/Icones/logo final.png" id="2_b5c0n"]
+[ext_resource type="Texture2D" uid="uid://dejpvdgqxphu" path="res://Recursos/Imagens/Outros/load circulo.png" id="2_c83rb"]
+
+[sub_resource type="Animation" id="Animation_5jng6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LoadBar:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_sdoi4"]
+resource_name = "Rottate"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LoadBar:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.523599, 2.0944, 3.14159, 4.18879, 5.23599, 6.28319]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5yga0"]
+_data = {
+"RESET": SubResource("Animation_5jng6"),
+"Rottate": SubResource("Animation_sdoi4")
+}
+
+[node name="CaixaLoad" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Fundo" type="Sprite2D" parent="."]
+scale = Vector2(0.533333, 0.233333)
+texture = ExtResource("1_2xr5o")
+centered = false
+
+[node name="LogoFinal" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.392157)
+position = Vector2(289.5, 225)
+scale = Vector2(0.636667, 0.446)
+texture = ExtResource("2_b5c0n")
+
+[node name="LoadBar" type="Sprite2D" parent="."]
+position = Vector2(288, 232)
+scale = Vector2(0.356, 0.356)
+texture = ExtResource("2_c83rb")
+
+[node name="Rotacao LoadBar" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_5yga0")
+}
+autoplay = "Rottate"

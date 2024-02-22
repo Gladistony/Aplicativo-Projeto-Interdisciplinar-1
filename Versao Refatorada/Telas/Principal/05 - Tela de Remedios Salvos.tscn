@@ -1,0 +1,66 @@
+[gd_scene load_steps=6 format=3 uid="uid://chgx81u32a5u1"]
+
+[ext_resource type="Script" path="res://Scripts/Principal/05 - Tela de Remedios Salvos.gd" id="1_2q0p8"]
+[ext_resource type="Texture2D" uid="uid://cgavlolq1yri2" path="res://Recursos/Imagens/Fundos/fundoBranco.png" id="1_7ksic"]
+[ext_resource type="PackedScene" uid="uid://bdskk0aw2cqem" path="res://Telas/Menus/MenuAbaixo.tscn" id="2_iadwj"]
+[ext_resource type="FontFile" uid="uid://b3qs137o2m78r" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="3_id2lg"]
+[ext_resource type="PackedScene" uid="uid://bgu2mg7cnmjdo" path="res://Recursos/Componentes/BotaoFundoAzul.tscn" id="5_8lsfx"]
+
+[node name="05 - Tela de Remedios Salvos" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2q0p8")
+
+[node name="Fundo" type="Sprite2D" parent="."]
+texture = ExtResource("1_7ksic")
+centered = false
+
+[node name="Botoes" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Voltar" type="Button" parent="Botoes"]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 176.0
+offset_right = 144.0
+offset_bottom = 255.0
+scale = Vector2(2.16, 1.52)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_id2lg")
+theme_override_font_sizes/font_size = 50
+text = "<"
+flat = true
+
+[node name="Menu Abaixo" parent="." instance=ExtResource("2_iadwj")]
+offset_top = 1712.0
+offset_bottom = 1712.0
+
+[node name="Box de Scroll" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 288.0
+offset_right = 1008.0
+offset_bottom = 1696.0
+metadata/_edit_lock_ = true
+
+[node name="Lista de Resultados" type="VBoxContainer" parent="Box de Scroll"]
+layout_mode = 2
+
+[node name="Adicionar Mais" parent="." instance=ExtResource("5_8lsfx")]
+layout_mode = 0
+offset_left = 344.0
+offset_top = 1416.0
+offset_right = 610.0
+offset_bottom = 1481.0
+scale = Vector2(1.5225, 2.46104)
+TextoBotao = "Adicionar Mais"
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="Botoes/Voltar" to="." method="_on_voltar_pressed"]
+[connection signal="pressed" from="Adicionar Mais" to="." method="_on_adicionar_mais_pressed"]

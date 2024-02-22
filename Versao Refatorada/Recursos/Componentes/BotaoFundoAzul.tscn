@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgu2mg7cnmjdo"]
+
+[ext_resource type="Texture2D" uid="uid://di17yqyvdquus" path="res://Recursos/Imagens/Imagem Botoes/button base.png" id="1_v2s4a"]
+[ext_resource type="Script" path="res://Scripts/Componentes/BotaoFundoAzul.gd" id="2_bb4yb"]
+[ext_resource type="FontFile" uid="uid://jdhdqglwuy8c" path="res://Recursos/Fontes/Poppins/Poppins-Regular.ttf" id="3_06ehu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_n2i7x"]
+font = ExtResource("3_06ehu")
+font_size = 30
+
+[node name="BotaoFundoAzul" type="TextureButton"]
+scale = Vector2(1.20301, 1)
+texture_normal = ExtResource("1_v2s4a")
+script = ExtResource("2_bb4yb")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 266.0
+offset_bottom = 65.0
+text = "Texto botao"
+label_settings = SubResource("LabelSettings_n2i7x")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1

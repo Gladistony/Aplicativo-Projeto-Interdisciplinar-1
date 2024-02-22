@@ -11,5 +11,10 @@ func _process(delta):
 	pass
 
 func _notificacao(time):
-	if time:
+	if time and :
 		
+	if time and :
+		
+	else:
+		
+

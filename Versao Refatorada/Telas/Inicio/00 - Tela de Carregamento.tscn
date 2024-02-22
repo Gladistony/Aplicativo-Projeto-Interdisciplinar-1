@@ -1,0 +1,92 @@
+[gd_scene load_steps=9 format=3 uid="uid://ccu6ds7h827g5"]
+
+[ext_resource type="Texture2D" uid="uid://cgavlolq1yri2" path="res://Recursos/Imagens/Fundos/fundoBranco.png" id="1_370ad"]
+[ext_resource type="Script" path="res://Scripts/Inicio/00 - Tela de Carregamento.gd" id="1_fvu0a"]
+[ext_resource type="Texture2D" uid="uid://c8lqtkhctw7d0" path="res://Recursos/Imagens/Icones/logo final.png" id="2_xoauu"]
+[ext_resource type="Texture2D" uid="uid://dxnklrmtkl000" path="res://Recursos/Imagens/Outros/load circulo.png" id="3_ud2pb"]
+[ext_resource type="LabelSettings" uid="uid://3sie0gqg8ko1" path="res://Recursos/Configuracoes/label cor preta normal size 50.tres" id="5_3oowd"]
+
+[sub_resource type="Animation" id="Animation_5jng6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LoadBar:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_sdoi4"]
+resource_name = "Rottate"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LoadBar:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.523599, 2.0944, 3.14159, 4.18879, 5.23599, 6.28319]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5yga0"]
+_data = {
+"RESET": SubResource("Animation_5jng6"),
+"Rottate": SubResource("Animation_sdoi4")
+}
+
+[node name="00-TelaDeCarregamento" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fvu0a")
+
+[node name="Fundo" type="Sprite2D" parent="."]
+texture = ExtResource("1_370ad")
+centered = false
+
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(544, 645)
+scale = Vector2(1.191, 1)
+texture = ExtResource("2_xoauu")
+
+[node name="LoadBar" type="Sprite2D" parent="."]
+position = Vector2(542, 1339)
+scale = Vector2(0.322, 0.322)
+texture = ExtResource("3_ud2pb")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 1517.0
+offset_right = 1088.0
+offset_bottom = 1709.0
+text = "Carregando dados do usuario ..."
+label_settings = ExtResource("5_3oowd")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Rotacao LoadBar" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_5yga0")
+}
+autoplay = "Rottate"
+
+[node name="Iniciar Programa" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Iniciar Programa" to="." method="_on_iniciar_programa_timeout"]
