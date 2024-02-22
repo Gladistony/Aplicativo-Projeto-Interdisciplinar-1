@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=3 uid="uid://bexko0rsmfsbd"]
+
+[ext_resource type="Script" path="res://Objetos de Teste/Teste Notificacao.gd" id="1_nkdih"]
+
+[node name="TesteNotificacao" type="Node2D"]
+script = ExtResource("1_nkdih")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 130.0
+offset_top = 102.0
+offset_right = 224.0
+offset_bottom = 133.0
+text = "Olá mundo"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 279.0
+offset_top = 104.0
+offset_right = 373.0
+offset_bottom = 135.0
+text = "cancel"
+
+[node name="LineEdit" type="LineEdit" parent="."]
+offset_left = 53.0
+offset_top = 189.0
+offset_right = 243.0
+offset_bottom = 220.0
+placeholder_text = "Usuario"
+virtual_keyboard_type = 5
+
+[node name="LineEdit2" type="LineEdit" parent="."]
+offset_left = 53.0
+offset_top = 234.0
+offset_right = 243.0
+offset_bottom = 265.0
+placeholder_text = "Senha"
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 280.0
+offset_top = 188.0
+offset_right = 330.0
+offset_bottom = 219.0
+text = "Login"
+
+[node name="Button4" type="Button" parent="."]
+offset_left = 281.0
+offset_top = 239.0
+offset_right = 331.0
+offset_bottom = 270.0
+text = "Registrar"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 173.0
+offset_top = 302.0
+offset_right = 226.0
+offset_bottom = 325.0
+text = "Estado"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
