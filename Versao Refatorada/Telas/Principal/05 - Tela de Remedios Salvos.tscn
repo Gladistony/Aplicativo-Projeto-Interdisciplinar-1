@@ -1,18 +1,18 @@
 [gd_scene load_steps=6 format=3 uid="uid://chgx81u32a5u1"]
 
 [ext_resource type="Script" path="res://Scripts/Principal/05 - Tela de Remedios Salvos.gd" id="1_2q0p8"]
-[ext_resource type="Texture2D" uid="uid://cgavlolq1yri2" path="res://Recursos/Imagens/Fundos/fundoBranco.png" id="1_7ksic"]
+[ext_resource type="Texture2D" uid="uid://c150xodf8a8nu" path="res://Recursos/Imagens/Fundos/fundoBranco.png" id="1_7ksic"]
 [ext_resource type="PackedScene" uid="uid://bdskk0aw2cqem" path="res://Telas/Menus/MenuAbaixo.tscn" id="2_iadwj"]
-[ext_resource type="FontFile" uid="uid://b3qs137o2m78r" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="3_id2lg"]
+[ext_resource type="FontFile" uid="uid://bwmbnspw4olgn" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="3_id2lg"]
 [ext_resource type="PackedScene" uid="uid://bgu2mg7cnmjdo" path="res://Recursos/Componentes/BotaoFundoAzul.tscn" id="5_8lsfx"]
 
 [node name="05 - Tela de Remedios Salvos" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchor_right = 1.49
+anchor_bottom = 1.775
+offset_right = 0.199951
+offset_bottom = -0.00012207
+size_flags_horizontal = 4
 script = ExtResource("1_2q0p8")
 
 [node name="Fundo" type="Sprite2D" parent="."]
@@ -59,7 +59,7 @@ offset_top = 1416.0
 offset_right = 610.0
 offset_bottom = 1481.0
 scale = Vector2(1.5225, 2.46104)
-TextoBotao = "Adicionar Mais"
+TextoBotao = "+"
 metadata/_edit_lock_ = true
 
 [connection signal="pressed" from="Botoes/Voltar" to="." method="_on_voltar_pressed"]

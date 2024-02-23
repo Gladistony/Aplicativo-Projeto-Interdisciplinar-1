@@ -1,9 +1,9 @@
 [gd_scene load_steps=11 format=3 uid="uid://ch17ebldpvs55"]
 
-[ext_resource type="FontFile" uid="uid://b3qs137o2m78r" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="1_h4mti"]
+[ext_resource type="FontFile" uid="uid://bwmbnspw4olgn" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="1_h4mti"]
 [ext_resource type="Script" path="res://Scripts/Componentes/Box Email.gd" id="2_jx5gx"]
-[ext_resource type="Texture2D" uid="uid://crvhfcxvtrh3m" path="res://Recursos/Imagens/Imagens Box/box_senha.png" id="3_144me"]
-[ext_resource type="Texture2D" uid="uid://bpdvrxq8pichr" path="res://Recursos/Imagens/Imagens Box/open_eye.png" id="4_op8r3"]
+[ext_resource type="Texture2D" uid="uid://t4h30ql3c72g" path="res://Recursos/Imagens/Imagens Box/box_senha.png" id="3_144me"]
+[ext_resource type="Texture2D" uid="uid://dgle2g0hwwnio" path="res://Recursos/Imagens/Imagens Box/open_eye.png" id="4_op8r3"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q5cst"]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bqesu6l8jwieg"]
 
 [ext_resource type="Script" path="res://Scripts/Componentes/Box Auxiliar Remedios Salvos.gd" id="1_kq5q4"]
-[ext_resource type="Texture2D" uid="uid://dgwab1sp3u787" path="res://Recursos/Imagens/Imagens Box/box_remedios.png" id="2_bn3mx"]
+[ext_resource type="Texture2D" uid="uid://dbdouajacbxjt" path="res://Recursos/Imagens/Imagens Box/box_remedios.png" id="2_bn3mx"]
 
 [node name="BoxAuxiliarRemediosSalvos" type="Control"]
 layout_mode = 3
