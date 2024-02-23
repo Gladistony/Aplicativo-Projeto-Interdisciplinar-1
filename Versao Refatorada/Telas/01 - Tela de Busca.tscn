@@ -1,0 +1,202 @@
+[gd_scene load_steps=10 format=3 uid="uid://llvn0crplqeg"]
+
+[ext_resource type="Texture2D" uid="uid://7vf0ypdav6fm" path="res://Recursos/Imagens/Fundos/fundoBranco.png" id="1_pdmri"]
+[ext_resource type="Script" path="res://Scripts/Principal/01 - Tela de Busca.gd" id="1_q7yff"]
+[ext_resource type="PackedScene" uid="uid://bdskk0aw2cqem" path="res://Telas/Menus/MenuAbaixo.tscn" id="2_v3ir0"]
+[ext_resource type="FontFile" uid="uid://w4gbden6b2v7" path="res://Recursos/Fontes/Poppins/Poppins-Regular.ttf" id="4_khvdf"]
+[ext_resource type="StyleBox" uid="uid://bn3w0ulngnkkc" path="res://Recursos/Configuracoes/01 - Tela de Busca.tres" id="5_t45j5"]
+[ext_resource type="FontFile" uid="uid://dwgt6k24ekcg2" path="res://Recursos/Fontes/Poppins/Poppins-Medium.ttf" id="5_y5ooi"]
+[ext_resource type="PackedScene" uid="uid://b8i8rilpswkor" path="res://Recursos/Componentes/Box Auxiliar Infor Pop.tscn" id="6_hnfsw"]
+[ext_resource type="PackedScene" uid="uid://bgu2mg7cnmjdo" path="res://Recursos/Componentes/BotaoFundoAzul.tscn" id="7_mvxqu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_64kmg"]
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+
+[node name="01-TelaDeBusca" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_q7yff")
+
+[node name="FundoBranco" type="Sprite2D" parent="."]
+texture = ExtResource("1_pdmri")
+centered = false
+
+[node name="Menu Abaixo" parent="." instance=ExtResource("2_v3ir0")]
+offset_top = 1712.0
+offset_bottom = 1712.0
+
+[node name="Bloco de Pesquisa" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Linha de Pesquisa" type="LineEdit" parent="Bloco de Pesquisa"]
+layout_mode = 0
+offset_right = 1080.0
+offset_bottom = 144.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_khvdf")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = ExtResource("5_t45j5")
+placeholder_text = "Digite o nome do medicamento"
+
+[node name="Label-Medicamento" type="Label" parent="Bloco de Pesquisa"]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 176.0
+offset_right = 376.0
+offset_bottom = 232.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_khvdf")
+theme_override_font_sizes/font_size = 40
+text = "Medicamentos:"
+
+[node name="Botao Mudar Substancia" type="LinkButton" parent="Bloco de Pesquisa"]
+layout_mode = 0
+offset_left = 904.0
+offset_top = 176.0
+offset_right = 1034.0
+offset_bottom = 232.0
+theme_override_colors/font_color = Color(0.25098, 0.482353, 1, 1)
+theme_override_fonts/font = ExtResource("5_y5ooi")
+theme_override_font_sizes/font_size = 40
+text = "Trocar"
+underline = 2
+
+[node name="Linhas" type="Control" parent="Bloco de Pesquisa"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HSeparator" type="HSeparator" parent="Bloco de Pesquisa/Linhas"]
+layout_mode = 0
+offset_top = 256.0
+offset_right = 1082.0
+offset_bottom = 267.0
+theme_override_styles/separator = SubResource("StyleBoxFlat_64kmg")
+
+[node name="HSeparator2" type="HSeparator" parent="Bloco de Pesquisa/Linhas"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 264.0
+offset_right = 126.0
+offset_bottom = 278.0
+rotation = -1.5708
+theme_override_styles/separator = SubResource("StyleBoxFlat_64kmg")
+
+[node name="HSeparator3" type="HSeparator" parent="Bloco de Pesquisa/Linhas"]
+layout_mode = 0
+offset_left = 1070.0
+offset_top = 264.0
+offset_right = 1199.0
+offset_bottom = 278.0
+rotation = -1.5708
+theme_override_styles/separator = SubResource("StyleBoxFlat_64kmg")
+
+[node name="Auto Busca" type="Timer" parent="Bloco de Pesquisa"]
+autostart = true
+
+[node name="Bloco de Resultados" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Box de Scroll" type="ScrollContainer" parent="Bloco de Resultados"]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 288.0
+offset_right = 1008.0
+offset_bottom = 1696.0
+
+[node name="Lista de Resultados" type="VBoxContainer" parent="Bloco de Resultados/Box de Scroll"]
+layout_mode = 2
+
+[node name="Janela de POP Informacao Remedio" type="Window" parent="."]
+position = Vector2i(65, 36)
+size = Vector2i(869, 750)
+unresizable = true
+
+[node name="Fundo" type="Sprite2D" parent="Janela de POP Informacao Remedio"]
+texture = ExtResource("1_pdmri")
+centered = false
+
+[node name="Box de informacao Vertical" type="VBoxContainer" parent="Janela de POP Informacao Remedio"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Nome" parent="Janela de POP Informacao Remedio/Box de informacao Vertical" instance=ExtResource("6_hnfsw")]
+layout_mode = 2
+NomePropriedade = "Nome:"
+
+[node name="Substancia" parent="Janela de POP Informacao Remedio/Box de informacao Vertical" instance=ExtResource("6_hnfsw")]
+layout_mode = 2
+NomePropriedade = "Substancia:"
+
+[node name="Botao Busca Substancia" type="HBoxContainer" parent="Janela de POP Informacao Remedio/Box de informacao Vertical"]
+layout_mode = 2
+
+[node name="Separador" type="Label" parent="Janela de POP Informacao Remedio/Box de informacao Vertical/Botao Busca Substancia"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+
+[node name="Botao Buscar Substancia" parent="Janela de POP Informacao Remedio/Box de informacao Vertical/Botao Busca Substancia" instance=ExtResource("7_mvxqu")]
+layout_mode = 2
+TextoBotao = "Buscar Subs."
+
+[node name="Fabricante" parent="Janela de POP Informacao Remedio/Box de informacao Vertical" instance=ExtResource("6_hnfsw")]
+layout_mode = 2
+NomePropriedade = "Fabricante:"
+
+[node name="Apresentacao" parent="Janela de POP Informacao Remedio/Box de informacao Vertical" instance=ExtResource("6_hnfsw")]
+layout_mode = 2
+NomePropriedade = "Aprest.:"
+
+[node name="Classe" parent="Janela de POP Informacao Remedio/Box de informacao Vertical" instance=ExtResource("6_hnfsw")]
+layout_mode = 2
+NomePropriedade = "Classe:"
+
+[node name="Tarja" parent="Janela de POP Informacao Remedio/Box de informacao Vertical" instance=ExtResource("6_hnfsw")]
+layout_mode = 2
+NomePropriedade = "Tarja:"
+
+[node name="Tipo" parent="Janela de POP Informacao Remedio/Box de informacao Vertical" instance=ExtResource("6_hnfsw")]
+layout_mode = 2
+NomePropriedade = "Tipo:"
+
+[node name="Preco Estimado" parent="Janela de POP Informacao Remedio/Box de informacao Vertical" instance=ExtResource("6_hnfsw")]
+layout_mode = 2
+NomePropriedade = "Preço (2023):"
+
+[node name="Separador" type="Label" parent="Janela de POP Informacao Remedio/Box de informacao Vertical"]
+visible = false
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="Botao Adicionar LLembrete" type="HBoxContainer" parent="Janela de POP Informacao Remedio/Box de informacao Vertical"]
+layout_mode = 2
+
+[node name="Separador" type="Label" parent="Janela de POP Informacao Remedio/Box de informacao Vertical/Botao Adicionar LLembrete"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+
+[node name="Novo Lembrete" parent="Janela de POP Informacao Remedio/Box de informacao Vertical/Botao Adicionar LLembrete" instance=ExtResource("7_mvxqu")]
+layout_mode = 2
+TextoBotao = "Novo Lembrete"
+
+[node name="Fechar Pop" parent="Janela de POP Informacao Remedio/Box de informacao Vertical/Botao Adicionar LLembrete" instance=ExtResource("7_mvxqu")]
+layout_mode = 2
+TextoBotao = "Fechar"
+
+[connection signal="focus_entered" from="." to="." method="_on_linha_de_pesquisa_focus_entered"]
+[connection signal="focus_entered" from="Bloco de Pesquisa/Linha de Pesquisa" to="." method="_on_linha_de_pesquisa_focus_entered"]
+[connection signal="pressed" from="Bloco de Pesquisa/Botao Mudar Substancia" to="." method="_on_botao_mudar_substancia_pressed"]
+[connection signal="timeout" from="Bloco de Pesquisa/Auto Busca" to="." method="_on_auto_busca_timeout"]
+[connection signal="close_requested" from="Janela de POP Informacao Remedio" to="." method="_on_janela_de_pop_informacao_remedio_close_requested"]
+[connection signal="pressed" from="Janela de POP Informacao Remedio/Box de informacao Vertical/Botao Busca Substancia/Botao Buscar Substancia" to="." method="_on_botao_buscar_substancia_pressed"]
+[connection signal="pressed" from="Janela de POP Informacao Remedio/Box de informacao Vertical/Botao Adicionar LLembrete/Novo Lembrete" to="." method="_on_novo_lembrete_pressed"]
+[connection signal="pressed" from="Janela de POP Informacao Remedio/Box de informacao Vertical/Botao Adicionar LLembrete/Fechar Pop" to="." method="_on_fechar_pop_pressed"]

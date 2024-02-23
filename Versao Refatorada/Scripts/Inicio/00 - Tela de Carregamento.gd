@@ -17,7 +17,8 @@ func _ready():
 	BancoDeDados._readEnd.connect(finalLeituraBanco)
 	Firebase.Auth.login_failed.connect(on_login_failed)
 	Firebase.Auth.login_succeeded.connect(_on_login_succeeded)
-	
+
+
 func _on_iniciar_programa_timeout():
 	_charceStade("Carregando banco de dados ...")
 	BancoDeDados._loadData()

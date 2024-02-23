@@ -7,6 +7,7 @@ func _ready():
 	menuBaixo.connect("BotaoMenu",menuPrincipal)
 	menuBaixo.connect("BotaoPerfil",_janelaPerfil)
 	menuBaixo.connect("BotaoPesquisa", botaopesquisa)
+	AtualizarListaRemedios()
 
 func _janelaPerfil():
 	get_tree().change_scene_to_file("res://Telas/Principal/02 - Perfil de Usuario.tscn")
@@ -17,12 +18,12 @@ func menuPrincipal():
 func botaopesquisa():
 	get_tree().change_scene_to_file("res://Telas/Principal/01 - Tela de Busca.tscn")
 
-func _on_voltar_pressed():
-	get_tree().change_scene_to_file("res://Telas/Principal/02 - Perfil de Usuario.tscn")
-
-func _on_alterar_pressed():
-	get_tree().change_scene_to_file("res://Telas/Principal/06 - Tela de Redefinir Dados.tscn")
-
-
-func _on_deletar_pressed():
-	get_tree().change_scene_to_file("res://Telas/Principal/07 - Tela de excluir conta.tscn")
+func AtualizarListaRemedios():
+	DadosCliente.processarMedicamentos()
+	$"Lista de Medicamentos".text = ""
+	$"Lista de Medicamentos".visible = false
+	var cont = 0
+	for medicamento in DadosCliente.medicamentos:
+		$"Lista de Medicamentos".visible = true
+		cont += 1
+		$"Lista de Medicamentos".text += str(cont) + " - "+ medicamento["remedio"]+" - Hora:"+str(medicamento["Horarios"][0]["hora"])+" : "+str(medicamento["Horarios"][0]["min"])+"\n"
