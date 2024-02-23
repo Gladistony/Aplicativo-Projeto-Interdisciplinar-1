@@ -1,15 +1,15 @@
 [gd_scene load_steps=21 format=3 uid="uid://8wpvxvtcw5kc"]
 
 [ext_resource type="Script" path="res://Scripts/Inicio/03 - Tela de Registro.gd" id="1_r86kp"]
-[ext_resource type="Texture2D" uid="uid://cgavlolq1yri2" path="res://Recursos/Imagens/Fundos/fundoBranco.png" id="2_4e01t"]
-[ext_resource type="FontFile" uid="uid://b3qs137o2m78r" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="3_0cxpw"]
+[ext_resource type="Texture2D" uid="uid://c150xodf8a8nu" path="res://Recursos/Imagens/Fundos/fundoBranco.png" id="2_4e01t"]
+[ext_resource type="FontFile" uid="uid://bwmbnspw4olgn" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="3_0cxpw"]
 [ext_resource type="PackedScene" uid="uid://nep5yir0nrba" path="res://Recursos/Componentes/Box Nome.tscn" id="4_gjpoe"]
 [ext_resource type="PackedScene" uid="uid://dbidxil2e8lk1" path="res://Recursos/Componentes/Box Email.tscn" id="5_b65t1"]
 [ext_resource type="PackedScene" uid="uid://ch17ebldpvs55" path="res://Recursos/Componentes/Box Senha.tscn" id="6_h60ru"]
 [ext_resource type="PackedScene" uid="uid://wx5whhqgusvp" path="res://Recursos/Componentes/Box Calendario.tscn" id="7_roy7c"]
 [ext_resource type="PackedScene" uid="uid://bgu2mg7cnmjdo" path="res://Recursos/Componentes/BotaoFundoAzul.tscn" id="8_me01q"]
 [ext_resource type="PackedScene" uid="uid://dn3338ikol3x" path="res://Recursos/Componentes/CheckBox.tscn" id="9_7awmx"]
-[ext_resource type="FontFile" uid="uid://jdhdqglwuy8c" path="res://Recursos/Fontes/Poppins/Poppins-Regular.ttf" id="10_x3ilq"]
+[ext_resource type="FontFile" uid="uid://e1ds0we2jajm" path="res://Recursos/Fontes/Poppins/Poppins-Regular.ttf" id="10_x3ilq"]
 [ext_resource type="PackedScene" uid="uid://cmeex3tld7s5e" path="res://Recursos/Componentes/BotaoSemFundo.tscn" id="11_7n56k"]
 [ext_resource type="PackedScene" uid="uid://b7xpilmtc12d2" path="res://Recursos/Componentes/Caixa Load.tscn" id="12_whec0"]
 

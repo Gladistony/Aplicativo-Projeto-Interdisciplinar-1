@@ -22,3 +22,7 @@ func _on_voltar_pressed():
 
 func _on_alterar_pressed():
 	get_tree().change_scene_to_file("res://Telas/Principal/06 - Tela de Redefinir Dados.tscn")
+
+
+func _on_deletar_pressed():
+	get_tree().change_scene_to_file("res://Telas/Principal/07 - Tela de excluir conta.tscn")

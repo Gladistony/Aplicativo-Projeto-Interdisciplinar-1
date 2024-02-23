@@ -1,21 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://bqesu6l8jwieg"]
+[gd_scene load_steps=6 format=3 uid="uid://bqesu6l8jwieg"]
 
 [ext_resource type="Script" path="res://Scripts/Componentes/Box Auxiliar Remedios Salvos.gd" id="1_kq5q4"]
 [ext_resource type="Texture2D" uid="uid://dbdouajacbxjt" path="res://Recursos/Imagens/Imagens Box/box_remedios.png" id="2_bn3mx"]
+[ext_resource type="FontFile" uid="uid://bwmbnspw4olgn" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="3_mg7fd"]
+[ext_resource type="Texture2D" uid="uid://v3a2a522w68p" path="res://Recursos/Imagens/Menus/pilulaConfig.png" id="4_cip2q"]
+[ext_resource type="Texture2D" uid="uid://t0ydqrb4eo5h" path="res://Recursos/Imagens/Icones/Alarm.png" id="5_16ay8"]
 
 [node name="BoxAuxiliarRemediosSalvos" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -1.0
+offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_kq5q4")
 
 [node name="BoxRemedios" type="Sprite2D" parent="."]
-position = Vector2(225, 49)
-scale = Vector2(0.871094, 0.183594)
+position = Vector2(201, 45)
+scale = Vector2(0.777344, 0.167969)
 texture = ExtResource("2_bn3mx")
+metadata/_edit_lock_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="BoxRemedios"]
 offset_left = -440.0
@@ -25,40 +31,58 @@ offset_bottom = -184.0
 
 [node name="Nome Remédio" type="Label" parent="."]
 layout_mode = 0
-offset_left = 104.0
+offset_left = 47.0
 offset_top = 32.0
-offset_right = 268.0
+offset_right = 211.0
 offset_bottom = 81.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_mg7fd")
 theme_override_font_sizes/font_size = 20
 text = "Tadalafila"
 
-[node name="Remédio" type="Label" parent="."]
-layout_mode = 0
-offset_left = 8.0
-offset_top = 32.0
-offset_right = 104.0
-offset_bottom = 81.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
-text = "Remédio: "
-
 [node name="Horário Remédio" type="Label" parent="."]
 layout_mode = 0
-offset_left = 336.0
-offset_top = 32.0
-offset_right = 388.0
-offset_bottom = 81.0
+offset_left = 233.0
+offset_top = 34.0
+offset_right = 291.0
+offset_bottom = 83.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_mg7fd")
 theme_override_font_sizes/font_size = 20
 text = "00:00"
 
-[node name="Horário" type="Label" parent="."]
+[node name="info" type="Label" parent="."]
 layout_mode = 0
-offset_left = 248.0
-offset_top = 32.0
-offset_right = 322.0
-offset_bottom = 81.0
+offset_left = 180.0
+offset_top = 33.0
+offset_right = 205.0
+offset_bottom = 61.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_mg7fd")
 theme_override_font_sizes/font_size = 20
-text = "Horário:"
+text = "às"
+
+[node name="PilulaConfig" type="Sprite2D" parent="."]
+position = Vector2(32, 46)
+scale = Vector2(0.718129, 0.653963)
+texture = ExtResource("4_cip2q")
+
+[node name="Alarm" type="Sprite2D" parent="."]
+position = Vector2(317, 47)
+scale = Vector2(0.95164, 0.80143)
+texture = ExtResource("5_16ay8")
+
+[node name="Detalhes do Remédio" type="Button" parent="."]
+layout_mode = 0
+offset_left = 364.0
+offset_top = 24.0
+offset_right = 399.0
+offset_bottom = 103.0
+scale = Vector2(0.889274, 0.573152)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_mg7fd")
+theme_override_font_sizes/font_size = 50
+text = ">"
+flat = true
+
+[connection signal="pressed" from="Detalhes do Remédio" to="." method="_on_detalhes_do_remédio_pressed"]

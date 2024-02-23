@@ -16,6 +16,17 @@ script = ExtResource("1_46q7g")
 texture = ExtResource("1_b1v0s")
 centered = false
 
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 280.0
+offset_top = 155.0
+offset_right = 888.0
+offset_bottom = 267.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_araeq")
+theme_override_font_sizes/font_size = 80
+text = "Configurações"
+
 [node name="Menu Abaixo" parent="." instance=ExtResource("2_fp1np")]
 offset_top = 1712.0
 offset_bottom = 1712.0
@@ -28,10 +39,11 @@ offset_bottom = 40.0
 
 [node name="Voltar" type="Button" parent="Botoes"]
 layout_mode = 0
-offset_left = 224.0
-offset_top = 190.0
-offset_right = 264.0
-offset_bottom = 269.0
+offset_left = 112.0
+offset_top = 120.0
+offset_right = 152.0
+offset_bottom = 199.0
+scale = Vector2(2.70584, 2.12166)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_araeq")
 theme_override_font_sizes/font_size = 50
@@ -57,4 +69,5 @@ scale = Vector2(2.36916, 3.19025)
 texture_normal = ExtResource("6_pqu0d")
 
 [connection signal="pressed" from="Botoes/Voltar" to="." method="_on_voltar_pressed"]
+[connection signal="pressed" from="Botoes/Deletar" to="." method="_on_deletar_pressed"]
 [connection signal="pressed" from="Botoes/Alterar" to="." method="_on_alterar_pressed"]

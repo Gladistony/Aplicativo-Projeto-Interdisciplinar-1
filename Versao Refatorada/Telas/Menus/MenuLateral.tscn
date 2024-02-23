@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://dj77c1lmkym68"]
 
 [ext_resource type="Script" path="res://Scripts/Menus/MenuLateral.gd" id="1_tdxnn"]
-[ext_resource type="Texture2D" uid="uid://b2bxmw6wucbct" path="res://Recursos/Imagens/Fundos/fundoAzul.png" id="1_xenym"]
-[ext_resource type="FontFile" uid="uid://b3qs137o2m78r" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="2_xvo6x"]
-[ext_resource type="Texture2D" uid="uid://dlq65lmllrf6m" path="res://Recursos/Imagens/Menus/pilulaConfig.png" id="4_ppa7n"]
-[ext_resource type="Texture2D" uid="uid://cv2d6f0yxe25y" path="res://Recursos/Imagens/Menus/engrenagemConfig.png" id="5_qs6rr"]
-[ext_resource type="Texture2D" uid="uid://wgncemakqd2m" path="res://Recursos/Imagens/Menus/addConfig.png" id="6_x2w1s"]
+[ext_resource type="Texture2D" uid="uid://ch3tnfqhcg8i3" path="res://Recursos/Imagens/Fundos/fundoAzul.png" id="1_xenym"]
+[ext_resource type="FontFile" uid="uid://bwmbnspw4olgn" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="2_xvo6x"]
+[ext_resource type="Texture2D" uid="uid://v3a2a522w68p" path="res://Recursos/Imagens/Menus/pilulaConfig.png" id="4_ppa7n"]
+[ext_resource type="Texture2D" uid="uid://d0o1ae8mbjehe" path="res://Recursos/Imagens/Menus/engrenagemConfig.png" id="5_qs6rr"]
+[ext_resource type="Texture2D" uid="uid://bpfryhsmk5jk" path="res://Recursos/Imagens/Menus/addConfig.png" id="6_x2w1s"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q6j62"]
 

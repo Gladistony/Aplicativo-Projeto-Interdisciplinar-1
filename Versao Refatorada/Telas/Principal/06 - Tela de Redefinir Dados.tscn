@@ -12,13 +12,13 @@
 
 [node name="06TeladeRedefinirDados" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_right = 1.493
+anchor_bottom = 1.78
+offset_right = 0.0400391
+offset_bottom = -0.400146
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_kvubj")
-metadata/_edit_lock_ = true
 
 [node name="Fundo" type="Sprite2D" parent="."]
 z_index = -1
@@ -56,13 +56,14 @@ TextoBotao = "Salvar"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 166.0
-offset_top = 136.0
-offset_right = 1060.0
-offset_bottom = 260.0
+offset_left = 291.0
+offset_top = 140.0
+offset_right = 856.0
+offset_bottom = 252.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_arwcy")
 theme_override_font_sizes/font_size = 80
-text = "Alterar Dados Salvos"
+text = "Alterar Dados"
 
 [node name="Box" type="Control" parent="."]
 layout_mode = 3

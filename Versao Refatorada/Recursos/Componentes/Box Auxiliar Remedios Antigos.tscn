@@ -1,0 +1,93 @@
+[gd_scene load_steps=6 format=3 uid="uid://cdgovcmlh7mj6"]
+
+[ext_resource type="Script" path="res://Scripts/Componentes/Box Auxiliar Remedios Antigos.gd" id="1_0ibc4"]
+[ext_resource type="Texture2D" uid="uid://dbdouajacbxjt" path="res://Recursos/Imagens/Imagens Box/box_remedios.png" id="2_s1qb6"]
+[ext_resource type="FontFile" uid="uid://bwmbnspw4olgn" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="3_4qsdr"]
+[ext_resource type="Texture2D" uid="uid://v3a2a522w68p" path="res://Recursos/Imagens/Menus/pilulaConfig.png" id="4_1owi1"]
+[ext_resource type="Texture2D" uid="uid://t0ydqrb4eo5h" path="res://Recursos/Imagens/Icones/Alarm.png" id="5_kce6j"]
+
+[node name="BoxAuxiliarRemediosAntigos" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0ibc4")
+
+[node name="BoxRemedios" type="Sprite2D" parent="."]
+position = Vector2(280, 43)
+scale = Vector2(1.08739, 0.167969)
+texture = ExtResource("2_s1qb6")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BoxRemedios"]
+offset_left = -440.0
+offset_top = -224.0
+offset_right = -400.0
+offset_bottom = -184.0
+
+[node name="Nome Remédio" type="Label" parent="."]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 32.0
+offset_right = 211.0
+offset_bottom = 81.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_4qsdr")
+theme_override_font_sizes/font_size = 20
+text = "Tadalafila"
+
+[node name="Horário Remédio" type="Label" parent="."]
+layout_mode = 0
+offset_left = 231.0
+offset_top = 34.0
+offset_right = 289.0
+offset_bottom = 62.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_4qsdr")
+theme_override_font_sizes/font_size = 20
+text = "00:00"
+
+[node name="info" type="Label" parent="."]
+layout_mode = 0
+offset_left = 181.0
+offset_top = 34.0
+offset_right = 206.0
+offset_bottom = 62.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_4qsdr")
+theme_override_font_sizes/font_size = 20
+text = "às"
+
+[node name="PilulaConfig" type="Sprite2D" parent="."]
+position = Vector2(32, 46)
+scale = Vector2(0.718129, 0.653963)
+texture = ExtResource("4_1owi1")
+
+[node name="Alarm" type="Sprite2D" parent="."]
+position = Vector2(320, 48)
+scale = Vector2(0.95164, 0.80143)
+texture = ExtResource("5_kce6j")
+
+[node name="info2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 352.0
+offset_top = 34.0
+offset_right = 416.0
+offset_bottom = 62.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_4qsdr")
+theme_override_font_sizes/font_size = 20
+text = "do dia
+"
+
+[node name="Data do remédio" type="Label" parent="."]
+layout_mode = 0
+offset_left = 432.0
+offset_top = 34.0
+offset_right = 543.0
+offset_bottom = 62.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_4qsdr")
+theme_override_font_sizes/font_size = 20
+text = "21/02/2024"
