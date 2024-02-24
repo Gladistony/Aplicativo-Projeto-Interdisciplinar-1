@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://dfnvw327n86um"]
 
-[ext_resource type="Texture2D" uid="uid://c150xodf8a8nu" path="res://Recursos/Imagens/Fundos/fundoBranco.png" id="1_7udk1"]
+[ext_resource type="Texture2D" uid="uid://cgavlolq1yri2" path="res://Recursos/Imagens/Fundos/fundoBranco.png" id="1_7udk1"]
 [ext_resource type="Script" path="res://Scripts/Principal/07 - Tela de excluir conta.gd" id="1_k22lm"]
-[ext_resource type="FontFile" uid="uid://bwmbnspw4olgn" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="2_jymmp"]
-[ext_resource type="Texture2D" uid="uid://bpsshvhksaqw1" path="res://Recursos/Imagens/Icones/logo final.png" id="4_ec2r0"]
-[ext_resource type="Texture2D" uid="uid://bos53u1c53bdd" path="res://Recursos/Imagens/Icones/lixo.png" id="5_ppv3b"]
+[ext_resource type="FontFile" uid="uid://b3qs137o2m78r" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="2_jymmp"]
+[ext_resource type="Texture2D" uid="uid://c8lqtkhctw7d0" path="res://Recursos/Imagens/Icones/logo final.png" id="4_ec2r0"]
+[ext_resource type="Texture2D" uid="uid://dolddyru8tkyj" path="res://Recursos/Imagens/Icones/lixo.png" id="5_ppv3b"]
 [ext_resource type="PackedScene" uid="uid://bgu2mg7cnmjdo" path="res://Recursos/Componentes/BotaoFundoAzul.tscn" id="6_564ax"]
 [ext_resource type="PackedScene" uid="uid://dm7cmd1vu3pp1" path="res://Recursos/Componentes/BotaoFundoBranco.tscn" id="7_fbbx7"]
 
@@ -75,7 +75,7 @@ theme_override_font_sizes/font_size = 50
 text = "Tem certeza que deseja apagar todos os seus dados? Não será possível recuperá-los."
 autowrap_mode = 1
 
-[node name="BotaoFundoAzul" parent="." instance=ExtResource("6_564ax")]
+[node name="Cancelar" parent="." instance=ExtResource("6_564ax")]
 layout_mode = 0
 offset_left = 224.0
 offset_top = 1561.0
@@ -84,7 +84,7 @@ offset_bottom = 1626.0
 scale = Vector2(2.64099, 1.97553)
 TextoBotao = "Cancelar"
 
-[node name="BotaoFundoAzul2" parent="." instance=ExtResource("7_fbbx7")]
+[node name="Deletar" parent="." instance=ExtResource("7_fbbx7")]
 layout_mode = 0
 offset_left = 215.0
 offset_top = 1712.0
@@ -94,5 +94,5 @@ scale = Vector2(2.7161, 1.98367)
 TextoBotao = "Deletar"
 
 [connection signal="pressed" from="Botoes/Voltar" to="." method="_on_voltar_pressed"]
-[connection signal="pressed" from="BotaoFundoAzul" to="." method="_on_botao_fundo_azul_pressed"]
-[connection signal="pressed" from="BotaoFundoAzul2" to="." method="_on_botao_fundo_azul_2_pressed"]
+[connection signal="pressed" from="Cancelar" to="." method="_on_cancelar_pressed"]
+[connection signal="pressed" from="Deletar" to="." method="_on_deletar_pressed"]

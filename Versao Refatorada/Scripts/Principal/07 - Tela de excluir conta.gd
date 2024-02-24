@@ -5,23 +5,12 @@ extends Control
 func _ready():
 	pass # Replace with function body.
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-
 func _on_voltar_pressed():
 	get_tree().change_scene_to_file("res://Telas/Principal/03 - Tela de Configuracao.tscn")
-
-
-	#colocar código aqui
-	DadosCliente.deletarConta()
-
 
 func _on_cancelar_pressed():
 	get_tree().change_scene_to_file("res://Telas/Principal/00 - Main.tscn")
 
-
 func _on_deletar_pressed():
-	pass # Replace with function body.
+	#colocar código aqui
+	DadosCliente.deletarConta()
