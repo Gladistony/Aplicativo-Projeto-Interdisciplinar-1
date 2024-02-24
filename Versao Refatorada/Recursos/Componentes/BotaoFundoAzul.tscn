@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://bgu2mg7cnmjdo"]
 
-[ext_resource type="Texture2D" uid="uid://dom8tuw2ewdwm" path="res://Recursos/Imagens/Imagem Botoes/button base.png" id="1_v2s4a"]
+[ext_resource type="Texture2D" uid="uid://di17yqyvdquus" path="res://Recursos/Imagens/Imagem Botoes/button base.png" id="1_v2s4a"]
 [ext_resource type="Script" path="res://Scripts/Componentes/BotaoFundoAzul.gd" id="2_bb4yb"]
-[ext_resource type="FontFile" uid="uid://e1ds0we2jajm" path="res://Recursos/Fontes/Poppins/Poppins-Regular.ttf" id="3_06ehu"]
+[ext_resource type="FontFile" uid="uid://jdhdqglwuy8c" path="res://Recursos/Fontes/Poppins/Poppins-Regular.ttf" id="3_06ehu"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_n2i7x"]
 font = ExtResource("3_06ehu")

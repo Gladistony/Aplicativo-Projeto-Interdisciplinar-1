@@ -1,14 +1,14 @@
 [gd_scene load_steps=10 format=3 uid="uid://bjd5cdlgxjv0l"]
 
 [ext_resource type="Script" path="res://Scripts/Principal/06 - Tela de Redefinir Dados.gd" id="1_kvubj"]
-[ext_resource type="Texture2D" uid="uid://c150xodf8a8nu" path="res://Recursos/Imagens/Fundos/fundoBranco.png" id="2_kh60v"]
-[ext_resource type="FontFile" uid="uid://bwmbnspw4olgn" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="3_arwcy"]
+[ext_resource type="Texture2D" uid="uid://cgavlolq1yri2" path="res://Recursos/Imagens/Fundos/fundoBranco.png" id="2_kh60v"]
+[ext_resource type="FontFile" uid="uid://b3qs137o2m78r" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="3_arwcy"]
 [ext_resource type="PackedScene" uid="uid://bgu2mg7cnmjdo" path="res://Recursos/Componentes/BotaoFundoAzul.tscn" id="4_omvij"]
 [ext_resource type="PackedScene" uid="uid://dbidxil2e8lk1" path="res://Recursos/Componentes/Box Email.tscn" id="5_hjn55"]
 [ext_resource type="PackedScene" uid="uid://bjf0wd7or8apo" path="res://Recursos/Componentes/Box Alterar Senha.tscn" id="6_2ofuf"]
 [ext_resource type="PackedScene" uid="uid://nep5yir0nrba" path="res://Recursos/Componentes/Box Nome.tscn" id="6_hevip"]
 [ext_resource type="PackedScene" uid="uid://wx5whhqgusvp" path="res://Recursos/Componentes/Box Calendario.tscn" id="8_g6lty"]
-[ext_resource type="Texture2D" uid="uid://cq33ycj8xos60" path="res://Recursos/Imagens/Icones/Create.png" id="9_qnxrd"]
+[ext_resource type="Texture2D" uid="uid://c0fsxjr0c661s" path="res://Recursos/Imagens/Icones/Create.png" id="9_qnxrd"]
 
 [node name="06TeladeRedefinirDados" type="Control"]
 layout_mode = 3

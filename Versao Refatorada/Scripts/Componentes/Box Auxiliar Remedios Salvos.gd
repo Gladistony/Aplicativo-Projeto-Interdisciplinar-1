@@ -12,4 +12,4 @@ func _setHoraRemedio(hora):
 	$"Horário Remédio".text = hora
 
 func _on_detalhes_do_remédio_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://Recursos/Componentes/Box Detalhes do Remédio.tscn")

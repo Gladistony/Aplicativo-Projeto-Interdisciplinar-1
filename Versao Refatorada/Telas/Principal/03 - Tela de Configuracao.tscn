@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://74cbc6camw4w"]
 
 [ext_resource type="Script" path="res://Scripts/Principal/03 - Tela de Configuracao.gd" id="1_46q7g"]
-[ext_resource type="Texture2D" uid="uid://c150xodf8a8nu" path="res://Recursos/Imagens/Fundos/fundoBranco.png" id="1_b1v0s"]
+[ext_resource type="Texture2D" uid="uid://cgavlolq1yri2" path="res://Recursos/Imagens/Fundos/fundoBranco.png" id="1_b1v0s"]
 [ext_resource type="PackedScene" uid="uid://bdskk0aw2cqem" path="res://Telas/Menus/MenuAbaixo.tscn" id="2_fp1np"]
-[ext_resource type="FontFile" uid="uid://bwmbnspw4olgn" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="5_araeq"]
-[ext_resource type="Texture2D" uid="uid://dyc5nuf7xxqll" path="res://Recursos/Imagens/Imagem Botoes/Deletar.png" id="5_d5gv0"]
-[ext_resource type="Texture2D" uid="uid://c136mm42qovob" path="res://Recursos/Imagens/Imagem Botoes/Alterar.png" id="6_pqu0d"]
+[ext_resource type="FontFile" uid="uid://b3qs137o2m78r" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="5_araeq"]
+[ext_resource type="Texture2D" uid="uid://dyqs8iol12u1c" path="res://Recursos/Imagens/Imagem Botoes/Deletar.png" id="5_d5gv0"]
+[ext_resource type="Texture2D" uid="uid://qxnp4pdx6mdf" path="res://Recursos/Imagens/Imagem Botoes/Alterar.png" id="6_pqu0d"]
 
 [node name="03-TelaDeConfiguracao" type="Control"]
 layout_mode = 3

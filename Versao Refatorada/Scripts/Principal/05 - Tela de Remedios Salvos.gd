@@ -20,7 +20,6 @@ func AtualizarListaRemedios():
 	
 	clearBox()
 	
-	DadosCliente.processarMedicamentos()
 	var cont = 0
 	var nome = ""
 	var horario = ""

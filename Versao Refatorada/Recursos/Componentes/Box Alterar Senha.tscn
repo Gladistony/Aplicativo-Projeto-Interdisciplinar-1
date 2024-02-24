@@ -1,10 +1,10 @@
 [gd_scene load_steps=12 format=3 uid="uid://bjf0wd7or8apo"]
 
-[ext_resource type="FontFile" uid="uid://bwmbnspw4olgn" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="1_cru1m"]
+[ext_resource type="FontFile" uid="uid://b3qs137o2m78r" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="1_cru1m"]
 [ext_resource type="Script" path="res://Scripts/Componentes/Box Alterar Senha.gd" id="2_kkwwm"]
-[ext_resource type="Texture2D" uid="uid://t4h30ql3c72g" path="res://Recursos/Imagens/Imagens Box/box_senha.png" id="3_12y47"]
-[ext_resource type="Texture2D" uid="uid://dgle2g0hwwnio" path="res://Recursos/Imagens/Imagens Box/open_eye.png" id="4_w4uy6"]
-[ext_resource type="Texture2D" uid="uid://cq33ycj8xos60" path="res://Recursos/Imagens/Icones/Create.png" id="5_4qdob"]
+[ext_resource type="Texture2D" uid="uid://crvhfcxvtrh3m" path="res://Recursos/Imagens/Imagens Box/box_senha.png" id="3_12y47"]
+[ext_resource type="Texture2D" uid="uid://bpdvrxq8pichr" path="res://Recursos/Imagens/Imagens Box/open_eye.png" id="4_w4uy6"]
+[ext_resource type="Texture2D" uid="uid://c0fsxjr0c661s" path="res://Recursos/Imagens/Icones/Create.png" id="5_4qdob"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q5cst"]
 

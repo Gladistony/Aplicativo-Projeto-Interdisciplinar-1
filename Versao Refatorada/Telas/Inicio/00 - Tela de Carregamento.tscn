@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://ccu6ds7h827g5"]
 
-[ext_resource type="Texture2D" uid="uid://c150xodf8a8nu" path="res://Recursos/Imagens/Fundos/fundoBranco.png" id="1_370ad"]
+[ext_resource type="Texture2D" uid="uid://cgavlolq1yri2" path="res://Recursos/Imagens/Fundos/fundoBranco.png" id="1_370ad"]
 [ext_resource type="Script" path="res://Scripts/Inicio/00 - Tela de Carregamento.gd" id="1_fvu0a"]
-[ext_resource type="Texture2D" uid="uid://bpsshvhksaqw1" path="res://Recursos/Imagens/Icones/logo final.png" id="2_xoauu"]
-[ext_resource type="Texture2D" uid="uid://dbbgv6htucgm" path="res://Recursos/Imagens/Outros/load circulo.png" id="3_ud2pb"]
+[ext_resource type="Texture2D" uid="uid://c8lqtkhctw7d0" path="res://Recursos/Imagens/Icones/logo final.png" id="2_xoauu"]
+[ext_resource type="Texture2D" uid="uid://dxnklrmtkl000" path="res://Recursos/Imagens/Outros/load circulo.png" id="3_ud2pb"]
 [ext_resource type="LabelSettings" uid="uid://3sie0gqg8ko1" path="res://Recursos/Configuracoes/label cor preta normal size 50.tres" id="5_3oowd"]
 
 [sub_resource type="Animation" id="Animation_5jng6"]

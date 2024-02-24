@@ -8,7 +8,9 @@ var medicamentos = []
 func enviarMedicamentos():
 	saveColec['medicamentos'] = str(medicamentos)
 	envidarDadosConta()
-
+func deletarConta():
+	Firebase.Auth.delete_user_account()
+	_fazerLogOff()
 func processarMedicamentos():
 	if saveColec.has('medicamentos'):
 		medicamentos = []

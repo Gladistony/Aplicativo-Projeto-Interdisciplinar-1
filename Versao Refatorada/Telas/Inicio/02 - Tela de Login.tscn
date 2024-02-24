@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://Scripts/Inicio/02 - Tela de Login.gd" id="1_vpcu6"]
 [ext_resource type="PackedScene" uid="uid://dbidxil2e8lk1" path="res://Recursos/Componentes/Box Email.tscn" id="2_a7sts"]
-[ext_resource type="Texture2D" uid="uid://c150xodf8a8nu" path="res://Recursos/Imagens/Fundos/fundoBranco.png" id="2_eqthv"]
+[ext_resource type="Texture2D" uid="uid://cgavlolq1yri2" path="res://Recursos/Imagens/Fundos/fundoBranco.png" id="2_eqthv"]
 [ext_resource type="PackedScene" uid="uid://ch17ebldpvs55" path="res://Recursos/Componentes/Box Senha.tscn" id="3_yg0al"]
-[ext_resource type="FontFile" uid="uid://bwmbnspw4olgn" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="4_o33mo"]
+[ext_resource type="FontFile" uid="uid://b3qs137o2m78r" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="4_o33mo"]
 [ext_resource type="PackedScene" uid="uid://bgu2mg7cnmjdo" path="res://Recursos/Componentes/BotaoFundoAzul.tscn" id="6_8eoph"]
 [ext_resource type="PackedScene" uid="uid://cmeex3tld7s5e" path="res://Recursos/Componentes/BotaoSemFundo.tscn" id="7_hx30u"]
 [ext_resource type="PackedScene" uid="uid://b7xpilmtc12d2" path="res://Recursos/Componentes/Caixa Load.tscn" id="8_b6aqa"]
