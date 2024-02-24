@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://chgx81u32a5u1"]
 
 [ext_resource type="Script" path="res://Scripts/Principal/05 - Tela de Remedios Salvos.gd" id="1_2q0p8"]
-[ext_resource type="Texture2D" uid="uid://c150xodf8a8nu" path="res://Recursos/Imagens/Fundos/fundoBranco.png" id="1_7ksic"]
+[ext_resource type="Texture2D" uid="uid://cgavlolq1yri2" path="res://Recursos/Imagens/Fundos/fundoBranco.png" id="1_7ksic"]
 [ext_resource type="PackedScene" uid="uid://bdskk0aw2cqem" path="res://Telas/Menus/MenuAbaixo.tscn" id="2_iadwj"]
-[ext_resource type="FontFile" uid="uid://bwmbnspw4olgn" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="3_id2lg"]
+[ext_resource type="FontFile" uid="uid://b3qs137o2m78r" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="3_id2lg"]
 [ext_resource type="PackedScene" uid="uid://bgu2mg7cnmjdo" path="res://Recursos/Componentes/BotaoFundoAzul.tscn" id="5_8lsfx"]
 
 [node name="05 - Tela de Remedios Salvos" type="Control"]

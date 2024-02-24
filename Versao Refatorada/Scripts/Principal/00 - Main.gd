@@ -2,6 +2,9 @@ extends Control
 #=======================
 @onready var menuLateral = get_node("Menus/Menu Lateral")
 @onready var menuBaixo = get_node("Menus/Menu Abaixo")
+@onready var BoxdeScroll = get_node("Box de Scroll")
+@onready var listaResultados = get_node("Box de Scroll/Lista de Resultados")
+@onready var preloadBox = preload("res://Recursos/Componentes/Box Auxiliar Remedios Salvos.tscn")
 #=======================
 var recuar = false
 var swipe_start = null # guarda a posição inicial do toque
@@ -15,6 +18,7 @@ func _ready():
 	menuLateral.connect("BotaoRemedio",_pesquisaRemedio)
 	menuBaixo.connect("BotaoPesquisa",_pesquisaRemedio)
 	menuBaixo.connect("BotaoPerfil",_janelaPerfil)
+	AtualizarListaRemedios()
 	#=======================
 	if not VariaveisGlobais._carregamentoInicialCompleto:
 		VariaveisGlobais._carregamentoInicialCompleto = true
@@ -33,6 +37,32 @@ func _ready():
 			else:
 				DadosCliente.saveColec = DadosCliente._data["backupData"]
 #=======================
+func AtualizarListaRemedios():
+	
+	clearBox()
+	
+	DadosCliente.processarMedicamentos()
+	var cont = 0
+	var nome = ""
+	var horario = ""
+	var data = "" 
+	var agora = int(Time.get_unix_time_from_system())
+	#precisa fazer a função que pega só os prox 3 remédios 
+	#for medicamento in DadosCliente.medicamentos:
+		#cont += 1
+		#nome = medicamento["remedio"]
+		#preloadBox._setNomeRemedio(nome)
+		#horario = str(medicamento["Horarios"][0]["hora"])+" : "+str(medicamento["Horarios"][0]["min"])
+		#preloadBox._setHorarioRemedio(horario)
+		#listaResultados.add_child(preloadBox.instantiate())
+
+func clearBox():
+	if listaResultados != null:
+		BoxdeScroll.scroll_vertical = 0
+		for filhos in listaResultados.get_children():
+			filhos.queue_free()
+	else:
+		return
 func _janelaPerfil():
 	get_tree().change_scene_to_file("res://Telas/Principal/02 - Perfil de Usuario.tscn")
 func _pesquisaRemedio():
@@ -83,3 +113,5 @@ func _input(event):
 			_calculate_swipe(event.get_position()) # calcula se houve um swipe
 func _on_botao_menu_lateral_pressed():
 	menuLateral.visible = true
+func _on_botao_fundo_azul_pressed():
+	get_tree().change_scene_to_file("res://Telas/Principal/04 - Tela de Adicionar Remedio.tscn")

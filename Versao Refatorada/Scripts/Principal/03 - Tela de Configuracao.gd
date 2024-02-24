@@ -11,13 +11,16 @@ func _ready():
 
 func _janelaPerfil():
 	get_tree().change_scene_to_file("res://Telas/Principal/02 - Perfil de Usuario.tscn")
-
 func menuPrincipal():
 	get_tree().change_scene_to_file("res://Telas/Principal/00 - Main.tscn")
-
 func botaopesquisa():
 	get_tree().change_scene_to_file("res://Telas/Principal/01 - Tela de Busca.tscn")
-
+func _on_voltar_pressed():
+	get_tree().change_scene_to_file("res://Telas/Principal/02 - Perfil de Usuario.tscn")
+func _on_alterar_pressed():
+	get_tree().change_scene_to_file("res://Telas/Principal/06 - Tela de Redefinir Dados.tscn")
+func _on_deletar_pressed():
+	get_tree().change_scene_to_file("res://Telas/Principal/07 - Tela de excluir conta.tscn")
 func AtualizarListaRemedios():
 	DadosCliente.processarMedicamentos()
 	$"Lista de Medicamentos".text = ""
