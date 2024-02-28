@@ -17,3 +17,5 @@
   -Pedro Emmanuel		**[GitHub](https://github.com/Pedro-Emmanuel-G-C-Machado)** 
   
   -Vinicius Henrykyy 	**[GitHub](https://github.com/ViniciusHenrykyy)**
+
+O projeto foi apresentado no dia 26/02/2024 e a versão 1.1 em APK do projeto está incluída nesse repositório.
