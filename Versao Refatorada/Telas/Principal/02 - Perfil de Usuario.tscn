@@ -1,10 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://bovqnju3xp2ef"]
+[gd_scene load_steps=14 format=3 uid="uid://bovqnju3xp2ef"]
 
 [ext_resource type="Script" path="res://Scripts/Principal/02 - Perfil de Usuario.gd" id="1_8h0of"]
 [ext_resource type="Texture2D" uid="uid://cgavlolq1yri2" path="res://Recursos/Imagens/Fundos/fundoBranco.png" id="2_cgukm"]
 [ext_resource type="PackedScene" uid="uid://bdskk0aw2cqem" path="res://Telas/Menus/MenuAbaixo.tscn" id="3_2yufv"]
 [ext_resource type="Texture2D" uid="uid://dvv6xhk7j7rqu" path="res://Recursos/Imagens/Imagem Botoes/Logout.png" id="4_a0tlh"]
-[ext_resource type="FontFile" uid="uid://b3qs137o2m78r" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="5_oa1rc"]
 [ext_resource type="LabelSettings" uid="uid://3sie0gqg8ko1" path="res://Recursos/Configuracoes/label cor preta normal size 50.tres" id="5_ysai6"]
 [ext_resource type="Texture2D" uid="uid://cv2d6f0yxe25y" path="res://Recursos/Imagens/Menus/engrenagemConfig.png" id="6_bi0wp"]
 [ext_resource type="LabelSettings" uid="uid://cwt2bpk1l4pfx" path="res://Recursos/Configuracoes/label cor azul normal size 30.tres" id="6_dlydk"]
@@ -37,22 +36,11 @@ offset_bottom = 40.0
 [node name="LogOut" type="TextureButton" parent="Botoes"]
 layout_mode = 0
 offset_left = 279.0
-offset_top = 1440.0
+offset_top = 1424.0
 offset_right = 902.0
-offset_bottom = 1584.0
+offset_bottom = 1568.0
+scale = Vector2(0.989558, 1.10407)
 texture_normal = ExtResource("4_a0tlh")
-
-[node name="Voltar" type="Button" parent="Botoes"]
-layout_mode = 0
-offset_left = 224.0
-offset_top = 190.0
-offset_right = 264.0
-offset_bottom = 269.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("5_oa1rc")
-theme_override_font_sizes/font_size = 50
-text = "<"
-flat = true
 
 [node name="Configuracoes" type="TextureButton" parent="Botoes"]
 layout_mode = 0
@@ -79,7 +67,7 @@ offset_left = 272.0
 offset_top = 1264.0
 offset_right = 707.0
 offset_bottom = 1348.0
-scale = Vector2(1.51161, 1.4956)
+scale = Vector2(1.48489, 1.52153)
 texture_normal = ExtResource("8_tlbam")
 
 [node name="Dados" type="Control" parent="."]
@@ -206,7 +194,6 @@ text = "Metodo de carregamento"
 label_settings = ExtResource("5_ysai6")
 
 [connection signal="pressed" from="Botoes/LogOut" to="." method="_on_log_out_pressed"]
-[connection signal="pressed" from="Botoes/Voltar" to="." method="_on_voltar_pressed"]
 [connection signal="pressed" from="Botoes/Configuracoes" to="." method="_on_configuracoes_pressed"]
 [connection signal="pressed" from="Botoes/Edit Foto" to="." method="_on_edit_foto_pressed"]
 [connection signal="pressed" from="Botoes/Salvos" to="." method="_on_salvos_pressed"]

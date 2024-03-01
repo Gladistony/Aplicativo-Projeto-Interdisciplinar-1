@@ -1,0 +1,98 @@
+[gd_scene load_steps=8 format=3 uid="uid://dfnvw327n86um"]
+
+[ext_resource type="Texture2D" uid="uid://cgavlolq1yri2" path="res://Recursos/Imagens/Fundos/fundoBranco.png" id="1_7udk1"]
+[ext_resource type="Script" path="res://Scripts/Principal/07 - Tela de excluir conta.gd" id="1_k22lm"]
+[ext_resource type="FontFile" uid="uid://b3qs137o2m78r" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="2_jymmp"]
+[ext_resource type="Texture2D" uid="uid://c8lqtkhctw7d0" path="res://Recursos/Imagens/Icones/logo final.png" id="4_ec2r0"]
+[ext_resource type="Texture2D" uid="uid://dolddyru8tkyj" path="res://Recursos/Imagens/Icones/lixo.png" id="5_ppv3b"]
+[ext_resource type="PackedScene" uid="uid://bgu2mg7cnmjdo" path="res://Recursos/Componentes/BotaoFundoAzul.tscn" id="6_564ax"]
+[ext_resource type="PackedScene" uid="uid://dm7cmd1vu3pp1" path="res://Recursos/Componentes/BotaoFundoBranco.tscn" id="7_fbbx7"]
+
+[node name="07 - Tela de excluir conta" type="Control"]
+layout_mode = 3
+anchor_right = 1.504
+anchor_bottom = 1.779
+offset_right = 0.119995
+offset_bottom = -0.320068
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k22lm")
+
+[node name="Fundo" type="Sprite2D" parent="."]
+z_index = -1
+texture = ExtResource("1_7udk1")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Botoes" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Voltar" type="Button" parent="Botoes"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 128.0
+offset_right = 83.0
+offset_bottom = 207.0
+scale = Vector2(2.23347, 1.66458)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_jymmp")
+theme_override_font_sizes/font_size = 50
+text = "<"
+flat = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 366.0
+offset_top = 1111.0
+offset_right = 922.0
+offset_bottom = 1223.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_jymmp")
+theme_override_font_sizes/font_size = 80
+text = "Deletar conta"
+
+[node name="LogoFinal" type="Sprite2D" parent="."]
+position = Vector2(562, 621)
+texture = ExtResource("4_ec2r0")
+
+[node name="Lixo" type="Sprite2D" parent="."]
+position = Vector2(290, 1157)
+scale = Vector2(2.02727, 2.5)
+texture = ExtResource("5_ppv3b")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 151.0
+offset_top = 1286.0
+offset_right = 976.0
+offset_bottom = 1544.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_jymmp")
+theme_override_font_sizes/font_size = 50
+text = "Tem certeza que deseja apagar todos os seus dados? Não será possível recuperá-los."
+autowrap_mode = 1
+
+[node name="Cancelar" parent="." instance=ExtResource("6_564ax")]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 1561.0
+offset_right = 490.0
+offset_bottom = 1626.0
+scale = Vector2(2.64099, 1.97553)
+TextoBotao = "Cancelar"
+
+[node name="Deletar" parent="." instance=ExtResource("7_fbbx7")]
+layout_mode = 0
+offset_left = 215.0
+offset_top = 1712.0
+offset_right = 481.0
+offset_bottom = 1777.0
+scale = Vector2(2.7161, 1.98367)
+TextoBotao = "Deletar"
+
+[connection signal="pressed" from="Botoes/Voltar" to="." method="_on_voltar_pressed"]
+[connection signal="pressed" from="Cancelar" to="." method="_on_cancelar_pressed"]
+[connection signal="pressed" from="Deletar" to="." method="_on_deletar_pressed"]

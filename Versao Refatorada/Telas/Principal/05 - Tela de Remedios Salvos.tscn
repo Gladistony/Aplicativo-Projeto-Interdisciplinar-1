@@ -8,11 +8,11 @@
 
 [node name="05 - Tela de Remedios Salvos" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchor_right = 1.49
+anchor_bottom = 1.775
+offset_right = 0.199951
+offset_bottom = -0.00012207
+size_flags_horizontal = 4
 script = ExtResource("1_2q0p8")
 
 [node name="Fundo" type="Sprite2D" parent="."]
@@ -26,11 +26,11 @@ offset_bottom = 40.0
 
 [node name="Voltar" type="Button" parent="Botoes"]
 layout_mode = 0
-offset_left = 104.0
-offset_top = 176.0
-offset_right = 144.0
-offset_bottom = 255.0
-scale = Vector2(2.16, 1.52)
+offset_left = 73.0
+offset_top = 94.0
+offset_right = 113.0
+offset_bottom = 173.0
+scale = Vector2(2.71283, 1.88437)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_id2lg")
 theme_override_font_sizes/font_size = 50
@@ -43,24 +43,54 @@ offset_bottom = 1712.0
 
 [node name="Box de Scroll" type="ScrollContainer" parent="."]
 layout_mode = 0
-offset_left = 92.0
-offset_top = 288.0
-offset_right = 1008.0
-offset_bottom = 1696.0
-metadata/_edit_lock_ = true
+offset_left = 189.0
+offset_top = 309.0
+offset_right = 910.0
+offset_bottom = 885.0
 
 [node name="Lista de Resultados" type="VBoxContainer" parent="Box de Scroll"]
 layout_mode = 2
 
 [node name="Adicionar Mais" parent="." instance=ExtResource("5_8lsfx")]
 layout_mode = 0
-offset_left = 344.0
-offset_top = 1416.0
-offset_right = 610.0
-offset_bottom = 1481.0
-scale = Vector2(1.5225, 2.46104)
-TextoBotao = "Adicionar Mais"
-metadata/_edit_lock_ = true
+offset_left = 371.0
+offset_top = 1526.0
+offset_right = 637.0
+offset_bottom = 1591.0
+scale = Vector2(1.42792, 1.81375)
+TextoBotao = "+"
+
+[node name="Próximos remédios" type="Label" parent="."]
+layout_mode = 2
+offset_left = 266.0
+offset_top = 231.0
+offset_right = 862.0
+offset_bottom = 315.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_id2lg")
+theme_override_font_sizes/font_size = 60
+text = "Próximos remédios"
+
+[node name="Remédios antigos" type="Label" parent="."]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 890.0
+offset_right = 834.0
+offset_bottom = 974.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_id2lg")
+theme_override_font_sizes/font_size = 60
+text = "Remédios antigos"
+
+[node name="Box de Scroll 2" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 180.0
+offset_top = 974.0
+offset_right = 933.0
+offset_bottom = 1509.0
+
+[node name="Lista de Antigos" type="HBoxContainer" parent="Box de Scroll 2"]
+layout_mode = 2
 
 [connection signal="pressed" from="Botoes/Voltar" to="." method="_on_voltar_pressed"]
 [connection signal="pressed" from="Adicionar Mais" to="." method="_on_adicionar_mais_pressed"]

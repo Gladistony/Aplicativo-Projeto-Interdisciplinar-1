@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://br335fr3kchah"]
 
 [ext_resource type="Script" path="res://Scripts/Componentes/BoxMedicamentoPesquisa.gd" id="1_djti3"]
-[ext_resource type="Texture2D" uid="uid://8tytx7ni3jld" path="res://Recursos/Imagens/Fundos/fundoBranco.png" id="1_ufs6q"]
-[ext_resource type="FontFile" uid="uid://dobpqy3p3tgo0" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="2_vaj3m"]
-[ext_resource type="Texture2D" uid="uid://b4qgnncd4wrk0" path="res://Recursos/Imagens/Menus/pilulaConfig.png" id="4_0wqir"]
+[ext_resource type="Texture2D" uid="uid://cgavlolq1yri2" path="res://Recursos/Imagens/Fundos/fundoBranco.png" id="1_ufs6q"]
+[ext_resource type="FontFile" uid="uid://b3qs137o2m78r" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="2_vaj3m"]
+[ext_resource type="Texture2D" uid="uid://dlq65lmllrf6m" path="res://Recursos/Imagens/Menus/pilulaConfig.png" id="4_0wqir"]
 
 [node name="BoxMedicamentoPesquisa" type="Control"]
 custom_minimum_size = Vector2(900, 130)

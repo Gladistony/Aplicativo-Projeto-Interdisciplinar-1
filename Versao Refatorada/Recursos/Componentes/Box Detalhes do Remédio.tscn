@@ -1,0 +1,83 @@
+[gd_scene load_steps=5 format=3 uid="uid://bdqvyxpfqokm1"]
+
+[ext_resource type="Script" path="res://Scripts/Componentes/Box Detalhes do Remédio.gd" id="1_u82yk"]
+[ext_resource type="Texture2D" uid="uid://cgavlolq1yri2" path="res://Recursos/Imagens/Fundos/fundoBranco.png" id="2_2j7ig"]
+[ext_resource type="PackedScene" uid="uid://b8i8rilpswkor" path="res://Recursos/Componentes/Box Auxiliar Infor Pop.tscn" id="3_7tf3c"]
+[ext_resource type="PackedScene" uid="uid://bgu2mg7cnmjdo" path="res://Recursos/Componentes/BotaoFundoAzul.tscn" id="4_11wre"]
+
+[node name="Box Detalhes do remédio" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u82yk")
+
+[node name="Janela de POP Informacao Remedio" type="Window" parent="."]
+position = Vector2i(479, 36)
+size = Vector2i(869, 750)
+unresizable = true
+
+[node name="Fundo" type="Sprite2D" parent="Janela de POP Informacao Remedio"]
+texture = ExtResource("2_2j7ig")
+centered = false
+
+[node name="Box de informacao Vertical" type="VBoxContainer" parent="Janela de POP Informacao Remedio"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Nome" parent="Janela de POP Informacao Remedio/Box de informacao Vertical" instance=ExtResource("3_7tf3c")]
+layout_mode = 2
+NomePropriedade = "Nome:"
+
+[node name="Substancia" parent="Janela de POP Informacao Remedio/Box de informacao Vertical" instance=ExtResource("3_7tf3c")]
+layout_mode = 2
+NomePropriedade = "Substancia:"
+
+[node name="Fabricante" parent="Janela de POP Informacao Remedio/Box de informacao Vertical" instance=ExtResource("3_7tf3c")]
+layout_mode = 2
+NomePropriedade = "Fabricante:"
+
+[node name="Apresentacao" parent="Janela de POP Informacao Remedio/Box de informacao Vertical" instance=ExtResource("3_7tf3c")]
+layout_mode = 2
+NomePropriedade = "Aprest.:"
+
+[node name="Classe" parent="Janela de POP Informacao Remedio/Box de informacao Vertical" instance=ExtResource("3_7tf3c")]
+layout_mode = 2
+NomePropriedade = "Classe:"
+
+[node name="Tarja" parent="Janela de POP Informacao Remedio/Box de informacao Vertical" instance=ExtResource("3_7tf3c")]
+layout_mode = 2
+NomePropriedade = "Tarja:"
+
+[node name="Tipo" parent="Janela de POP Informacao Remedio/Box de informacao Vertical" instance=ExtResource("3_7tf3c")]
+layout_mode = 2
+NomePropriedade = "Tipo:"
+
+[node name="Preco Estimado" parent="Janela de POP Informacao Remedio/Box de informacao Vertical" instance=ExtResource("3_7tf3c")]
+layout_mode = 2
+NomePropriedade = "Preço (2023):"
+
+[node name="Separador" type="Label" parent="Janela de POP Informacao Remedio/Box de informacao Vertical"]
+visible = false
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="Botões" type="HBoxContainer" parent="Janela de POP Informacao Remedio/Box de informacao Vertical"]
+layout_mode = 2
+
+[node name="Separador" type="Label" parent="Janela de POP Informacao Remedio/Box de informacao Vertical/Botões"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+
+[node name="Excluir Lembrete" parent="Janela de POP Informacao Remedio/Box de informacao Vertical/Botões" instance=ExtResource("4_11wre")]
+layout_mode = 2
+TextoBotao = "Excluir"
+
+[node name="Fechar Pop" parent="Janela de POP Informacao Remedio/Box de informacao Vertical/Botões" instance=ExtResource("4_11wre")]
+layout_mode = 2
+TextoBotao = "Fechar"
+
+[connection signal="pressed" from="Janela de POP Informacao Remedio/Box de informacao Vertical/Botões/Excluir Lembrete" to="." method="_on_excluir_lembrete_pressed"]
+[connection signal="pressed" from="Janela de POP Informacao Remedio/Box de informacao Vertical/Botões/Fechar Pop" to="." method="_on_fechar_pop_pressed"]

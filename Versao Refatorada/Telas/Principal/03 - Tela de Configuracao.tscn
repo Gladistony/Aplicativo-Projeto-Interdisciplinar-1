@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://74cbc6camw4w"]
+[gd_scene load_steps=7 format=3 uid="uid://74cbc6camw4w"]
 
 [ext_resource type="Script" path="res://Scripts/Principal/03 - Tela de Configuracao.gd" id="1_46q7g"]
 [ext_resource type="Texture2D" uid="uid://cgavlolq1yri2" path="res://Recursos/Imagens/Fundos/fundoBranco.png" id="1_b1v0s"]
 [ext_resource type="PackedScene" uid="uid://bdskk0aw2cqem" path="res://Telas/Menus/MenuAbaixo.tscn" id="2_fp1np"]
+[ext_resource type="FontFile" uid="uid://b3qs137o2m78r" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="5_araeq"]
+[ext_resource type="Texture2D" uid="uid://dyqs8iol12u1c" path="res://Recursos/Imagens/Imagem Botoes/Deletar.png" id="5_d5gv0"]
+[ext_resource type="Texture2D" uid="uid://qxnp4pdx6mdf" path="res://Recursos/Imagens/Imagem Botoes/Alterar.png" id="6_pqu0d"]
 
 [node name="03-TelaDeConfiguracao" type="Control"]
 layout_mode = 3
@@ -13,19 +16,58 @@ script = ExtResource("1_46q7g")
 texture = ExtResource("1_b1v0s")
 centered = false
 
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 280.0
+offset_top = 155.0
+offset_right = 888.0
+offset_bottom = 267.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_araeq")
+theme_override_font_sizes/font_size = 80
+text = "Configurações"
+
 [node name="Menu Abaixo" parent="." instance=ExtResource("2_fp1np")]
 offset_top = 1712.0
 offset_bottom = 1712.0
 
-[node name="Lista de Medicamentos" type="TextEdit" parent="."]
+[node name="Botoes" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Voltar" type="Button" parent="Botoes"]
 layout_mode = 0
-offset_left = 41.0
-offset_top = 463.0
-offset_right = 1031.0
-offset_bottom = 960.0
-theme_override_font_sizes/font_size = 40
-editable = false
-context_menu_enabled = false
-virtual_keyboard_enabled = false
-wrap_mode = 1
-autowrap_mode = 2
+offset_left = 112.0
+offset_top = 120.0
+offset_right = 152.0
+offset_bottom = 199.0
+scale = Vector2(2.70584, 2.12166)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_araeq")
+theme_override_font_sizes/font_size = 50
+text = "<"
+flat = true
+
+[node name="Deletar" type="TextureButton" parent="Botoes"]
+layout_mode = 0
+offset_left = 232.0
+offset_top = 920.0
+offset_right = 535.0
+offset_bottom = 963.0
+scale = Vector2(2.32317, 3.18964)
+texture_normal = ExtResource("5_d5gv0")
+
+[node name="Alterar" type="TextureButton" parent="Botoes"]
+layout_mode = 0
+offset_left = 226.0
+offset_top = 656.0
+offset_right = 526.0
+offset_bottom = 699.0
+scale = Vector2(2.36916, 3.19025)
+texture_normal = ExtResource("6_pqu0d")
+
+[connection signal="pressed" from="Botoes/Voltar" to="." method="_on_voltar_pressed"]
+[connection signal="pressed" from="Botoes/Deletar" to="." method="_on_deletar_pressed"]
+[connection signal="pressed" from="Botoes/Alterar" to="." method="_on_alterar_pressed"]

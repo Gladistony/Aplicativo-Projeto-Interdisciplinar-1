@@ -1,16 +1,19 @@
-[gd_scene load_steps=6 format=3 uid="uid://djvi7yorx51ep"]
+[gd_scene load_steps=8 format=3 uid="uid://5a7kpneh0csb"]
 
 [ext_resource type="Script" path="res://Scripts/Principal/00 - Main.gd" id="1_bxsrb"]
 [ext_resource type="Texture2D" uid="uid://cgavlolq1yri2" path="res://Recursos/Imagens/Fundos/fundoBranco.png" id="2_wgb3d"]
 [ext_resource type="PackedScene" uid="uid://dj77c1lmkym68" path="res://Telas/Menus/MenuLateral.tscn" id="3_v2dnv"]
 [ext_resource type="PackedScene" uid="uid://bdskk0aw2cqem" path="res://Telas/Menus/MenuAbaixo.tscn" id="4_jmwy6"]
 [ext_resource type="Texture2D" uid="uid://ct6vp48tp0yv8" path="res://Recursos/Imagens/Imagem Botoes/MenuLateral.png" id="5_m23ud"]
+[ext_resource type="PackedScene" uid="uid://dm7cmd1vu3pp1" path="res://Recursos/Componentes/BotaoFundoBranco.tscn" id="6_4eygt"]
+[ext_resource type="FontFile" uid="uid://b3qs137o2m78r" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="7_223lg"]
 
 [node name="00-Main" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_right = 1.494
+anchor_bottom = 1.778
+offset_right = 0.319946
+offset_bottom = -0.240112
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_bxsrb")
@@ -18,6 +21,36 @@ script = ExtResource("1_bxsrb")
 [node name="Fundo" type="Sprite2D" parent="."]
 texture = ExtResource("2_wgb3d")
 centered = false
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 155.0
+offset_top = 380.0
+offset_right = 991.0
+offset_bottom = 492.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_223lg")
+theme_override_font_sizes/font_size = 80
+text = "Próximos Remédios:"
+
+[node name="BotaoFundoAzul" parent="." instance=ExtResource("6_4eygt")]
+layout_mode = 0
+offset_left = 294.0
+offset_top = 1421.0
+offset_right = 560.0
+offset_bottom = 1486.0
+scale = Vector2(2.08341, 2.69341)
+TextoBotao = "Criar lembrete"
+
+[node name="Box de Scroll" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 523.0
+offset_right = 1013.0
+offset_bottom = 1282.0
+
+[node name="Lista de Resultados" type="VBoxContainer" parent="Box de Scroll"]
+layout_mode = 2
 
 [node name="Botoes" type="Control" parent="."]
 anchors_preset = 0
@@ -49,4 +82,5 @@ offset_bottom = -40.0
 offset_top = 1712.0
 offset_bottom = 1712.0
 
+[connection signal="pressed" from="BotaoFundoAzul" to="." method="_on_botao_fundo_azul_pressed"]
 [connection signal="pressed" from="Botoes/Botao Menu Lateral" to="." method="_on_botao_menu_lateral_pressed"]

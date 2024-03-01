@@ -5,6 +5,7 @@ var olho_fechado = preload("res://Recursos/Imagens/Imagens Box/closed_eye.png")
 @onready var ImagemOlho = $Olho as Sprite2D
 @onready var Box = $"." as LineEdit
 
+
 func _on_button_pressed():
 	Box.secret = not Box.secret
 	if Box.secret:
@@ -16,4 +17,4 @@ func _on_button_pressed():
 
 
 func _on_renomear_pressed():
-	pass # Replace with function body.
+	Box.editable  = true

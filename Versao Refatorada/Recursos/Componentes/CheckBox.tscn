@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dn3338ikol3x"]
 
 [ext_resource type="Script" path="res://Scripts/Componentes/Botão Check.gd" id="1_r50jl"]
-[ext_resource type="Texture2D" uid="uid://bgm0m55k5iaqc" path="res://Recursos/Imagens/Imagens Box/checkbox-unchecked.png" id="2_ccltt"]
+[ext_resource type="Texture2D" uid="uid://ddvy2eh3mgc47" path="res://Recursos/Imagens/Imagens Box/checkbox-unchecked.png" id="2_ccltt"]
 
 [node name="BotãoCheck" type="Control"]
 layout_mode = 3

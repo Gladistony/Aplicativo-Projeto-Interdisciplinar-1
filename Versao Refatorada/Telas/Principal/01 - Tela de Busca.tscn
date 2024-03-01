@@ -117,7 +117,7 @@ offset_bottom = 1696.0
 layout_mode = 2
 
 [node name="Janela de POP Informacao Remedio" type="Window" parent="."]
-position = Vector2i(1500, 36)
+position = Vector2i(479, 36)
 size = Vector2i(869, 750)
 unresizable = true
 

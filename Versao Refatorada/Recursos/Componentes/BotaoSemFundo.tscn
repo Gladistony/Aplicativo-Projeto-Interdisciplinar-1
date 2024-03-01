@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cmeex3tld7s5e"]
 
-[ext_resource type="FontFile" uid="uid://dobpqy3p3tgo0" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="1_2gh6v"]
+[ext_resource type="FontFile" uid="uid://b3qs137o2m78r" path="res://Recursos/Fontes/Poppins/Poppins-Bold.ttf" id="1_2gh6v"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h1niy"]
 
